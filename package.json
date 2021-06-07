@@ -1,9 +1,13 @@
 {
   "name": "@seele/utils",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "files": [
     "dist"
   ],
+  "author": {
+    "name": "whitekite",
+    "email": "1075790909@qq.com"
+  },
   "main": "./dist/utils.umd.js",
   "module": "./dist/utils.es.js",
   "typings": "./dist/types/main.d.ts",
