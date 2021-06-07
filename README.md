@@ -1,27 +1,173 @@
-# Vue 3 + Typescript + Vite
+# Seele-utils
 
-This template should help get you started developing with Vue 3 and Typescript in Vite.
+白鸢个人工具包
 
-## Recommended IDE Setup
+## PropTypes
 
-[VSCode](https://code.visualstudio.com/) + [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur). Make sure to enable `vetur.experimental.templateInterpolationService` in settings!
+vue-types的封装 ，基础属性见[vue-types](https://dwightjack.github.io/vue-types/)
 
-### If Using `<script setup>`
+### 特殊方法
 
-[`<script setup>`](https://github.com/vuejs/rfcs/pull/227) is a feature that is currently in RFC stage. To get proper IDE support for the syntax, use [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) instead of Vetur (and disable Vetur).
+```tsx
 
-## Type Support For `.vue` Imports in TS
+// 基础的bool值，不具备响应式能力
+PropTypes.looseBool.def(false)
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can use the following:
+// 说明这是一个 CSSProperties 样式对象
+PropTypes.style.def(null)
 
-### If Using Volar
+// 说明这是一个组件插槽
+PropTypes.VNodeChild
+```
 
-Run `Volar: Switch TS Plugin on/off` from VSCode command palette.
+## extra·额外包
 
-### If Using Vetur
+基于java的 [hutool](https://hutool.cn/docs) 库做的js改写，仅改写了业务常用方法
 
-1. Install and add `@vuedx/typescript-plugin-vue` to the [plugins section](https://www.typescriptlang.org/tsconfig#plugins) in `tsconfig.json`
-2. Delete `src/shims-vue.d.ts` as it is no longer needed to provide module info to Typescript
-3. Open `src/main.ts` in VSCode
-4. Open the VSCode command palette
-5. Search and run "Select TypeScript version" -> "Use workspace version"
+### Base64Util
+
+base64工具-不支持中文编码
+
+```tsx
+
+/**
+ * 编码
+ * @param value
+ * @private
+ */
+Base64Util.encode('string')
+
+/**
+ * 解码
+ * @param value
+ * @private
+ */
+Base64Util.decode('string')
+```
+
+### BooleanUtil
+
+布尔值工具
+
+```tsx
+
+/**
+ * 切换原始布尔值
+ * @param value
+ */
+BooleanUtil.toggleBoolean()
+
+/**
+ * 切换数字型 1真，0假
+ * @param value
+ */
+BooleanUtil.toggleNumber()
+```
+
+### DateUtil
+
+日期工具
+
+```tsx
+/**
+ * 当前时间，转换为{@link Date}对象
+ *
+ * @return 当前时间
+ */
+
+DateUtil.date()
+
+/**
+ * 获得年的部分
+ *
+ * @param date 日期
+ * @return 年的部分
+ */
+DateUtil.year()
+
+/**
+ * @return 今年
+ */
+DateUtil.thisYear()
+
+/**
+ * 是否是闰年
+ */
+DateUtil.isLeapYear()
+
+/**
+ * 将日期字符串转为moment类
+ */
+DateUtil.toMoment()
+```
+
+### IdCardUtil
+
+身份证工具
+
+```tsx
+/**
+ * 是否是正确的中国人民身份证（包括港澳台特别行政区）
+ */
+IdCardUtil.isValidCard()
+```
+
+### MobileUtil
+
+手机号工具
+
+```tsx
+/**
+ * 是否是一个正确的手机号
+ */
+MobileUtil.isMobile()
+
+/**
+ * 是否是一个正确的中国香港手机号
+ */
+MobileUtil.isMobileHk()
+
+/**
+ * 是否是一个正确的中国澳门手机号
+ */
+MobileUtil.isMobileMo()
+
+/**
+ * 是否是一个正确的中国台湾手机号
+ */
+MobileUtil.isMobileTw()
+```
+
+### StrUtil
+
+字符串相关工具
+
+```tsx
+/**
+ * 是否是一个空白字符
+ */
+isBlankChar()
+
+/**
+ * 是否是一个空值-判断字符串及其字符串的空白字符
+ */
+isBlankString()
+
+/**
+ * 字符串是否为非空白<br>
+ * 空白符包括空格、制表符、全角空格和不间断空格<br>
+ * @param str
+ */
+isNotBlankString()
+
+/**
+ * 比较两个字符是否相同
+ *
+ * @param c1         字符1
+ * @param c2         字符2
+ * @param ignoreCase 是否忽略大小写
+ * @return 是否相同
+ * @since 4.0.3
+ */
+isStringEquals()
+```
