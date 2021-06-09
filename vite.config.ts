@@ -18,12 +18,14 @@ export default ({ command }: ConfigEnv): UserConfig => {
         name: 'seeleUtils',
       },
       rollupOptions: {
-        external: ['vue-types', 'moment', 'lodash-es'],
+        external: ['vue-types', 'moment', 'lodash-es', 'vue', 'crypto-js'],
         output: {
           globals: {
             'vue-types': 'vue-types',
             moment: 'moment',
             'lodash-es': 'lodash-es',
+            vue: 'vue',
+            'crypto-js': 'crypto-js',
           },
         },
       },

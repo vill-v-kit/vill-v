@@ -171,3 +171,189 @@ isNotBlankString()
  */
 isStringEquals()
 ```
+
+## dom
+
+### window
+
+```ts
+/**
+ * 打开新窗口
+ */
+openWindow('', { target: '_blank' })
+```
+
+<table>
+  <tr>
+    <th>字段</th>
+    <th>说明</th>
+    <th>类型</th>
+  </tr>
+  <tr>
+    <td colspan="3">API</td>
+  </tr>
+  <tr>
+    <td>url</td>
+    <td>打开的路径</td>
+    <td><a>string</a></td>
+  </tr>
+  <tr>
+    <td>opt</td>
+    <td>配置想</td>
+    <td><a>{ target?: '_self' | '_blank' | string; noopener?: boolean; noreferrer?: boolean }</a></td>
+  </tr>
+</table>
+
+### size
+
+#### getBoundingClientRect
+
+```ts
+/**
+ * 获取元素节点大小信息
+ * @param element {@type Element}
+ * @return {@type DOMRect|number}
+ */
+getBoundingClientRect(Element)
+```
+
+### style
+
+#### classNames
+
+fork by ant-design-vue
+
+拼接css class用，主要用于改写ant-design-vue组件，为业务组件使用
+
+```ts
+// fork by ant-design-vue
+// 拼接css class用，主要用于改写ant-design-vue组件，为业务组件使用
+classNames('foo', 'bar'); // => 'foo bar'
+classNames('foo', { bar: true }); // => 'foo bar'
+classNames({ 'foo-bar': true }); // => 'foo-bar'
+classNames({ 'foo-bar': false }); // => ''
+classNames({ foo: true }, { bar: true }); // => 'foo bar'
+classNames({ foo: true, bar: true }); // => 'foo bar'
+
+// lots of arguments of various types
+classNames('foo', { bar: true, duck: false }, 'baz', { quux: true }); // => 'foo bar baz quux'
+
+// other falsy values are just ignored
+classNames(null, false, 'bar', undefined, 0, 1, { baz: null }, ''); // => 'bar 1'
+```
+
+#### createStyleObject
+
+带样式提示的工具
+
+```ts
+// 带样式提示的工具
+createStyleObject({ color: '#fff', textAlign: 'center' })
+```
+
+### scroll
+
+#### getScroll
+
+获取html元素滚动高度
+
+fork by ant-design-vue
+
+```ts
+getScroll(HTMLElement, true) // ->srcollTop number
+getScroll(HTMLElement, false) // ->srcollLeft number
+```
+
+#### scrollTo
+
+带动画的纵向滚动
+
+fork by ant-design-vue
+
+```ts
+/**
+ * @param y {@type number} 滚动的距离
+ * @param option
+ */
+scrollTo(100, {// 默认滚动距离，模式是window
+  getContainer: window,
+  // 滚动返回函数
+  callback: () => null,
+  // 滚动动画持续时间，默认450
+  duration: 450
+})
+```
+
+### props-util
+
+#### initDefaultProps
+
+fork by ant-design-vue
+
+给vue-props赋值默认值的工具用，主要用于改写ant-design-vue组件，为业务组件使用
+
+```ts
+props: initDefaultProps({ vueprops }, { vueprops的初始值 })//->VueTypes
+```
+
+#### withInstall
+
+简单的局部安装vue组件工具,只能安装一个组件
+
+```ts
+withInstall(组件)
+```
+
+### cipher
+
+#### AesEncryption
+
+aes加密工具
+
+```ts
+const aesEncryption = new AesEncryption('key', 'iv')
+
+// 获取配置信息
+aesEncryption.getOptions()
+// 加密
+const secretCode = aesEncryption.encryptByAES('ssss')
+// 解密
+aesEncryption.decryptByAES(secretCode)
+```
+
+#### encryptByBase64
+
+base64加密
+
+```ts
+encryptByBase64('ssss')
+```
+
+#### decodeByBase64
+
+base64解密
+
+```ts
+decodeByBase64('ssss')
+```
+
+#### encryptByMd5
+
+MD5签名
+
+```ts
+encryptByMd5('ssss')
+```
+### UUID
+
+```ts
+/**
+ * 构建UUID
+ */
+buildUUID()
+/**
+ * 构建短UUID
+ * @param prefix 前缀
+ */
+buildShortUUID('-')
+```
