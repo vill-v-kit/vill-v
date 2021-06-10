@@ -1,6 +1,6 @@
 {
-  "name": "@seele/utils",
-  "version": "1.0.4",
+  "name": "@seele/utils-legacy",
+  "version": "0.0.2",
   "files": [
     "dist"
   ],
@@ -8,13 +8,13 @@
     "name": "whitekite",
     "email": "1075790909@qq.com"
   },
-  "main": "./dist/utils.umd.js",
-  "module": "./dist/utils.es.js",
+  "main": "./dist/utils-legacy.umd.js",
+  "module": "./dist/utils-legacy.es.js",
   "typings": "./dist/types/main.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/utils.es.js",
-      "require": "./dist/utils.umd.js"
+      "import": "./dist/utils-legacy.es.js",
+      "require": "./dist/utils-legacy.umd.js"
     }
   },
   "scripts": {
