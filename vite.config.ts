@@ -15,7 +15,7 @@ export default ({ command }: ConfigEnv): UserConfig => {
     build: {
       lib: {
         entry: path.resolve(__dirname, 'src/main.ts'),
-        name: 'seeleUtils',
+        name: 'seeleUtilsLegacy',
       },
       rollupOptions: {
         external: ['vue-types', 'moment', 'lodash-es', 'vue', 'crypto-js'],

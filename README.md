@@ -1,6 +1,6 @@
 # Seele-utils
 
-白鸢个人工具包
+白鸢个人工具包vue2兼容版
 
 ## PropTypes
 
