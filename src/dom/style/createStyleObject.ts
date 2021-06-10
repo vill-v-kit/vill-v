@@ -1,10 +1,10 @@
-import { CSSProperties } from 'vue'
+import { Properties } from 'csstype'
 
 /**
  * CSSProperties 的提示工具
  * @param style
  */
-const createStyleObject = (style?: CSSProperties) => {
+const createStyleObject = (style?: Properties) => {
   return style || {}
 }
 

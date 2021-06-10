@@ -301,7 +301,55 @@ props: initDefaultProps({ vueprops }, { vueprops的初始值 })//->VueTypes
 简单的局部安装vue组件工具,只能安装一个组件
 
 ```ts
-withInstall(组件)
+
+withInstall(主组件, ...安装在主组件下的子组件)
+
+import Component from "./component";
+import Header from "./Header";
+import Footer from "./Footer";
+import Content from "./Content";
+
+Component.Header = Header
+Component.Footer = Footer
+Component.Content = Content
+
+withInstall(Component, Header, Footer, Content)
+
+export default Component
+```
+
+jsx 形式示例
+
+```tsx
+<Component> sss </Component>
+<Component.Header>sssss</Component.Header>
+<Component.Content>sssss</Component.Content>
+<Component.Footer>ssssss</Component.Footer>
+```
+
+template形式示例
+
+```vue
+
+<template>
+  <component>
+    <component-header></component-header>
+    <component-content></component-content>
+    <component-footer></component-footer>
+  </component>
+</template>
+<script>
+import Component from "./component";
+
+export default {
+  components: {
+    Component,
+    ComponentHeader: Component.Header,
+    ComponentFooter: Component.Footer,
+    ComponentContent: Component.Content,
+  }
+}
+</script>
 ```
 
 ### cipher
@@ -344,6 +392,7 @@ MD5签名
 ```ts
 encryptByMd5('ssss')
 ```
+
 ### UUID
 
 ```ts
