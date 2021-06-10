@@ -1,6 +1,6 @@
 {
   "name": "@seele/utils",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "files": [
     "dist"
   ],
@@ -23,10 +23,10 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "crypto-js": "^4.0.0",
     "lodash-es": "^4.17.21",
     "moment": "^2.29.1",
-    "vue-types": "3",
-    "crypto-js": "^4.0.0"
+    "vue-types": "2"
   },
   "devDependencies": {
     "@types/lodash-es": "^4.17.4",
@@ -36,6 +36,7 @@
     "@vitejs/plugin-legacy": "^1.4.1",
     "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/eslint-config-typescript": "^7.0.0",
+    "csstype": "^3.0.8",
     "dotenv": "^10.0.0",
     "eslint": "^6.7.2",
     "eslint-define-config": "^1.0.8",
@@ -49,7 +50,7 @@
     "vite-plugin-compression": "^0.2.5",
     "vite-plugin-dts": "^0.3.0",
     "vite-plugin-html": "^2.0.7",
-    "vue": "^3.0.0",
+    "vue": "^2.6.14",
     "vue-tsc": "^0.0.24"
   }
 }

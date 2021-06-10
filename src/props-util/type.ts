@@ -1,4 +1,4 @@
-import { App, PropType, VNodeChild, Plugin } from 'vue'
+import { PropType, VNodeChildren, PluginObject } from 'vue'
 
 export type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>
 // https://stackoverflow.com/questions/46176165/ways-to-get-string-literal-type-of-array-values-without-enum-overhead
@@ -33,13 +33,13 @@ export interface PropOptions<T = any, D = T> {
   validator?(value: unknown): boolean
 }
 
-export type VueNode = VNodeChild | JSX.Element
+export type VueNode = VNodeChildren
 
 export const withInstall = <T>(comp: T) => {
   const c = comp as any
-  c.install = function (app: App) {
+  c.install = function (app) {
     app.component(c.displayName || c.name, comp)
   }
 
-  return comp as T & Plugin
+  return comp as T & PluginObject<T>
 }
