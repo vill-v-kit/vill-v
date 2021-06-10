@@ -301,7 +301,54 @@ props: initDefaultProps({ vueprops }, { vueprops的初始值 })//->VueTypes
 简单的局部安装vue组件工具,只能安装一个组件
 
 ```ts
-withInstall(组件)
+
+withInstall(主组件, ...安装在主组件下的子组件)
+
+import Component from "./component";
+import Header from "./Header";
+import Footer from "./Footer";
+import Content from "./Content";
+
+Component.Header = Header
+Component.Footer = Footer
+Component.Content = Content
+
+withInstall(Component, Header, Footer, Content)
+
+export default Component
+```
+
+jsx 形式示例
+
+```tsx
+<Component> sss </Component>
+<Component.Header>sssss</Component.Header>
+<Component.Content>sssss</Component.Content>
+<Component.Footer>ssssss</Component.Footer>
+```
+
+template形式示例
+
+```vue
+<template>
+  <component>
+    <component-header></component-header>
+    <component-content></component-content>
+    <component-footer></component-footer>
+  </component>
+</template>
+<script>
+import Component from "./component";
+
+export default {
+  components: {
+    Component,
+    ComponentHeader: Component.Header,
+    ComponentFooter: Component.Footer,
+    ComponentContent: Component.Content,
+  }
+}
+</script>
 ```
 
 ### cipher
@@ -357,3 +404,118 @@ buildUUID()
  */
 buildShortUUID('-')
 ```
+### file
+
+#### imgDataURLtoBlob
+
+base64文件转blob 主要用来转换base64图片
+
+```ts
+imgDataURLtoBlob('img:base64')
+```
+
+#### imgUrlToBase64
+
+图片url转Base64
+
+```ts
+imgUrlToBase64('https://', 'image/png')
+```
+
+#### downloadImageByOnlineUrl
+
+通过在线网址下载图片
+
+```ts
+downloadImageByOnlineUrl('https://', '下载图片的名称', 'image/png')
+```
+
+#### downloadImageByBase64
+
+下载base64图片
+
+```ts
+ downloadImageByBase64('img:base64', '下载图片的名称', 'image/png')
+```
+
+#### downloadByData
+
+根据后台返回的文件流下载
+
+```ts
+downloadByData({
+  data: new Blob(),
+  target: '_blank',
+  filename: '下载文件的名称',
+  mime: 'application/pdf'
+})
+```
+
+<table>
+  <tr>
+    <th>字段</th>
+    <th>说明</th>
+    <th>类型</th>
+  </tr>
+  <tr>
+    <td colspan="3">API</td>
+  </tr>
+  <tr>
+    <td>data</td>
+    <td>后台返回的流</td>
+    <td><a>Blob</a></td>
+  </tr>
+  <tr>
+    <td>target</td>
+    <td>target</td>
+    <td><a>_self | _blank</a></td>
+  </tr>
+  <tr>
+    <td>filename</td>
+    <td>下载的文件名称</td>
+    <td><a>string</a></td>
+  </tr>
+  <tr>
+    <td>mime</td>
+    <td>文件类型</td>
+    <td><a>image/png | image/jpg | application/pdf | string </a></td>
+  </tr>
+</table>
+
+#### downloadByUrl
+
+根据文件地址下载文件
+
+```ts
+downloadByUrl({
+  url: 'https://',
+  target: '_blank',
+  fileName: '下载的文件名称',
+})
+```
+
+<table>
+  <tr>
+    <th>字段</th>
+    <th>说明</th>
+    <th>类型</th>
+  </tr>
+  <tr>
+    <td colspan="3">API</td>
+  </tr>
+  <tr>
+    <td>data</td>
+    <td>后台返回的流</td>
+    <td><a>Blob</a></td>
+  </tr>
+  <tr>
+    <td>target</td>
+    <td>target</td>
+    <td><a>_self | _blank</a></td>
+  </tr>
+  <tr>
+    <td>filename</td>
+    <td>下载的文件名称</td>
+    <td><a>string</a></td>
+  </tr>
+</table>
