@@ -2,7 +2,7 @@
  * base64 to blob
  * @param base64Buf
  */
-export function dataURLtoBlob(base64Buf: string): Blob {
+export function imgDataURLtoBlob(base64Buf: string): Blob {
   const arr = base64Buf.split(',')
   const typeItem = arr[0]
   const mime = typeItem.match(/:(.*?);/)?.[1]

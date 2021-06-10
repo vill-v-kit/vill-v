@@ -406,3 +406,119 @@ buildUUID()
  */
 buildShortUUID('-')
 ```
+
+### file
+
+#### imgDataURLtoBlob
+
+base64文件转blob 主要用来转换base64图片
+
+```ts
+imgDataURLtoBlob('img:base64')
+```
+
+#### imgUrlToBase64
+
+图片url转Base64
+
+```ts
+imgUrlToBase64('https://', 'image/png')
+```
+
+#### downloadImageByOnlineUrl
+
+通过在线网址下载图片
+
+```ts
+downloadImageByOnlineUrl('https://', '下载图片的名称', 'image/png')
+```
+
+#### downloadImageByBase64
+
+下载base64图片
+
+```ts
+ downloadImageByBase64('img:base64', '下载图片的名称', 'image/png')
+```
+
+#### downloadByData
+
+根据后台返回的文件流下载
+
+```ts
+downloadByData({
+  data: new Blob(),
+  target: '_blank',
+  filename: '下载文件的名称',
+  mime: 'application/pdf'
+})
+```
+
+<table>
+  <tr>
+    <th>字段</th>
+    <th>说明</th>
+    <th>类型</th>
+  </tr>
+  <tr>
+    <td colspan="3">API</td>
+  </tr>
+  <tr>
+    <td>data</td>
+    <td>后台返回的流</td>
+    <td><a>Blob</a></td>
+  </tr>
+  <tr>
+    <td>target</td>
+    <td>target</td>
+    <td><a>_self | _blank</a></td>
+  </tr>
+  <tr>
+    <td>filename</td>
+    <td>下载的文件名称</td>
+    <td><a>string</a></td>
+  </tr>
+  <tr>
+    <td>mime</td>
+    <td>文件类型</td>
+    <td><a>image/png | image/jpg | application/pdf | string </a></td>
+  </tr>
+</table>
+
+#### downloadByUrl
+
+根据文件地址下载文件
+
+```ts
+downloadByUrl({
+  url: 'https://',
+  target: '_blank',
+  fileName: '下载的文件名称',
+})
+```
+
+<table>
+  <tr>
+    <th>字段</th>
+    <th>说明</th>
+    <th>类型</th>
+  </tr>
+  <tr>
+    <td colspan="3">API</td>
+  </tr>
+  <tr>
+    <td>data</td>
+    <td>后台返回的流</td>
+    <td><a>Blob</a></td>
+  </tr>
+  <tr>
+    <td>target</td>
+    <td>target</td>
+    <td><a>_self | _blank</a></td>
+  </tr>
+  <tr>
+    <td>filename</td>
+    <td>下载的文件名称</td>
+    <td><a>string</a></td>
+  </tr>
+</table>

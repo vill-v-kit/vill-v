@@ -35,7 +35,7 @@ export interface PropOptions<T = any, D = T> {
 
 export type VueNode = VNodeChildren
 
-export const withInstall = <T>(comp: T, ...compList: T[]) => {
+export const withInstall = <T, K>(comp: T, ...compList: K[]) => {
   const c = comp as any
   const cList = compList as any[]
   c.install = function (app: typeof Vue) {
@@ -44,6 +44,5 @@ export const withInstall = <T>(comp: T, ...compList: T[]) => {
       app.component(item.displayName || item.name, item)
     })
   }
-
   return comp as T & PluginObject<T>
 }

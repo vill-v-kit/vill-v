@@ -1,6 +1,6 @@
 import { TargetContext } from '../props-util'
 import { openWindow } from '../dom'
-import { dataURLtoBlob, imgUrlToBase64 } from './base64Conver'
+import { imgDataURLtoBlob, imgUrlToBase64 } from './base64Conver'
 
 /**
  * 通过url下载在线图片
@@ -9,9 +9,14 @@ import { dataURLtoBlob, imgUrlToBase64 } from './base64Conver'
  * @param mime
  * @param bom
  */
-export function downloadByOnlineUrl(url: string, filename: string, mime?: string, bom?: BlobPart) {
+export function downloadImageByOnlineUrl(
+  url: string,
+  filename: string,
+  mime?: string,
+  bom?: BlobPart
+) {
   imgUrlToBase64(url).then((base64) => {
-    downloadByBase64(base64, filename, mime, bom)
+    downloadImageByBase64(base64, filename, mime, bom)
   })
 }
 
@@ -22,8 +27,13 @@ export function downloadByOnlineUrl(url: string, filename: string, mime?: string
  * @param mime
  * @param bom
  */
-export function downloadByBase64(buf: string, filename: string, mime?: string, bom?: BlobPart) {
-  const base64Buf = dataURLtoBlob(buf)
+export function downloadImageByBase64(
+  buf: string,
+  filename: string,
+  mime?: string,
+  bom?: BlobPart
+) {
+  const base64Buf = imgDataURLtoBlob(buf)
   downloadByData({ data: base64Buf, filename, mime, bom })
 }
 
