@@ -1,9 +1,10 @@
 {
-  "name": "@seele/utils-legacy",
-  "version": "0.0.7",
+  "name": "@whitekite/utils-legacy",
+  "version": "0.0.1",
   "files": [
     "dist"
   ],
+  "license": "MIT",
   "author": {
     "name": "whitekite",
     "email": "1075790909@qq.com"

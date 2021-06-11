@@ -18,7 +18,7 @@ export default ({ command }: ConfigEnv): UserConfig => {
         name: 'seeleUtilsLegacy',
       },
       rollupOptions: {
-        external: ['vue-types', 'moment', 'lodash-es', 'vue', 'crypto-js'],
+        external: ['vue-types', 'moment', 'lodash-es', 'vue', 'crypto-js', 'csstype'],
         output: {
           globals: {
             'vue-types': 'vue-types',
@@ -26,6 +26,7 @@ export default ({ command }: ConfigEnv): UserConfig => {
             'lodash-es': 'lodash-es',
             vue: 'vue',
             'crypto-js': 'crypto-js',
+            csstype: 'csstype',
           },
         },
       },
