@@ -1,41 +1,37 @@
 import moment from 'moment'
 
 /**
- * 时间工具
- * 注：1.只封装项目中使用的方法，封装无意义的方法只是徒增包大小
+ * 当前时间，转换为{@link Date}对象
+ *
+ * @return 当前时间
  */
-export default class DateUtil {
-  /**
-   * 当前时间，转换为{@link Date}对象
-   *
-   * @return 当前时间
-   */
-  public static date(): Date {
-    return new Date()
-  }
+export const date = (): Date => new Date()
 
-  /**
-   * 获得年的部分
-   *
-   * @param date 日期
-   * @return 年的部分
-   */
-  public static year(date: Date): number {
-    return date.getFullYear()
-  }
+/**
+ * 获得年的部分
+ *
+ * @param date 日期
+ * @return 年的部分
+ */
+export const year = (date: Date): number => date.getFullYear()
 
-  /**
-   * @return 今年
-   */
-  public static thisYear(): number {
-    return this.year(this.date())
-  }
+/**
+ * @return 今年
+ */
+export const thisYear = (): number => year(date())
 
-  public static isLeapYear(year: number): boolean {
-    return moment([year]).isLeapYear()
-  }
+/**
+ * 转换为moment工具
+ * @param value
+ */
+export function toMoment(value: moment.MomentInput): moment.Moment {
+  return moment(value)
+}
 
-  public static toMoment(value: moment.MomentInput): moment.Moment {
-    return moment(value)
-  }
+/**
+ * 是否是闰年
+ * @param year
+ */
+export function isLeapYear(year: number): boolean {
+  return toMoment([year]).isLeapYear()
 }
