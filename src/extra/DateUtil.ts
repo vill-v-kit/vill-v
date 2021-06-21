@@ -24,14 +24,10 @@ export const thisYear = (): number => year(date())
  * 转换为moment工具
  * @param value
  */
-export function toMoment(value: moment.MomentInput): moment.Moment {
-  return moment(value)
-}
+export const toMoment = (value: moment.MomentInput): moment.Moment => moment(value)
 
 /**
  * 是否是闰年
  * @param year
  */
-export function isLeapYear(year: number): boolean {
-  return toMoment([year]).isLeapYear()
-}
+export const isLeapYear = (year: number): boolean => toMoment([year]).isLeapYear()

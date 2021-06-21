@@ -55,13 +55,41 @@ Base64Util.decode('string')
  * 切换原始布尔值
  * @param value
  */
-BooleanUtil.toggleBoolean()
+toggleBoolean(true) // => false
 
 /**
- * 切换数字型 1真，0假
+ * 切换数字型
+ * 默认1真，0假
  * @param value
+ * @param correct 真值
+ * @param error 假值
  */
-BooleanUtil.toggleNumber()
+toggleNumber(1) // =>0
+toggleNumber(1, 0, 1) // =>0
+toggleNumber(3, 2, 3) // =>2
+toggleNumber(2, 2, 3) // =>3
+
+/**
+ * 切换文字型
+ * @param value
+ * @param correct
+ * @param error
+ */
+toggleText('假假') // => 真
+toggleText('假假', '真', '假') // => 真
+toggleText('假假', '真真', '假') // => 真
+
+/**
+ * 统一切换，上面的集合
+ * 单必须确认传入的是string，number，boolean的一种
+ * @param value
+ * @param correct
+ * @param error
+ */
+toggle(true) //=>false
+toggle(1) // => 0
+toggle('假假') // => 真
+toggle(null) // => throw error
 ```
 
 ### DateUtil
@@ -75,7 +103,7 @@ BooleanUtil.toggleNumber()
  * @return 当前时间
  */
 
-DateUtil.date()
+date()
 
 /**
  * 获得年的部分
@@ -83,22 +111,22 @@ DateUtil.date()
  * @param date 日期
  * @return 年的部分
  */
-DateUtil.year()
+year()
 
 /**
  * @return 今年
  */
-DateUtil.thisYear()
+thisYear()
 
 /**
  * 是否是闰年
  */
-DateUtil.isLeapYear()
+isLeapYear()
 
 /**
  * 将日期字符串转为moment类
  */
-DateUtil.toMoment()
+toMoment()
 ```
 
 ### IdCardUtil
@@ -120,22 +148,89 @@ IdCardUtil.isValidCard()
 /**
  * 是否是一个正确的手机号
  */
-MobileUtil.isMobile()
+isMobile()
 
 /**
  * 是否是一个正确的中国香港手机号
  */
-MobileUtil.isMobileHk()
+isMobileHk()
 
 /**
  * 是否是一个正确的中国澳门手机号
  */
-MobileUtil.isMobileMo()
+isMobileMo()
 
 /**
  * 是否是一个正确的中国台湾手机号
  */
-MobileUtil.isMobileTw()
+isMobileTw()
+```
+
+### BirthdayUtil
+
+生日相关工具
+
+```tsx
+/**
+ * 验证是否为生日
+ *
+ * @param year  年，从1900年开始计算
+ * @param month 月，从1开始计数
+ * @param day   日，从1开始计数
+ * @return 是否为生日
+ */
+isBirthdayByDate(1999, 6, 1)
+
+/**
+ * 验证是否为生日<br>
+ * 只支持以下几种格式：
+ * <ul>
+ * <li>yyyyMMdd</li>
+ * <li>yyyy-MM-dd</li>
+ * <li>yyyy/MM/dd</li>
+ * <li>yyyy.MM.dd</li>
+ * <li>yyyy年MM月dd日</li>
+ * </ul>
+ *
+ * @param value 值
+ * @return 是否为生日
+ */
+isBirthday('1999-06-01')
+```
+
+### CharSetUtil
+
+字符集工具
+
+```tsx
+
+/**
+ * 文本转二进制数组
+ * 仅支持UTF-8
+ * @param value
+ */
+textEncode('事实上') // => Uint8Array()
+
+/**
+ * 二进制数组转文本
+ * @param value
+ * @param charSet 格式化编码
+ */
+textDecode(new Uint8Array(), 'GB2312') // => '事实上' as string
+```
+
+### ArrayUtil
+
+数组工具
+
+```tsx
+
+/**
+ * 是否数组每项都符合条件
+ * @param array
+ * @param filter
+ */
+isAllItemVerified([], (item, index, array) => true) // =>true
 ```
 
 ### StrUtil
@@ -330,6 +425,7 @@ jsx 形式示例
 template形式示例
 
 ```vue
+
 <template>
   <component>
     <component-header></component-header>
@@ -391,6 +487,7 @@ MD5签名
 ```ts
 encryptByMd5('ssss')
 ```
+
 ### UUID
 
 ```ts
@@ -404,6 +501,7 @@ buildUUID()
  */
 buildShortUUID('-')
 ```
+
 ### file
 
 #### imgDataURLtoBlob
@@ -519,3 +617,15 @@ downloadByUrl({
     <td><a>string</a></td>
   </tr>
 </table>
+
+## ENV
+
+浏览器环境工具
+
+```tsx
+/**
+ * 这个api是否可以使用
+ * @param api
+ */
+canIUse('TextEncoder') // => true/false
+```

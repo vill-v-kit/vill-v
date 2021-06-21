@@ -1,8 +1,4 @@
 /**
- * 正则配置
- */
-
-/**
  * 数字
  */
 export const NUMBERS_PATTERN = /^\d+$/

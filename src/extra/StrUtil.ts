@@ -5,16 +5,15 @@ import { isString, isNil, toLower } from 'lodash-es'
  * 空白符包括空格、制表符、全角空格和不间断空格<br>
  * @param c
  */
-export function isBlankChar(c: string): boolean {
-  return ['', ' ', '\t', '\r', '\n', '\f', '\ufeff', '\u202a', '\u0000'].includes(c)
-}
+export const isBlankChar = (c: string): boolean =>
+  ['', ' ', '\t', '\r', '\n', '\f', '\ufeff', '\u202a', '\u0000'].includes(c)
 
 /**
  * 字符串是否为空白<br>
  * 空白符包括空格、制表符、全角空格和不间断空格<br>
  * @param str
  */
-export function isBlankString(str?: string | null): str is null | undefined {
+export const isBlankString = (str?: string | null): str is null | undefined => {
   let length: number
   if (isNil(str) || (length = str.length) == 0) {
     return true
@@ -36,9 +35,7 @@ export function isBlankString(str?: string | null): str is null | undefined {
  * 空白符包括空格、制表符、全角空格和不间断空格<br>
  * @param str
  */
-export function isNotBlankString(str?: string | null): str is string {
-  return !isBlankString(str)
-}
+export const isNotBlankString = (str?: string | null): str is string => !isBlankString(str)
 
 /**
  * 比较两个字符是否相同
@@ -49,7 +46,7 @@ export function isNotBlankString(str?: string | null): str is string {
  * @return 是否相同
  * @since 4.0.3
  */
-export function isStringEquals(c1: string, c2: string, ignoreCase = false) {
+export const isStringEquals = (c1: string, c2: string, ignoreCase = false) => {
   if (ignoreCase) {
     return toLower(c1) === toLower(c2)
   }

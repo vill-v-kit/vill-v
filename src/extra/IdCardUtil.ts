@@ -1,8 +1,7 @@
-import Validator from './Validator'
-import PatternPool from './PatternPool'
-import ReUtil from './ReUtil'
+import { isMatchRegex, NUMBERS_PATTERN } from './Pattern'
 import { isBlankString, isStringEquals } from './StrUtil'
 import { isEmpty, toArray } from 'lodash-es'
+import { isBirthday } from './BirthdayUtil'
 
 /**
  * 构建城市码
@@ -215,12 +214,12 @@ export default class IdCardUtil {
       return false
     }
     //校验生日
-    if (!Validator.isBirthday(idCard.substring(6, 14))) {
+    if (!isBirthday(idCard.substring(6, 14))) {
       return false
     }
     // 前17位
     const code17 = idCard.substring(0, 17)
-    if (ReUtil.isMatch(PatternPool.NUMBERS, code17)) {
+    if (isMatchRegex(NUMBERS_PATTERN, code17)) {
       // 获取校验位
       const val = this.getCheckCode18(code17)
       // 第18位
@@ -240,7 +239,7 @@ export default class IdCardUtil {
     if (this.CHINA_ID_MIN_LENGTH !== idCard.length) {
       return false
     }
-    if (ReUtil.isMatch(PatternPool.NUMBERS, idCard)) {
+    if (isMatchRegex(NUMBERS_PATTERN, idCard)) {
       // 省份
       const proCode = idCard.substring(0, 2)
       if (!this.CITY_CODES.get(proCode)) {
@@ -248,7 +247,7 @@ export default class IdCardUtil {
       }
 
       //校验生日（两位年份，补充为19XX）
-      return Validator.isBirthday('19' + idCard.substring(6, 12))
+      return isBirthday('19' + idCard.substring(6, 12))
     } else {
       return false
     }
