@@ -1,7 +1,8 @@
 import { isMatchRegex, NUMBERS_PATTERN } from './Pattern'
-import { isBlankString, isStringEquals } from './StrUtil'
+import { hideStringWithStartAndEnd, isBlankString, isStringEquals } from './StrUtil'
 import { isEmpty, toArray } from 'lodash-es'
 import { isBirthday } from './BirthdayUtil'
+import { age, parseDate, parseDateString, toMoment, year } from './DateUtil'
 
 /**
  * 构建城市码
@@ -110,6 +111,37 @@ export default class IdCardUtil {
    * @private
    */
   private static TW_FIRST_CODE = createTwFirstCode()
+
+  /**
+   * 将15位身份证号码转换为18位
+   *
+   * @param idCard 15位身份编码
+   * @return 18位身份编码
+   */
+  private static convert15To18(idCard: string) {
+    let idCard18: string
+    if (idCard.length !== this.CHINA_ID_MIN_LENGTH) {
+      return null
+    }
+    if (isMatchRegex(NUMBERS_PATTERN, idCard)) {
+      // 获取出生年月日
+      const birthday = idCard.substring(6, 12)
+      const birthDate = parseDate(birthday, 'YYMMdd')
+      // 获取出生年(完全表现形式,如：2010)
+      let sYear = year(birthDate)
+      if (sYear > 2000) {
+        // 2000年之后不存在15位身份证号，此处用于修复此问题的判断
+        sYear -= 100
+      }
+      idCard18 = `${idCard.substring(0, 6)}${sYear}${idCard.substring(8)}`
+      // 获取校验位
+      const sVal = this.getCheckCode18(idCard18)
+      idCard18 += sVal
+    } else {
+      return null
+    }
+    return idCard18
+  }
 
   /**
    * 是否有效身份证号，忽略X的大小写
@@ -302,5 +334,246 @@ export default class IdCardUtil {
       iflag--
     }
     return (sum % 10 === 0 ? 0 : 10 - (sum % 10)) === parseInt(end)
+  }
+
+  /**
+   * 根据身份编号获取生日，只支持15或18位身份证号码
+   *
+   * @return 生日(yyyyMMdd)
+   * @param idCard
+   */
+  public static getBirthByIdCard(idCard: string): string {
+    return this.getBirth(idCard)
+  }
+
+  /**
+   * 根据身份编号获取生日，只支持15或18位身份证号码
+   *
+   * @param idCard 身份编号
+   * @return 生日(yyyyMMdd)
+   */
+  public static getBirth(idCard: string): string {
+    if (isBlankString(idCard)) {
+      return ''
+    }
+    const len = idCard.length
+    if (len < this.CHINA_ID_MIN_LENGTH) {
+      return ''
+    } else if (len === this.CHINA_ID_MIN_LENGTH) {
+      idCard = this.convert15To18(idCard) || ''
+    }
+    return idCard.substring(6, 14)
+  }
+
+  /**
+   * 从身份证号码中获取生日日期，只支持15或18位身份证号码
+   *
+   * @param idCard 身份证号码
+   * @return 日期
+   */
+  public static getBirthDate(idCard: string): Date | null {
+    const birthByIdCard = this.getBirthByIdCard(idCard)
+    return !birthByIdCard ? null : parseDate(birthByIdCard, 'YYYYMMDD')
+  }
+
+  /**
+   * 根据身份编号获取年龄，只支持15或18位身份证号码
+   *
+   * @return 年龄
+   * @param idCard
+   */
+  public static getAgeByIdCard(idCard: string): number {
+    const birth = this.getBirthByIdCard(idCard)
+    return age(toMoment(birth, 'YYYYMMDD'))
+  }
+
+  /**
+   * 根据身份编号获取生日年，只支持15或18位身份证号码
+   *
+   * @return 生日(yyyy)
+   * @param idCard
+   */
+  public static getYearByIdCard(idCard: string) {
+    const len = idCard.length
+    if (len < this.CHINA_ID_MIN_LENGTH) {
+      return null
+    } else if (len === this.CHINA_ID_MIN_LENGTH) {
+      idCard = this.convert15To18(idCard) || ''
+    }
+    return idCard.substring(6, 10)
+  }
+
+  /**
+   * 根据身份编号获取生日月，只支持15或18位身份证号码
+   *
+   * @return 生日(MM)
+   * @param idCard
+   */
+  public static getMonthByIdCard(idCard: string) {
+    const len = idCard.length
+    if (len < this.CHINA_ID_MIN_LENGTH) {
+      return null
+    } else if (len === this.CHINA_ID_MIN_LENGTH) {
+      idCard = this.convert15To18(idCard) || ''
+    }
+    return idCard.substring(10, 12)
+  }
+
+  /**
+   * 根据身份编号获取生日天，只支持15或18位身份证号码
+   *
+   * @return 生日(dd)
+   * @param idCard
+   */
+  public static getDayByIdCard(idCard: string): string | null {
+    const len = idCard.length
+    if (len < this.CHINA_ID_MIN_LENGTH) {
+      return null
+    } else if (len === this.CHINA_ID_MIN_LENGTH) {
+      idCard = this.convert15To18(idCard) || ''
+    }
+    return idCard.substring(12, 14)
+  }
+
+  /**
+   * 根据身份编号获取性别，只支持15或18位身份证号码
+   *
+   * @return 性别(1 : 男 ， 0 : 女)
+   * @param idCard
+   */
+  public static getGenderByIdCard(idCard: string): number | null {
+    if (isBlankString(idCard)) {
+      return null
+    }
+    const len = idCard.length
+    if (len < this.CHINA_ID_MIN_LENGTH) {
+      return null
+    }
+
+    if (len === this.CHINA_ID_MIN_LENGTH) {
+      idCard = this.convert15To18(idCard) || ''
+    }
+    const sCardChar = Number(idCard.charAt(16))
+    return sCardChar % 2 !== 0 ? 1 : 0
+  }
+
+  /**
+   * 根据身份编号获取户籍省份，只支持15或18位身份证号码
+   *
+   * @return 省份名称。
+   * @param idCard
+   */
+  public static getProvinceByIdCard(idCard: string) {
+    const len = idCard.length
+    if (len === this.CHINA_ID_MIN_LENGTH || len === this.CHINA_ID_MAX_LENGTH) {
+      const sProvinNum = idCard.substring(0, 2)
+      return this.CITY_CODES.get(sProvinNum)
+    }
+    return null
+  }
+
+  /**
+   * 根据身份编号获取市级编码，只支持15或18位身份证号码
+   *
+   * @return 市级编码。
+   * @param idCard
+   */
+  public static getCityCodeByIdCard(idCard: string) {
+    const len = idCard.length
+    if (len === this.CHINA_ID_MIN_LENGTH || len === this.CHINA_ID_MAX_LENGTH) {
+      return idCard.substring(0, 5)
+    }
+    return null
+  }
+
+  /**
+   * 隐藏指定位置的几个身份证号数字为“*”
+   *
+   * @param idCard
+   * @param startInclude 开始位置（包含）
+   * @param endExclude   结束位置（不包含）
+   * @return 隐藏后的身份证号码
+   */
+  public static hide(idCard: string, startInclude: number, endExclude: number) {
+    return hideStringWithStartAndEnd(idCard, startInclude, endExclude, '*')
+  }
+
+  /**
+   * 获取身份证信息，包括身份、城市代码、生日、性别等
+   *
+   * @param idCard
+   */
+  public static getIdCardInfo(idCard) {
+    return new IdCard(idCard)
+  }
+}
+
+export class IdCard {
+  get birthDateString(): string | null | undefined {
+    return parseDateString(this.birthDate, 'YYYYMMDD')
+  }
+
+  get age(): number | undefined {
+    return this._age
+  }
+
+  set age(value: number | undefined) {
+    this._age = value
+  }
+
+  get genderString(): string | null | undefined {
+    if (this._gender === 1) {
+      return '男'
+    }
+    if (this._gender === 0) {
+      return '女'
+    }
+    return null
+  }
+
+  get gender(): number | null | undefined {
+    return this._gender
+  }
+
+  set gender(value: number | null | undefined) {
+    this._gender = value
+  }
+
+  get birthDate(): Date | null | undefined {
+    return this._birthDate
+  }
+
+  set birthDate(value: Date | null | undefined) {
+    this._birthDate = value
+  }
+
+  get cityCode(): string | null | undefined {
+    return this._cityCode
+  }
+
+  set cityCode(value: string | null | undefined) {
+    this._cityCode = value
+  }
+
+  get provinceCode(): string | null | undefined {
+    return this._provinceCode
+  }
+
+  set provinceCode(value: string | null | undefined) {
+    this._provinceCode = value
+  }
+
+  private _provinceCode: string | null | undefined
+  private _cityCode: string | null | undefined
+  private _birthDate: Date | null | undefined
+  private _gender: number | null | undefined
+  private _age: number | undefined
+
+  constructor(idCard: string) {
+    this.provinceCode = IdCardUtil.getProvinceByIdCard(idCard)
+    this.cityCode = IdCardUtil.getCityCodeByIdCard(idCard)
+    this.birthDate = IdCardUtil.getBirthDate(idCard)
+    this.gender = IdCardUtil.getGenderByIdCard(idCard)
+    this.age = IdCardUtil.getAgeByIdCard(idCard)
   }
 }

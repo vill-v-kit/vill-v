@@ -102,7 +102,6 @@ toggle(null) // => throw error
  *
  * @return 当前时间
  */
-
 date()
 
 /**
@@ -126,7 +125,28 @@ isLeapYear()
 /**
  * 将日期字符串转为moment类
  */
-toMoment()
+toMoment(new Date(), 'YYYYMMDD')
+
+/**
+ * 计算年龄
+ * @param birthday
+ * @param dateToCompare
+ */
+age(toMoment('19990601', 'YYYYMMDD'), moment())
+
+/**
+ * 格式化时间字符串
+ * @param value
+ * @param format
+ */
+parseDateString(new Date(), 'YYYYMMDD') //=>string
+
+/**
+ * 格式化时间
+ * @param value
+ * @param format
+ */
+parseDate(new Date(), 'YYYYMMDD') //=>moment.Moment
 ```
 
 ### IdCardUtil
@@ -138,6 +158,104 @@ toMoment()
  * 是否是正确的中国人民身份证（包括港澳台特别行政区）
  */
 IdCardUtil.isValidCard()
+
+/**
+ * 根据身份编号获取生日，只支持15或18位身份证号码
+ *
+ * @return 生日(yyyyMMdd)
+ * @param idCard
+ */
+IdCardUtil.getBirthByIdCard("idCard") //=> string 
+
+/**
+ * 从身份证号码中获取生日日期，只支持15或18位身份证号码
+ *
+ * @param idCard 身份证号码
+ * @return 日期
+ */
+IdCardUtil.getBirthDate("idCard")//=> Date | null 
+
+/**
+ * 根据身份编号获取年龄，只支持15或18位身份证号码
+ *
+ * @return 年龄
+ * @param idCard
+ */
+IdCardUtil.getAgeByIdCard("idCard") //=>number
+
+/**
+ * 根据身份编号获取生日年，只支持15或18位身份证号码
+ *
+ * @return 生日(yyyy)
+ * @param idCard
+ */
+IdCardUtil.getYearByIdCard("idCard") //=>string
+
+/**
+ * 根据身份编号获取生日月，只支持15或18位身份证号码
+ *
+ * @return 生日(MM)
+ * @param idCard
+ */
+IdCardUtil.getMonthByIdCard("idCard") //=>string
+
+/**
+ * 根据身份编号获取生日天，只支持15或18位身份证号码
+ *
+ * @return 生日(dd)
+ * @param idCard
+ */
+IdCardUtil.getDayByIdCard("idCard")//=> string | null
+
+/**
+ * 根据身份编号获取性别，只支持15或18位身份证号码
+ *
+ * @return 性别(1 : 男 ， 0 : 女)
+ * @param idCard
+ */
+IdCardUtil.getGenderByIdCard("idCard") // =>number | null
+
+/**
+ * 根据身份编号获取户籍省份，只支持15或18位身份证号码
+ *
+ * @return 省份名称。
+ * @param idCard
+ */
+IdCardUtil.getProvinceByIdCard("idCard") //=>string|null
+
+/**
+ * 根据身份编号获取市级编码，只支持15或18位身份证号码
+ *
+ * @return 市级编码。
+ * @param idCard
+ */
+IdCardUtil.getCityCodeByIdCard("idCard") //=>number
+
+/**
+ * 隐藏指定位置的几个身份证号数字为“*”
+ *
+ * @param idCard
+ * @param startInclude 开始位置（包含）
+ * @param endExclude   结束位置（不包含）
+ * @return 隐藏后的身份证号码
+ */
+IdCardUtil.hide("idCard", 1, 2) //=>**213123121212124712
+
+/**
+ * 获取身份证信息，包括身份、城市代码、生日、性别等
+ *
+ * @param idCard
+ */
+IdCardUtil.getIdCardInfo("idCard") //=> class IdCard
+
+const idcard = new IdCard("idCard")
+idcard.age //=>年龄
+idcard.birthDate // =>生日 返回 Date格式
+idcard.birthDateString // =>生日 返回 string格式
+idcard.gender // 性别 =>number 1 男 0女
+idcard.genderString // 性别 =>string 男 女
+idcard.cityCode // 市级编码
+idcard.provinceCode // 户籍省份
 ```
 
 ### MobileUtil
@@ -265,6 +383,16 @@ isNotBlankString()
  * @since 4.0.3
  */
 isStringEquals()
+
+/**
+ * 隐藏字符串，通过开始和结束下标
+ * @param str
+ * @param startInclude
+ * @param endExclude
+ * @param replacedChar
+ */
+hideStringWithStartAndEnd = ('xxxxx', 0, 2, '*') // => ***xx
+
 ```
 
 ## dom
