@@ -1,4 +1,4 @@
-export { default as PropTypes } from './vue-types'
+export * from './vue-types'
 export * from './extra'
 export * from './dom'
 export * from './props-util'

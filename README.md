@@ -10,14 +10,17 @@ vue-types的封装 ，基础属性见[vue-types](https://dwightjack.github.io/vu
 
 ```tsx
 
-// 基础的bool值，不具备响应式能力
-PropTypes.looseBool.def(false)
+// 基础的bool值，不验证
+looseBool().def(false)
+
+// 说明这是一个 CSSProperties 样式对象或字符串
+style().def(null)
 
 // 说明这是一个 CSSProperties 样式对象
-PropTypes.style.def(null)
+styleObject()
 
 // 说明这是一个组件插槽
-PropTypes.VNodeChild
+vNode()
 ```
 
 ## extra·额外包

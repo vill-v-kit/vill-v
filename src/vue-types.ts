@@ -1,37 +1,16 @@
-import { CSSProperties, VNodeChild } from 'vue'
-import { createTypes, VueTypeValidableDef, VueTypesInterface } from 'vue-types'
-const PropTypes = createTypes({
-  func: undefined,
-  bool: undefined,
-  string: undefined,
-  number: undefined,
-  array: undefined,
-  object: undefined,
-  integer: undefined,
-})
+import { CSSProperties, VNodeChild, PropType } from 'vue'
+import { VueTypeValidableDef, fromType, any, oneOfType, string, toType } from 'vue-types'
 
-PropTypes.extend([
-  {
-    name: 'looseBool',
-    getter: true,
+const vNode = () => fromType('vNode', any() as VueTypeValidableDef<VNodeChild | JSX.Element>)
+const styleObject = () =>
+  toType('styleObject', {
+    type: Object as PropType<CSSProperties>,
+  })
+const style = () => fromType('style', oneOfType([string(), styleObject()]))
+const looseBool = () =>
+  toType('looseBool', {
     type: Boolean,
-    default: undefined,
-  },
-  {
-    name: 'style',
-    getter: true,
-    type: [String, Object],
-    default: undefined,
-  },
-  {
-    name: 'VNodeChild',
-    getter: true,
-    type: [Function, Object],
-  },
-])
+  })
 
-export default PropTypes as VueTypesInterface & {
-  readonly looseBool: VueTypeValidableDef<boolean>
-  readonly style: VueTypeValidableDef<CSSProperties>
-  readonly VNodeChild: VueTypeValidableDef<VNodeChild | JSX.Element>
-}
+export { vNode, style, looseBool, styleObject }
+export * from 'vue-types'
