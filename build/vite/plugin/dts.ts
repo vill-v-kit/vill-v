@@ -14,7 +14,10 @@ const includeExt = ['.ts', '.d.ts']
 const include = includeExt.map((ext) => `${projectRoot}/**/*${ext}`)
 
 const createWriteFilePath = (filePath: string) =>
-  path.resolve(buildOutputFullPath, path.relative(buildOutputFullPath + projectRoot, filePath))
+  path.resolve(
+    buildOutputFullPath,
+    path.relative(buildOutputFullPath + '/' + projectRoot, filePath)
+  )
 
 export function configDtsPlugin(): Plugin {
   return dts({
