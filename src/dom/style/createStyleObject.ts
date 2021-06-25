@@ -1,4 +1,6 @@
-import { CSSProperties } from 'vue'
+import { Properties } from 'csstype'
+
+export type CSSProperties = Properties<number | string>
 
 /**
  * CSSProperties 的提示工具

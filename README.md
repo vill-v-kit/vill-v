@@ -2,27 +2,6 @@
 
 白鸢个人工具包
 
-## PropTypes
-
-vue-types的封装 ，基础属性见[vue-types](https://dwightjack.github.io/vue-types/)
-
-### 特殊方法
-
-```tsx
-
-// 基础的bool值，不验证
-looseBool().def(false)
-
-// 说明这是一个 CSSProperties 样式对象或字符串
-style().def(null)
-
-// 说明这是一个 CSSProperties 样式对象
-styleObject()
-
-// 说明这是一个组件插槽
-vNode()
-```
-
 ## extra·额外包
 
 基于java的 [hutool](https://hutool.cn/docs) 库做的js改写，仅改写了业务常用方法
@@ -508,74 +487,6 @@ scrollTo(100, {// 默认滚动距离，模式是window
   // 滚动动画持续时间，默认450
   duration: 450
 })
-```
-
-### props-util
-
-#### initDefaultProps
-
-fork by ant-design-vue
-
-给vue-props赋值默认值的工具用，主要用于改写ant-design-vue组件，为业务组件使用
-
-```ts
-props: initDefaultProps({ vueprops }, { vueprops的初始值 })//->VueTypes
-```
-
-#### withInstall
-
-简单的局部安装vue组件工具,只能安装一个组件
-
-```ts
-
-withInstall(主组件, ...安装在主组件下的子组件)
-
-import Component from "./component";
-import Header from "./Header";
-import Footer from "./Footer";
-import Content from "./Content";
-
-Component.Header = Header
-Component.Footer = Footer
-Component.Content = Content
-
-withInstall(Component, Header, Footer, Content)
-
-export default Component
-```
-
-jsx 形式示例
-
-```tsx
-<Component> sss </Component>
-<Component.Header>sssss</Component.Header>
-<Component.Content>sssss</Component.Content>
-<Component.Footer>ssssss</Component.Footer>
-```
-
-template形式示例
-
-```vue
-
-<template>
-  <component>
-    <component-header></component-header>
-    <component-content></component-content>
-    <component-footer></component-footer>
-  </component>
-</template>
-<script>
-import Component from "./component";
-
-export default {
-  components: {
-    Component,
-    ComponentHeader: Component.Header,
-    ComponentFooter: Component.Footer,
-    ComponentContent: Component.Content,
-  }
-}
-</script>
 ```
 
 ### cipher

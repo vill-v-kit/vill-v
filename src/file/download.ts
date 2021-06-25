@@ -1,4 +1,4 @@
-import { TargetContext } from '../props-util'
+import { TargetContext } from '../env'
 import { openWindow } from '../dom'
 import { imgDataURLtoBlob, imgUrlToBase64 } from './base64Conver'
 
