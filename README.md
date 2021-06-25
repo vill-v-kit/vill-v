@@ -30,7 +30,7 @@
       @whitekite/vue-types-extra
     </td>
     <td>
-      <a href='https://gitee.com/white-kite/vue-types-extra/stargazers'>
+      <a href='https://gitee.com/white-kite/vue-types-extra'>
         <img src='https://gitee.com/white-kite/vue-types-extra/badge/star.svg?theme=gray' alt='star'>
       </a>
     </td>
@@ -41,7 +41,7 @@
   <tr>
     <td>@whitekite/vue-helper</td>
     <td>
-      <a href='https://gitee.com/white-kite/vue-helper/stargazers'>
+      <a href='https://gitee.com/white-kite/vue-helper'>
         <img src='https://gitee.com/white-kite/vue-helper/badge/star.svg?theme=gray' alt='star'>
       </a>
     </td>
