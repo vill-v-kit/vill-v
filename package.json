@@ -1,6 +1,6 @@
 {
   "name": "@whitekite/utils",
-  "version": "0.1.2",
+  "version": "0.1.2-rc.1",
   "files": [
     "dist"
   ],
@@ -9,6 +9,8 @@
     "name": "whitekite",
     "email": "1075790909@qq.com"
   },
+  "homepage": "https://gitee.com/white-kite/seele-utils/blob/master/README.md",
+  "repository": "https://gitee.com/white-kite/seele-utils/blob/master",
   "main": "./dist/utils.umd.js",
   "module": "./dist/utils.es.js",
   "typings": "./dist/types/index.d.ts",
