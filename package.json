@@ -1,6 +1,6 @@
 {
   "name": "@whitekite/utils",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "files": [
     "dist"
   ],
@@ -11,7 +11,7 @@
   },
   "main": "./dist/utils.umd.js",
   "module": "./dist/utils.es.js",
-  "typings": "./dist/types/main.d.ts",
+  "typings": "./dist/types/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/utils.es.js",
