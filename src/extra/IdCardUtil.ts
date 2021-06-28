@@ -456,7 +456,7 @@ export default class IdCardUtil {
     if (len === this.CHINA_ID_MIN_LENGTH) {
       idCard = this.convert15To18(idCard) || ''
     }
-    const sCardChar = Number(idCard.charAt(14))
+    const sCardChar = Number(idCard.charAt(16))
     return sCardChar % 2 !== 0 ? 1 : 0
   }
 
