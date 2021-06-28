@@ -382,8 +382,11 @@ export default class IdCardUtil {
    * @return 年龄
    * @param idCard
    */
-  public static getAgeByIdCard(idCard: string): number {
+  public static getAgeByIdCard(idCard: string): number | null {
     const birth = this.getBirthByIdCard(idCard)
+    if (!birth) {
+      return null
+    }
     return age(toMoment(birth, 'YYYYMMDD'))
   }
 
@@ -510,14 +513,15 @@ export default class IdCardUtil {
 
 export class IdCard {
   get birthDateString(): string | null | undefined {
-    return parseDateString(this.birthDate, 'YYYYMMDD')
+    const birthDate = this.birthDate
+    return !birthDate ? null : parseDateString(this.birthDate, 'YYYYMMDD')
   }
 
-  get age(): number | undefined {
+  get age(): number | undefined | null {
     return this._age
   }
 
-  set age(value: number | undefined) {
+  set age(value: number | undefined | null) {
     this._age = value
   }
 
@@ -567,7 +571,7 @@ export class IdCard {
   private _cityCode: string | null | undefined
   private _birthDate: Date | null | undefined
   private _gender: number | null | undefined
-  private _age: number | undefined
+  private _age: number | undefined | null
 
   constructor(idCard: string) {
     this.provinceCode = IdCardUtil.getProvinceByIdCard(idCard)
