@@ -1,6 +1,6 @@
 {
   "name": "@whitekite/utils",
-  "version": "0.1.9",
+  "version": "0.2.2",
   "files": [
     "dist"
   ],
@@ -9,6 +9,7 @@
     "name": "whitekite",
     "email": "1075790909@qq.com"
   },
+  "sideEffects": false,
   "homepage": "https://gitee.com/white-kite/seele-utils/blob/master/README.md",
   "repository": "https://gitee.com/white-kite/seele-utils/blob/master",
   "main": "./dist/utils.umd.js",
@@ -25,8 +26,11 @@
     "build": "vue-tsc --noEmit && vite build",
     "serve": "vite preview"
   },
+  "peerDependencies": {
+    "crypto-js": "<4.0.0"
+  },
   "dependencies": {
-    "crypto-js": "^4.0.0",
+    "crypto-js": "^3.3.0",
     "csstype": "^3.0.8",
     "dayjs": "^1.10.6",
     "lodash-es": "^4.17.21"
