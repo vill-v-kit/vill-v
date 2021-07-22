@@ -21,7 +21,6 @@ export default ({ command }: ConfigEnv): UserConfig => {
         external: [
           'dayjs',
           'lodash-es',
-          'crypto-js',
           'csstype',
           'dayjs/plugin/customParseFormat',
           'dayjs/plugin/duration',
@@ -48,7 +47,6 @@ export default ({ command }: ConfigEnv): UserConfig => {
             'crypto-js/md5': 'crypto-js/md5',
             'crypto-js/enc-base64': 'crypto-js/enc-base64',
             'lodash-es': 'lodash-es',
-            'crypto-js': 'crypto-js',
           },
         },
       },
