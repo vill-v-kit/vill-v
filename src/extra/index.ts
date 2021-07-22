@@ -1,6 +1,5 @@
 /**
  * 改写自hutool
- * @author WhiteKite
  */
 export * from './StrUtil'
 export { default as IdCardUtil, IdCard } from './IdCardUtil'

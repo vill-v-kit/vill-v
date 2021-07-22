@@ -1,4 +1,4 @@
-import dayjs, { Dayjs, ConfigType } from 'dayjs'
+import dayjs, { ConfigType, Dayjs } from 'dayjs'
 import customParseFormat from 'dayjs/plugin/customParseFormat'
 import duration from 'dayjs/plugin/duration'
 import arraySupport from 'dayjs/plugin/arraySupport'
@@ -8,22 +8,6 @@ dayjs.extend(customParseFormat)
 dayjs.extend(duration)
 dayjs.extend(arraySupport)
 dayjs.extend(isLeapYearPlugin)
-
-/**
- * 当前时间，转换为{@link Date}对象
- *
- * @return 当前时间
- */
-export const date = (): Date => new Date()
-
-/**
- * 获得年的部分
- *
- * @param date 日期
- * @return 年的部分
- */
-export const year = (date: Date): number => date.getFullYear()
-
 /**
  * 计算年龄
  * @param birthday
@@ -35,11 +19,6 @@ export const age = (birthday: Dayjs, dateToCompare = dayjs()): number => {
   }
   return dayjs.duration(dateToCompare.diff(birthday)).years()
 }
-
-/**
- * @return 今年
- */
-export const thisYear = (): number => year(date())
 
 /**
  * 转换为moment工具
