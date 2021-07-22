@@ -2,7 +2,7 @@ import { isMatchRegex, NUMBERS_PATTERN } from './Pattern'
 import { hideStringWithStartAndEnd, isBlankString, isStringEquals } from './StrUtil'
 import { isEmpty, toArray } from 'lodash-es'
 import { isBirthday } from './BirthdayUtil'
-import { age, parseDate, parseDateString, toMoment, year } from './DateUtil'
+import { age, parseDate, parseDateString, toDayJs, year } from './DateUtil'
 
 /**
  * 构建城市码
@@ -387,7 +387,7 @@ export default class IdCardUtil {
     if (!birth) {
       return null
     }
-    return age(toMoment(birth, 'YYYYMMDD'))
+    return age(toDayJs(birth, 'YYYYMMDD'))
   }
 
   /**

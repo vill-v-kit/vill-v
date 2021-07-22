@@ -1,4 +1,13 @@
-import moment from 'moment'
+import dayjs, { Dayjs, ConfigType } from 'dayjs'
+import customParseFormat from 'dayjs/plugin/customParseFormat'
+import duration from 'dayjs/plugin/duration'
+import arraySupport from 'dayjs/plugin/arraySupport'
+import isLeapYearPlugin from 'dayjs/plugin/isLeapYear'
+
+dayjs.extend(customParseFormat)
+dayjs.extend(duration)
+dayjs.extend(arraySupport)
+dayjs.extend(isLeapYearPlugin)
 
 /**
  * 当前时间，转换为{@link Date}对象
@@ -20,11 +29,11 @@ export const year = (date: Date): number => date.getFullYear()
  * @param birthday
  * @param dateToCompare
  */
-export const age = (birthday: moment.Moment, dateToCompare = moment()): number => {
+export const age = (birthday: Dayjs, dateToCompare = dayjs()): number => {
   if (!birthday) {
     return 0
   }
-  return moment.duration(dateToCompare.diff(birthday)).years()
+  return dayjs.duration(dateToCompare.diff(birthday)).years()
 }
 
 /**
@@ -37,27 +46,24 @@ export const thisYear = (): number => year(date())
  * @param value
  * @param format
  */
-export const toMoment = (value: moment.MomentInput, format?: string): moment.Moment =>
-  moment(value, format)
+export const toDayJs = (value: ConfigType, format?: string): Dayjs => dayjs(value, format)
 
 /**
  * 格式化时间字符串
  * @param value
  * @param format
  */
-export const parseDateString = (value: moment.MomentInput, format: string) =>
-  toMoment(value).format(format)
+export const parseDateString = (value: ConfigType, format: string) => toDayJs(value).format(format)
 
 /**
  * 格式化时间
  * @param value
  * @param format
  */
-export const parseDate = (value: moment.MomentInput, format: string) =>
-  toMoment(value, format).toDate()
+export const parseDate = (value: ConfigType, format: string) => toDayJs(value, format).toDate()
 
 /**
  * 是否是闰年
  * @param year
  */
-export const isLeapYear = (year: number): boolean => toMoment([year]).isLeapYear()
+export const isLeapYear = (year: number): boolean => toDayJs([year]).isLeapYear()

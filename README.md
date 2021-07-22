@@ -6,6 +6,10 @@
 
 开发中的一些总结
 
+> 更换moment.js为dayjs
+> 
+> 在0.1.8版本之后优化打包体积
+
 <div>
 <a href="https://gitee.com/white-kite/seele-utils/wikis" style="font-size: 20px;font-weight: bold;">文档</a>
 </div>

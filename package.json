@@ -1,6 +1,6 @@
 {
   "name": "@whitekite/utils",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "files": [
     "dist"
   ],
@@ -28,8 +28,8 @@
   "dependencies": {
     "crypto-js": "^4.0.0",
     "csstype": "^3.0.8",
-    "lodash-es": "^4.17.21",
-    "moment": "^2.29.1"
+    "dayjs": "^1.10.6",
+    "lodash-es": "^4.17.21"
   },
   "devDependencies": {
     "@types/lodash-es": "^4.17.4",
