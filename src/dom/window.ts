@@ -12,3 +12,12 @@ export function openWindow(
 
   window.open(url, target, feature.join(','))
 }
+
+export function openNewTag(url: string, opt?: { target?: TargetContext | string }) {
+  const { target = '_blank' } = opt || {}
+  let link: HTMLAnchorElement | null = document.createElement('a')
+  link.href = url
+  link.target = target
+  link.click()
+  link = null
+}
