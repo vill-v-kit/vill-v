@@ -15,7 +15,6 @@ module.exports = defineConfig({
     'plugin:vue/vue3-essential',
     'eslint:recommended',
     '@vue/typescript/recommended',
-    'plugin:vue-types/recommended',
     '@vue/prettier',
     '@vue/prettier/@typescript-eslint',
   ],
