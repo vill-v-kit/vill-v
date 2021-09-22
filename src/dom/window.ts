@@ -10,7 +10,7 @@ export function openWindow(
   noopener && feature.push('noopener=yes')
   noreferrer && feature.push('noreferrer=yes')
 
-  window.open(url, target, feature.join(','))
+  return window.open(url, target, feature.join(','))
 }
 
 export function openNewTag(url: string, opt?: { target?: TargetContext | string }) {

@@ -1,7 +1,7 @@
-import UTF8, { parse } from 'crypto-js/enc-utf8'
+import UTF8 from 'crypto-js/enc-utf8'
 import ECB from 'crypto-js/mode-ecb'
 import pkcs7 from 'crypto-js/pad-pkcs7'
-import { decrypt, encrypt } from 'crypto-js/aes'
+import AES from 'crypto-js/aes'
 
 export interface EncryptionParams {
   key: string
@@ -15,10 +15,10 @@ export class AesEncryption {
   constructor(opt: Partial<EncryptionParams> = {}) {
     const { key, iv } = opt
     if (key) {
-      this.key = parse(key)
+      this.key = UTF8.parse(key)
     }
     if (iv) {
-      this.iv = parse(iv)
+      this.iv = UTF8.parse(iv)
     }
   }
 
@@ -31,10 +31,10 @@ export class AesEncryption {
   }
 
   encryptByAES(cipherText: string) {
-    return encrypt(cipherText, this.key, this.getOptions).toString()
+    return AES.encrypt(cipherText, this.key, this.getOptions).toString()
   }
 
   decryptByAES(cipherText: string) {
-    return decrypt(cipherText, this.key, this.getOptions).toString(UTF8)
+    return AES.decrypt(cipherText, this.key, this.getOptions).toString(UTF8)
   }
 }
