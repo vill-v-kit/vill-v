@@ -2,9 +2,8 @@
  * 异步并发控制器（池）
  */
 export class AsyncPool<T = any> {
-  private max: number
+  private readonly max: number
   private pool: (() => Promise<T>)[] = []
-  private result: T[] = []
 
   constructor(max = 6) {
     this.max = max
@@ -23,51 +22,27 @@ export class AsyncPool<T = any> {
    */
   public clear() {
     this.pool = []
-    this.result = []
   }
 
   /**
    * 消费
    */
-  public consume() {
-    this.result = []
-    return Promise.all(
-      Array.from({ length: this.max }).map(
-        () =>
-          new Promise<void>((resolve, reject) => {
-            const runTask = () => {
-              if (this.pool.length <= 0) {
-                resolve()
-                return
-              }
-              const task = this.pool.shift()
-              if (!task) {
-                resolve()
-                return
-              }
-              task()
-                .then((res) => {
-                  this.result.push(res)
-                  runTask()
-                })
-                .catch(reject)
-            }
-            runTask()
-          })
-      )
-    )
-      .then(() => this.result)
-      .catch((e) => {
-        this.clear()
-        return e
-      })
-  }
-
-  /**
-   * 获取结果列表
-   */
-  public get resultList() {
-    return this.result
+  public async consume() {
+    const ret: any[] = []
+    const executing: (() => Promise<T>)[] = []
+    for (const item of this.pool) {
+      if (this.max <= this.pool.length) {
+        const p = Promise.resolve().then(() => item())
+        ret.push(p)
+        const e = p.then(() => executing.splice(executing.indexOf(e), 1))
+        executing.push(e)
+        if (executing.length >= this.max) {
+          await Promise.race(executing)
+        }
+      }
+    }
+    this.clear()
+    return Promise.all(ret)
   }
 
   /**
