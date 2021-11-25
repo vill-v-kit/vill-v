@@ -31,9 +31,9 @@ export class AsyncPool<T = any> {
     const ret: any[] = []
     const executing: (() => Promise<T>)[] = []
     for (const item of this.pool) {
+      const p = Promise.resolve().then(() => item())
+      ret.push(p)
       if (this.max <= this.pool.length) {
-        const p = Promise.resolve().then(() => item())
-        ret.push(p)
         const e = p.then(() => executing.splice(executing.indexOf(e), 1))
         executing.push(e)
         if (executing.length >= this.max) {
