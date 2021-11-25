@@ -60,7 +60,11 @@ export function downloadByData({
 }) {
   const blobData = typeof bom !== 'undefined' ? [bom, data] : [data]
   const blob = new Blob(blobData, { type: mime || 'application/octet-stream' })
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
   if (typeof window.navigator.msSaveBlob !== 'undefined') {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     window.navigator.msSaveBlob(blob, filename)
   } else {
     const blobURL = window.URL.createObjectURL(blob)
