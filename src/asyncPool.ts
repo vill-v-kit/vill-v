@@ -25,6 +25,27 @@ export class AsyncPool<T = any> {
   }
 
   /**
+   * 获取请求池的长度
+   */
+  public get size() {
+    return this.pool.length
+  }
+
+  /**
+   * 是否不为空
+   */
+  public isNotEmpty() {
+    return !!this.size
+  }
+
+  /**
+   * 是否为空
+   */
+  public isEmpty() {
+    return !this.isNotEmpty
+  }
+
+  /**
    * 消费
    */
   public async consume() {
