@@ -6,7 +6,6 @@ export class GroupLog {
   public prod = false
 
   constructor(name: string, prod?: boolean) {
-    this.clear()
     this.create(name)
     this.setProd(prod)
   }
