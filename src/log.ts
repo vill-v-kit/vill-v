@@ -28,9 +28,9 @@ export class GroupLog {
     return this
   }
 
-  private create(name: string, author?: string) {
+  public create(name: string, author?: string) {
     const dateTime = parseDateString(date(), 'YYYY-MM-DD hh:mm:ss')
-    const groupName = `${name} ${author} ${dateTime}`
+    const groupName = `${name} ${author || 'WhiteKite'} ${dateTime}`
     this.console?.group(groupName)
     return this
   }
