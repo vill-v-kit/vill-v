@@ -1,3 +1,4 @@
+import { date, parseDateString } from './extra'
 /**
  * 一个用于处理💩山时，项目过多log的突发奇想
  * 试验性质，不保证可用
@@ -5,8 +6,8 @@
 export class GroupLog {
   public prod = false
 
-  constructor(name: string, prod?: boolean) {
-    this.create(name)
+  constructor(name: string, author?: string, prod?: boolean) {
+    this.create(name, author)
     this.setProd(prod)
   }
 
@@ -27,8 +28,10 @@ export class GroupLog {
     return this
   }
 
-  private create(name: string) {
-    this.console?.group(name)
+  private create(name: string, author?: string) {
+    const dateTime = parseDateString(date(), 'YYYY-MM-DD hh:mm:ss')
+    const groupName = `${name} ${author} ${dateTime}`
+    this.console?.group(groupName)
     return this
   }
 
@@ -81,7 +84,7 @@ export class GroupLog {
     return this
   }
 
-  public static start(name: string, prop?: boolean) {
-    return new GroupLog(name, prop)
+  public static start(name: string, author?: string, prop?: boolean) {
+    return new GroupLog(name, author, prop)
   }
 }
