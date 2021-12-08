@@ -81,4 +81,8 @@ export class GroupLog {
     this.console?.timeEnd(label)
     return this
   }
+
+  public static start(name: string, prop?: boolean) {
+    return new GroupLog(name, prop)
+  }
 }
