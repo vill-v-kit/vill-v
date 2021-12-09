@@ -1,4 +1,11 @@
-export function forceJsonParse(jsonString: string | null | undefined, type: 'string'): string
+export function forceJsonParse<T = any>(
+  jsonString: string | null | undefined,
+  type: 'origin'
+): T | string
+export function forceJsonParse<T = any>(
+  jsonString: string | null | undefined,
+  type: 'string'
+): T | string
 export function forceJsonParse<T = any>(
   jsonString: string | null | undefined,
   type: 'null'
@@ -12,13 +19,14 @@ export function forceJsonParse<T = any>(jsonString: string | null | undefined, t
  */
 export function forceJsonParse(
   jsonString: string | null | undefined,
-  type: 'string' | 'array' | 'null' | 'object'
+  type: 'string' | 'array' | 'null' | 'object' | 'origin'
 ) {
   const typeMap = new Map<string, any>([
     ['string', ''],
     ['array', []],
     ['null', null],
     ['object', {}],
+    ['origin', jsonString],
   ])
   const originValue = typeMap.get(type)
   let json: any = originValue
