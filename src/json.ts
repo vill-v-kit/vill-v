@@ -26,7 +26,7 @@ export function forceJsonParse(
     ['array', []],
     ['null', null],
     ['object', {}],
-    ['origin', jsonString],
+    ['origin', jsonString || ''],
   ])
   const originValue = typeMap.get(type)
   let json: any = originValue
