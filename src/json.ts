@@ -1,25 +1,53 @@
+/**
+ * 总有坑爹后端，返回给你不规范的json字符串，但项目已经是💩山，但你又没办法管
+ * @private
+ * @param jsonString
+ * @param originValue
+ */
+function looseJsonParse(jsonString: string, originValue: any) {
+  try {
+    return Function(`"use strict";return (${jsonString})`)()
+  } catch (e) {
+    return originValue
+  }
+}
+
 export function forceJsonParse<T = any>(
   jsonString: string | null | undefined,
-  type: 'origin'
+  type: 'origin',
+  loose?: boolean
 ): T | string
 export function forceJsonParse<T = any>(
   jsonString: string | null | undefined,
-  type: 'string'
+  type: 'string',
+  loose?: boolean
 ): T | string
 export function forceJsonParse<T = any>(
   jsonString: string | null | undefined,
-  type: 'null'
+  type: 'null',
+  loose?: boolean
 ): T | null
-export function forceJsonParse<T = any>(jsonString: string | null | undefined, type: 'object'): T
-export function forceJsonParse<T = any>(jsonString: string | null | undefined, type: 'array'): T[]
+export function forceJsonParse<T = any>(
+  jsonString: string | null | undefined,
+  type: 'object',
+  loose?: boolean
+): T
+export function forceJsonParse<T = any>(
+  jsonString: string | null | undefined,
+  type: 'array',
+  loose?: boolean
+): T[]
+
 /**
  * 有返回的json格式化
- * @param jsonString
- * @param type
+ * @param jsonString 输入的json字符串
+ * @param type 格式化失败返回的类型
+ * @param [loose] 降级处理不规范json字符串
  */
 export function forceJsonParse(
   jsonString: string | null | undefined,
-  type: 'string' | 'array' | 'null' | 'object' | 'origin'
+  type: 'string' | 'array' | 'null' | 'object' | 'origin',
+  loose?: boolean
 ) {
   const typeMap = new Map<string, any>([
     ['string', ''],
@@ -29,15 +57,13 @@ export function forceJsonParse(
     ['origin', jsonString || ''],
   ])
   const originValue = typeMap.get(type)
-  let json: any = originValue
   if (!jsonString) {
     return originValue
   }
 
   try {
-    json = JSON.parse(jsonString) || originValue
+    return JSON.parse(jsonString) || originValue
   } catch (error) {
-    return json
+    return loose ? looseJsonParse(jsonString, originValue) : originValue
   }
-  return json
 }
