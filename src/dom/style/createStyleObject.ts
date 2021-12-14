@@ -1,6 +1,8 @@
-import { Properties } from 'csstype'
+import type { Properties, PropertiesHyphen } from 'csstype'
 
-export type CSSProperties = Properties<number | string>
+export interface CSSProperties
+  extends Properties<string | number>,
+    PropertiesHyphen<string | number> {}
 
 /**
  * CSSProperties 的提示工具
