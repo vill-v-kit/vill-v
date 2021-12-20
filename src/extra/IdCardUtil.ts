@@ -80,38 +80,31 @@ const createTwFirstCode = () => {
   TW_FIRST_CODE.set('O', 35)
   return TW_FIRST_CODE
 }
+/**
+ * 中国公民身份证号码最小长度
+ */
+const CHINA_ID_MIN_LENGTH = 15
+/**
+ * 中国公民身份证号码最大长度
+ */
+const CHINA_ID_MAX_LENGTH = 18
+/**
+ * 每位加权因子
+ */
+const POWER = [7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2]
+/**
+ * 省市代码表
+ */
+const CITY_CODES = createCityCodes()
+/**
+ * 台湾身份首字母对应数字
+ */
+const TW_FIRST_CODE = createTwFirstCode()
 
 /**
  * 身份证工具
  */
 export default class IdCardUtil {
-  /**
-   * 中国公民身份证号码最小长度。
-   */
-  private static CHINA_ID_MIN_LENGTH = 15
-
-  /**
-   * 中国公民身份证号码最大长度。
-   */
-  private static CHINA_ID_MAX_LENGTH = 18
-
-  /**
-   * 每位加权因子
-   */
-  private static POWER = [7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2]
-
-  /**
-   * 省市代码表
-   * @private
-   */
-  private static CITY_CODES = createCityCodes()
-
-  /**
-   * 台湾身份首字母对应数字
-   * @private
-   */
-  private static TW_FIRST_CODE = createTwFirstCode()
-
   /**
    * 将15位身份证号码转换为18位
    *
@@ -120,7 +113,7 @@ export default class IdCardUtil {
    */
   private static convert15To18(idCard: string) {
     let idCard18: string
-    if (idCard.length !== this.CHINA_ID_MIN_LENGTH) {
+    if (idCard.length !== CHINA_ID_MIN_LENGTH) {
       return null
     }
     if (isMatchRegex(NUMBERS_PATTERN, idCard)) {
@@ -177,9 +170,9 @@ export default class IdCardUtil {
    */
   private static getPowerSum(iArr: string[]): number {
     let iSum = 0
-    if (this.POWER.length === iArr.length) {
+    if (POWER.length === iArr.length) {
       for (let i = 0; i < iArr.length; i++) {
-        iSum += parseInt(String(iArr[i])) * this.POWER[i]
+        iSum += parseInt(String(iArr[i])) * POWER[i]
       }
     }
     return iSum
@@ -237,12 +230,12 @@ export default class IdCardUtil {
    * @param ignoreCase
    */
   private static isValidCard18(idCard: string, ignoreCase: boolean): boolean {
-    if (this.CHINA_ID_MAX_LENGTH !== idCard.length) {
+    if (CHINA_ID_MAX_LENGTH !== idCard.length) {
       return false
     }
     // 省份
     const proCode = idCard.substring(0, 2)
-    if (!this.CITY_CODES.get(proCode)) {
+    if (!CITY_CODES.get(proCode)) {
       return false
     }
     //校验生日
@@ -268,13 +261,13 @@ export default class IdCardUtil {
    * @param idCard
    */
   private static isValidCard15(idCard: string): boolean {
-    if (this.CHINA_ID_MIN_LENGTH !== idCard.length) {
+    if (CHINA_ID_MIN_LENGTH !== idCard.length) {
       return false
     }
     if (isMatchRegex(NUMBERS_PATTERN, idCard)) {
       // 省份
       const proCode = idCard.substring(0, 2)
-      if (!this.CITY_CODES.get(proCode)) {
+      if (!CITY_CODES.get(proCode)) {
         return false
       }
 
@@ -320,7 +313,7 @@ export default class IdCardUtil {
       return false
     }
     const start = idCard.substring(0, 1)
-    const iStart = this.TW_FIRST_CODE.get(start)
+    const iStart = TW_FIRST_CODE.get(start)
     if (!iStart) {
       return false
     }
@@ -357,9 +350,9 @@ export default class IdCardUtil {
       return ''
     }
     const len = idCard.length
-    if (len < this.CHINA_ID_MIN_LENGTH) {
+    if (len < CHINA_ID_MIN_LENGTH) {
       return ''
-    } else if (len === this.CHINA_ID_MIN_LENGTH) {
+    } else if (len === CHINA_ID_MIN_LENGTH) {
       idCard = this.convert15To18(idCard) || ''
     }
     return idCard.substring(6, 14)
@@ -398,9 +391,9 @@ export default class IdCardUtil {
    */
   public static getYearByIdCard(idCard: string) {
     const len = idCard.length
-    if (len < this.CHINA_ID_MIN_LENGTH) {
+    if (len < CHINA_ID_MIN_LENGTH) {
       return null
-    } else if (len === this.CHINA_ID_MIN_LENGTH) {
+    } else if (len === CHINA_ID_MIN_LENGTH) {
       idCard = this.convert15To18(idCard) || ''
     }
     return idCard.substring(6, 10)
@@ -414,9 +407,9 @@ export default class IdCardUtil {
    */
   public static getMonthByIdCard(idCard: string) {
     const len = idCard.length
-    if (len < this.CHINA_ID_MIN_LENGTH) {
+    if (len < CHINA_ID_MIN_LENGTH) {
       return null
-    } else if (len === this.CHINA_ID_MIN_LENGTH) {
+    } else if (len === CHINA_ID_MIN_LENGTH) {
       idCard = this.convert15To18(idCard) || ''
     }
     return idCard.substring(10, 12)
@@ -430,9 +423,9 @@ export default class IdCardUtil {
    */
   public static getDayByIdCard(idCard: string): string | null {
     const len = idCard.length
-    if (len < this.CHINA_ID_MIN_LENGTH) {
+    if (len < CHINA_ID_MIN_LENGTH) {
       return null
-    } else if (len === this.CHINA_ID_MIN_LENGTH) {
+    } else if (len === CHINA_ID_MIN_LENGTH) {
       idCard = this.convert15To18(idCard) || ''
     }
     return idCard.substring(12, 14)
@@ -449,11 +442,11 @@ export default class IdCardUtil {
       return null
     }
     const len = idCard.length
-    if (len < this.CHINA_ID_MIN_LENGTH) {
+    if (len < CHINA_ID_MIN_LENGTH) {
       return null
     }
 
-    if (len === this.CHINA_ID_MIN_LENGTH) {
+    if (len === CHINA_ID_MIN_LENGTH) {
       idCard = this.convert15To18(idCard) || ''
     }
     const sCardChar = Number(idCard.charAt(16))
@@ -468,9 +461,9 @@ export default class IdCardUtil {
    */
   public static getProvinceByIdCard(idCard: string) {
     const len = idCard.length
-    if (len === this.CHINA_ID_MIN_LENGTH || len === this.CHINA_ID_MAX_LENGTH) {
+    if (len === CHINA_ID_MIN_LENGTH || len === CHINA_ID_MAX_LENGTH) {
       const sProvinNum = idCard.substring(0, 2)
-      return this.CITY_CODES.get(sProvinNum)
+      return CITY_CODES.get(sProvinNum)
     }
     return null
   }
@@ -483,7 +476,7 @@ export default class IdCardUtil {
    */
   public static getCityCodeByIdCard(idCard: string) {
     const len = idCard.length
-    if (len === this.CHINA_ID_MIN_LENGTH || len === this.CHINA_ID_MAX_LENGTH) {
+    if (len === CHINA_ID_MIN_LENGTH || len === CHINA_ID_MAX_LENGTH) {
       return idCard.substring(0, 5)
     }
     return null
