@@ -1,7 +1,6 @@
 export * from './extra'
 export * from './dom'
 export * from './file'
-export * from './cipher'
 export * from './uuid'
 export * from './env'
 export * from './asyncPool'
