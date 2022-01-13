@@ -8,7 +8,7 @@ export interface CSSProperties
  * CSSProperties 的提示工具
  * @param style
  */
-const createStyleObject = (style?: CSSProperties) => {
+const createStyleObject = (style?: CSSProperties): any => {
   return style || {}
 }
 
