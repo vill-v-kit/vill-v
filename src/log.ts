@@ -40,17 +40,17 @@ export class GroupLog {
   }
 
   public log(...args: any[]) {
-    this.console?.log(args)
+    this.console?.log(...args)
     return this
   }
 
   public warn(...args: any[]) {
-    this.console?.warn(args)
+    this.console?.warn(...args)
     return this
   }
 
   public error(...args: any[]) {
-    this.console?.error(args)
+    this.console?.error(...args)
     return this
   }
 
@@ -65,7 +65,7 @@ export class GroupLog {
   }
 
   public info(...args: any[]) {
-    this.console?.info(args)
+    this.console?.info(...args)
     return this
   }
 
