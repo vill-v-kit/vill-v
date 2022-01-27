@@ -21,18 +21,32 @@ export const age = (birthday: Dayjs, dateToCompare = dayjs()): number => {
 }
 
 /**
- * 转换为moment工具
+ * 转换为dayjs工具
  * @param value
  * @param format
  */
 export const toDayJs = (value: ConfigType, format?: string): Dayjs => dayjs(value, format)
 
 /**
+ * 检查dayJs是否合法，并返回错误占位值
+ * @param value
+ * @param error
+ */
+export const checkDateValue = (value: ConfigType, error?: string) =>
+  toDayJs(value).isValid() ? value : error || ''
+
+/**
  * 格式化时间字符串
  * @param value
  * @param format
+ * @param error 是否验证时间合法，验证则填写验证失败返回值
  */
-export const parseDateString = (value: ConfigType, format: string) => toDayJs(value).format(format)
+export const parseDateString = (value: ConfigType, format: string, error?: any) => {
+  if (error && !checkDateValue(value)) {
+    return error || ''
+  }
+  return toDayJs(value).format(format)
+}
 
 /**
  * 格式化时间
