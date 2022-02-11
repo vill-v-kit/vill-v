@@ -83,6 +83,37 @@ export function downloadByData({
 }
 
 /**
+ * 通过请求的方式下载
+ * @param url
+ * @param target
+ * @param fileName
+ */
+export function downloadByUrlRequest({
+  url,
+  target = '_blank',
+  fileName,
+}: {
+  url: string
+  target?: TargetContext
+  fileName?: string
+}) {
+  const xhr = new XMLHttpRequest()
+  xhr.open('get', url, true)
+  xhr.responseType = 'blob'
+  xhr.onload = () => {
+    if (xhr.status !== 200) {
+      return
+    }
+    downloadByData({
+      data: xhr.response,
+      target,
+      filename: fileName || url.substring(url.lastIndexOf('/') + 1, url.length),
+    })
+  }
+  xhr.send()
+}
+
+/**
  * 根据文件地址下载文件
  * @param url
  * @param target
