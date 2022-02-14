@@ -32,8 +32,13 @@ export const toDayJs = (value: ConfigType, format?: string): Dayjs => dayjs(valu
  * @param value
  * @param error
  */
-export const checkDateValue = (value: ConfigType, error?: string) =>
-  toDayJs(value).isValid() ? value : error || ''
+export const checkDateValue = (value: ConfigType, error?: string) => {
+  const _error = error || ''
+  if (!value) {
+    return _error
+  }
+  return toDayJs(value).isValid() ? value : _error
+}
 
 /**
  * 格式化时间字符串
