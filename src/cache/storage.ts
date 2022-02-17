@@ -1,28 +1,28 @@
 import { forceJsonParse } from '../json'
 import { isNil, isString } from 'lodash-es'
 
-export type CacheStoreType = typeof localStorage | typeof sessionStorage
+export type StorageCacheStoreType = typeof localStorage | typeof sessionStorage
 
-export enum CacheStoreEnum {
+export enum StorageCacheStoreEnum {
   Local = 1,
   Session = 1 << 1,
 }
 
-const CacheStoreEnumObj = {
-  [CacheStoreEnum.Local]: localStorage,
-  [CacheStoreEnum.Session]: sessionStorage,
+const StorageCacheStoreEnumObj = {
+  [StorageCacheStoreEnum.Local]: localStorage,
+  [StorageCacheStoreEnum.Session]: sessionStorage,
 }
 
 /**
  * Storage缓存商店
  */
 export class StorageCacheStore<T = any> {
-  private readonly storage: CacheStoreType
+  private readonly storage: StorageCacheStoreType
   private readonly json: boolean
   private readonly key: string
 
-  constructor(storage: CacheStoreEnum, key: string, json?: boolean) {
-    this.storage = CacheStoreEnumObj[storage]
+  constructor(storage: StorageCacheStoreEnum, key: string, json?: boolean) {
+    this.storage = StorageCacheStoreEnumObj[storage]
     this.json = json || false
     this.key = key
   }
