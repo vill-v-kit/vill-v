@@ -1,4 +1,5 @@
 import { isNil } from 'lodash-es'
+import { forceJsonParse } from '../json'
 
 export type StorageCacheStoreType = typeof localStorage | typeof sessionStorage
 
@@ -21,6 +22,11 @@ const NormalStorageCacheStoreParse = {
   get: (value) => value,
   set: (value) => value,
 }
+
+const JSONStorageCacheStoreParse = {
+  get: (value) => forceJsonParse(value, 'null'),
+  set: (value) => JSON.stringify(value),
+}
 /**
  * Storage缓存商店
  */
@@ -29,10 +35,24 @@ export class StorageCacheStore<T = any> {
   private readonly parse: StorageCacheStoreParseType<T>
   private readonly key: string
 
-  constructor(storage: StorageCacheStoreEnum, key: string, parse?: StorageCacheStoreParseType<T>) {
+  constructor(
+    storage: StorageCacheStoreEnum,
+    key: string,
+    parse?: StorageCacheStoreParseType<T> | true
+  ) {
     this.storage = StorageCacheStoreEnumObj[storage]
-    this.parse = parse || NormalStorageCacheStoreParse
+    this.parse = this.changeParse(parse)
     this.key = key
+  }
+
+  changeParse(parse?: StorageCacheStoreParseType<T> | true) {
+    if (!parse) {
+      return NormalStorageCacheStoreParse
+    }
+    if (parse === true) {
+      return JSONStorageCacheStoreParse
+    }
+    return parse
   }
 
   get(): T | null {
