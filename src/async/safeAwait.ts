@@ -14,8 +14,8 @@ async function safeAwaitAny(fn: () => Promise<any>) {
  * 用于阻止await报错，影响后续流程
  * @param arg
  */
-export function safeAwait(arg: Promise<any>)
-export function safeAwait(arg: () => Promise<any>)
+export function safeAwait(arg: Promise<any>): Promise<any>
+export function safeAwait(arg: () => Promise<any>): Promise<any>
 export function safeAwait(arg: any) {
   if (arg instanceof Promise) {
     return safeAwaitSingle(arg)
