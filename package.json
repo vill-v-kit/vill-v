@@ -1,6 +1,6 @@
 {
   "name": "@whitekite/utils",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "files": [
     "dist"
   ],
@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "csstype": "^3.0.10",
-    "dayjs": "^1.10.7",
+    "dayjs": "^1.10.8",
     "lodash-es": "^4.17.21"
   },
   "devDependencies": {

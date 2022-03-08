@@ -13,7 +13,7 @@ dayjs.extend(isLeapYearPlugin)
  * @param birthday
  * @param dateToCompare
  */
-export const age = (birthday: Dayjs, dateToCompare = dayjs()): number => {
+export const age = (birthday: Dayjs, dateToCompare: Dayjs = dayjs()): number => {
   if (!birthday) {
     return 0
   }
@@ -32,7 +32,7 @@ export const toDayJs = (value: ConfigType, format?: string): Dayjs => dayjs(valu
  * @param value
  * @param error
  */
-export const checkDateValue = (value: ConfigType, error?: string) => {
+export const checkDateValue = (value: ConfigType, error?: string): ConfigType => {
   const _error = error || ''
   if (!value) {
     return _error
