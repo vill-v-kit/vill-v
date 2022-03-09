@@ -16,7 +16,7 @@ export class DelayAsyncQueue {
   }
 
   private activeIndex: number
-  private result: { state: AsyncQueueSate }[]
+  private readonly result: { state?: AsyncQueueSate }[]
 
   constructor() {
     this.result = []
@@ -77,6 +77,7 @@ export class DelayAsyncQueue {
    */
   private updateResult(state: AsyncQueueSate) {
     this.activeIndex++
+    this.result[this.activeIndex] ||= {}
     this.result[this.activeIndex].state = state
   }
 
