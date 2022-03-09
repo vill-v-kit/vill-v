@@ -88,7 +88,8 @@ export class DelayAsyncQueue {
   private async _consume() {
     return new Promise<void>((resolve, reject) => {
       if (this.isEmpty()) {
-        return Promise.resolve()
+        resolve()
+        return
       }
       this.queue.reduce((prev, curr) => {
         return prev
