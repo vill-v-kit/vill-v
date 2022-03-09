@@ -67,7 +67,7 @@ export class DelayAsyncQueue {
    * 是否为空
    */
   public isEmpty() {
-    return !this.isNotEmpty
+    return !this.isNotEmpty()
   }
 
   /**
@@ -85,7 +85,7 @@ export class DelayAsyncQueue {
    * 消费内部
    * @private
    */
-  private async _consume() {
+  private _consume() {
     return new Promise<void>((resolve, reject) => {
       if (this.isEmpty()) {
         resolve()
@@ -95,6 +95,7 @@ export class DelayAsyncQueue {
         return prev
           .then((prevRes) => {
             if (this.result[this.activeIndex]?.state === this.promiseState.rejected) {
+              resolve()
               return
             }
 
@@ -116,7 +117,7 @@ export class DelayAsyncQueue {
   /**
    * 消费
    */
-  public async consume() {
-    return this._consume().finally(() => this.clear())
+  public consume() {
+    return this._consume()
   }
 }

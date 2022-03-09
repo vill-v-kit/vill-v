@@ -42,7 +42,7 @@ export class AsyncPool<T = any> {
    * 是否为空
    */
   public isEmpty() {
-    return !this.isNotEmpty
+    return !this.isNotEmpty()
   }
 
   /**
