@@ -7,5 +7,5 @@ export default defineConfig({
   dts: true,
   format: ['cjs', 'esm'],
   platform: 'browser',
-  target: 'esnext',
+  target: 'es2015',
 })
