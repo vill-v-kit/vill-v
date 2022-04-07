@@ -158,3 +158,13 @@ export function downloadByUrl({
   openWindow(url, { target })
   return true
 }
+
+/**
+ * 简易的将文字转为文件下载
+ * @param text
+ * @param filename
+ */
+export function simpleDownloadTextFile(text: string, filename: string) {
+  const file = new File([text], filename)
+  downloadByData({ data: file, filename })
+}
