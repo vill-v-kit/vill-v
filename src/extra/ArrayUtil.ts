@@ -1,4 +1,4 @@
-import { isEmpty } from 'lodash-es'
+import isEmpty from 'lodash.isempty'
 
 /**
  * 是否数组每项都符合条件

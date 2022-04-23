@@ -1,4 +1,6 @@
-import { isArray, isNil, isString } from 'lodash-es'
+import isArray from 'lodash.isarray'
+import isNil from 'lodash.isnil'
+import isString from 'lodash.isstring'
 import { isAllItemVerified } from './extra'
 export type Nullable<T> = T | null
 

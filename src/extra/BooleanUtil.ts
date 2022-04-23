@@ -2,7 +2,10 @@
  * 切换原始布尔值
  * @param value
  */
-import { isBoolean, isNumber, isString } from 'lodash-es'
+
+import isBoolean from 'lodash.isboolean'
+import isNumber from 'lodash.isnumber'
+import isString from 'lodash.isstring'
 
 export const toggleBoolean = (value: boolean) => !value
 

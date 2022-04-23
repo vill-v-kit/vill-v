@@ -1,6 +1,7 @@
 import { isMatchRegex, NUMBERS_PATTERN } from './Pattern'
 import { hideStringWithStartAndEnd, isBlankString, isStringEquals } from './StrUtil'
-import { isEmpty, toArray } from 'lodash-es'
+import isEmpty from 'lodash.isempty'
+import toArray from 'lodash.toarray'
 import { isBirthday } from './BirthdayUtil'
 import { age, parseDate, parseDateString, toDayJs, year } from './DateUtil'
 

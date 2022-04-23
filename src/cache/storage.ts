@@ -1,4 +1,4 @@
-import { isNil } from 'lodash-es'
+import isNil from 'lodash.isnil'
 import { forceJsonParse } from '../json'
 
 export type StorageCacheStoreType = typeof localStorage | typeof sessionStorage

@@ -1,5 +1,7 @@
-import { isArray, isString, isObject, has } from 'lodash-es'
-
+import isArray from 'lodash.isarray'
+import isObject from 'lodash.isobject'
+import isString from 'lodash.isstring'
+import has from 'lodash.has'
 /**
  * classnames动态样式class组装 <br/>
  * {@link https://github.com/vueComponent/ant-design-vue/blob/next/components/_util/classNames.ts}

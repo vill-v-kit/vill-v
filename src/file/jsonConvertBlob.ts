@@ -1,5 +1,5 @@
 import { isBlankString } from '../extra'
-import { isString } from 'lodash-es'
+import isString from 'lodash.isstring'
 
 /**
  * blob转json

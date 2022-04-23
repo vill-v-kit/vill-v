@@ -1,5 +1,7 @@
-import { isString, isNil, toLower, isEmpty } from 'lodash-es'
-
+import isString from 'lodash.isstring'
+import isNil from 'lodash.isnil'
+import toLower from 'lodash.tolower'
+import isEmpty from 'lodash.isempty'
 /**
  * 是否空白符<br>
  * 空白符包括空格、制表符、全角空格和不间断空格<br>

@@ -1,4 +1,4 @@
-import { isEmpty } from 'lodash-es'
+import isEmpty from 'lodash.isempty'
 import { canIUse } from '../env'
 
 type DefaultCharSet = 'utf-8' | 'utf8' | 'UTF-8' | 'gbk' | 'GBK' | 'GB2312' | string
