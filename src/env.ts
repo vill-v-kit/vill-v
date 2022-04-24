@@ -1,4 +1,3 @@
-import isArray from 'lodash.isarray'
 import isNil from 'lodash.isnil'
 import isString from 'lodash.isstring'
 import { isAllItemVerified } from './extra'
@@ -41,7 +40,7 @@ export function canIUse(api: keyof typeof window | (keyof typeof window)[]) {
   if (isString(api) && window[api]) {
     return true
   }
-  if (isArray(api)) {
+  if (Array.isArray(api)) {
     return isAllItemVerified(api, (item) => isString(item) && window[item])
   }
   return false

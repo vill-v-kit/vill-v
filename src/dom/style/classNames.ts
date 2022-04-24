@@ -1,4 +1,3 @@
-import isArray from 'lodash.isarray'
 import isObject from 'lodash.isobject'
 import isString from 'lodash.isstring'
 import has from 'lodash.has'
@@ -14,7 +13,7 @@ function classNames(...args: any[]) {
     if (!value) continue
     if (isString(value)) {
       classes.push(value)
-    } else if (isArray(value)) {
+    } else if (Array.isArray(value)) {
       for (let i = 0; i < value.length; i++) {
         const inner = classNames(value[i])
         if (inner) {

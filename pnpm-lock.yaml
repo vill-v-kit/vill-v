@@ -1,9 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@types/lodash-es': ^4.17.4
   '@types/lodash.has': ^4.5.7
-  '@types/lodash.isarray': ^4.0.7
   '@types/lodash.isboolean': ^3.0.7
   '@types/lodash.isempty': ^4.4.7
   '@types/lodash.isnil': ^4.0.7
@@ -23,9 +21,7 @@ specifiers:
   eslint-define-config: ^1.0.8
   eslint-plugin-prettier: ^3.3.1
   eslint-plugin-vue: ^7.0.0
-  lodash-es: ^4.17.21
   lodash.has: ^4.5.2
-  lodash.isarray: ^4.0.0
   lodash.isboolean: ^3.0.3
   lodash.isempty: ^4.4.0
   lodash.isnil: ^4.0.0
@@ -42,9 +38,7 @@ specifiers:
 dependencies:
   csstype: 3.0.10
   dayjs: 1.11.1
-  lodash-es: 4.17.21
   lodash.has: 4.5.2
-  lodash.isarray: 4.0.0
   lodash.isboolean: 3.0.3
   lodash.isempty: 4.4.0
   lodash.isnil: 4.0.0
@@ -55,9 +49,7 @@ dependencies:
   lodash.tolower: 4.1.2
 
 devDependencies:
-  '@types/lodash-es': 4.17.5
   '@types/lodash.has': 4.5.7
-  '@types/lodash.isarray': 4.0.7
   '@types/lodash.isboolean': 3.0.7
   '@types/lodash.isempty': 4.4.7
   '@types/lodash.isnil': 4.0.7
@@ -134,20 +126,8 @@ packages:
     resolution: {integrity: sha512-qcUXuemtEu+E5wZSJHNxUXeCZhAfXKQ41D+duX+VYPde7xyEVZci+/oXKJL13tnRs9lR2pr4fod59GT6/X1/yQ==}
     dev: true
 
-  /@types/lodash-es/4.17.5:
-    resolution: {integrity: sha512-SHBoI8/0aoMQWAgUHMQ599VM6ZiSKg8sh/0cFqqlQQMyY9uEplc0ULU5yQNzcvdR4ZKa0ey8+vFmahuRbOCT1A==}
-    dependencies:
-      '@types/lodash': 4.14.178
-    dev: true
-
   /@types/lodash.has/4.5.7:
     resolution: {integrity: sha512-nfbAzRbsZBdzSAkL9iiLy4SQk89uuFcXBFwZ7pf6oZhBgPvNys8BY5Twp/w8XvZKGt1o6cAa85wX4QhqO3uQ7A==}
-    dependencies:
-      '@types/lodash': 4.14.178
-    dev: true
-
-  /@types/lodash.isarray/4.0.7:
-    resolution: {integrity: sha512-j4LGkaWRU3siKODqnY9xffwoJgnpp4TYsfCxDhRSZwIbX4qD+TkH483r6+mqGkgqlnP08NhjQYhDXPLWgA2uxQ==}
     dependencies:
       '@types/lodash': 4.14.178
     dev: true
@@ -1426,17 +1406,8 @@ packages:
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dev: true
 
-  /lodash-es/4.17.21:
-    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
-    dev: false
-
   /lodash.has/4.5.2:
     resolution: {integrity: sha1-0Z9NwQlQWMzL4rDN9O4P5Ko3yGI=}
-    dev: false
-
-  /lodash.isarray/4.0.0:
-    resolution: {integrity: sha1-KspJayjEym1yZxUxNZDALm6jRAM=}
-    deprecated: This package is deprecated. Use Array.isArray.
     dev: false
 
   /lodash.isboolean/3.0.3:
