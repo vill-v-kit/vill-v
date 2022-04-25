@@ -1,5 +1,5 @@
 {
-  "name": "vill-v",
+  "name": "@vill-v/regexp-match",
   "version": "0.0.1",
   "files": [
     "dist"
@@ -22,13 +22,7 @@
       "types": "./dist/index.d.ts"
     }
   },
-  "dependencies": {
-    "@vill-v/vanilla": "workspace:*",
-    "@vill-v/ts": "workspace:*",
-    "@vill-v/regexp-match": "workspace:*",
-    "@vill-v/date": "workspace:*",
-    "@vill-v/broswer": "workspace:*",
-    "@vill-v/async": "workspace:*",
-    "@vill-v/idcard-cn": "workspace:*"
+  "scripts": {
+    "build": "tsup-node"
   }
 }

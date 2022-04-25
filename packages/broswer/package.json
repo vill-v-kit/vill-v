@@ -1,5 +1,5 @@
 {
-  "name": "vill-v",
+  "name": "@vill-v/broswer",
   "version": "0.0.1",
   "files": [
     "dist"
@@ -22,13 +22,12 @@
       "types": "./dist/index.d.ts"
     }
   },
+  "scripts": {
+    "build": "tsup-node"
+  },
   "dependencies": {
     "@vill-v/vanilla": "workspace:*",
     "@vill-v/ts": "workspace:*",
-    "@vill-v/regexp-match": "workspace:*",
-    "@vill-v/date": "workspace:*",
-    "@vill-v/broswer": "workspace:*",
-    "@vill-v/async": "workspace:*",
-    "@vill-v/idcard-cn": "workspace:*"
+    "csstype": "^3.0.11"
   }
 }

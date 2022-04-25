@@ -5,6 +5,7 @@ dist
 .cache
 
 packages/dist
+packages/*/.turbo
 
 .local
 # local env files
