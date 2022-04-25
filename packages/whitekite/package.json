@@ -1,7 +1,39 @@
 {
   "name": "@whitekite/utils",
-  "version": "0.4.0",
+  "version": "0.4.1",
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "whitekite",
+    "email": "1075790909@qq.com"
+  },
+  "sideEffects": false,
+  "homepage": "https://gitee.com/white-kite/seele-utils/blob/master/README.md",
+  "repository": "https://gitee.com/white-kite/seele-utils/blob/master",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup-node",
+    "release": "standard-version"
+  },
   "dependencies": {
     "vill-v": "workspace:*"
+  },
+  "standard-version": {
+    "skip": {
+      "commit": true,
+      "tag": true,
+      "changelog": true
+    }
   }
 }
