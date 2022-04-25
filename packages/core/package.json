@@ -1,0 +1,38 @@
+{
+  "name": "@whitekite/utils",
+  "version": "0.3.9",
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "whitekite",
+    "email": "1075790909@qq.com"
+  },
+  "sideEffects": false,
+  "homepage": "https://gitee.com/white-kite/seele-utils/blob/master/README.md",
+  "repository": "https://gitee.com/white-kite/seele-utils/blob/master",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "dependencies": {
+    "csstype": "^3.0.10",
+    "dayjs": "^1.11.1",
+    "lodash.isnil": "^4.0.0",
+    "lodash.isempty": "^4.4.0",
+    "lodash.isstring": "^4.0.1",
+    "lodash.isobject": "^3.0.2",
+    "lodash.has": "^4.5.2",
+    "lodash.isboolean": "^3.0.3",
+    "lodash.isnumber": "^3.0.3",
+    "lodash.toarray": "^4.4.0",
+    "lodash.tolower": "^4.1.2"
+  }
+}

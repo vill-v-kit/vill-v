@@ -4,6 +4,7 @@ dist
 .npmrc
 .cache
 
+packages/dist
 
 .local
 # local env files
