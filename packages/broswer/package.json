@@ -1,6 +1,6 @@
 {
   "name": "@vill-v/broswer",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "files": [
     "dist"
   ],
@@ -23,11 +23,19 @@
     }
   },
   "scripts": {
-    "build": "tsup-node"
+    "build": "tsup-node",
+    "release": "standard-version"
   },
   "dependencies": {
     "@vill-v/vanilla": "workspace:*",
     "@vill-v/ts": "workspace:*",
     "csstype": "^3.0.11"
+  },
+  "standard-version": {
+    "skip": {
+      "commit": true,
+      "tag": true,
+      "changelog": true
+    }
   }
 }

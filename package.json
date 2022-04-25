@@ -5,7 +5,8 @@
   "homepage": "https://gitee.com/white-kite/seele-utils/blob/master/README.md",
   "repository": "https://gitee.com/white-kite/seele-utils/blob/master",
   "scripts": {
-    "build": "turbo run build"
+    "build": "turbo run build",
+    "release": "turbo run release"
   },
   "devDependencies": {
     "@types/node": "^17.0.21",
@@ -21,6 +22,7 @@
     "typescript": "^4.6.3",
     "vue": "^3.2.33",
     "tsup": "^5.12.6",
-    "turbo": "^1.2.5"
+    "turbo": "^1.2.5",
+    "standard-version": "^9.3.2"
   }
 }

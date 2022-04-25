@@ -1,6 +1,6 @@
 {
   "name": "vill-v",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "files": [
     "dist"
   ],
@@ -22,6 +22,10 @@
       "types": "./dist/index.d.ts"
     }
   },
+  "scripts": {
+    "build": "tsup-node",
+    "release": "standard-version"
+  },
   "dependencies": {
     "@vill-v/vanilla": "workspace:*",
     "@vill-v/ts": "workspace:*",
@@ -30,5 +34,12 @@
     "@vill-v/broswer": "workspace:*",
     "@vill-v/async": "workspace:*",
     "@vill-v/idcard-cn": "workspace:*"
+  },
+  "standard-version": {
+    "skip": {
+      "commit": true,
+      "tag": true,
+      "changelog": true
+    }
   }
 }

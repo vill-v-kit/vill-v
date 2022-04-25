@@ -109,7 +109,7 @@ const TW_FIRST_CODE = createTwFirstCode()
 /**
  * 身份证工具
  */
-export default class IdCardUtil {
+export class IdCardUtil {
   /**
    * 将15位身份证号码转换为18位
    *

@@ -6,9 +6,9 @@
 
 开发中的一些总结
 
-> 更换moment.js为dayjs
-> 
-> 在0.1.8版本之后优化打包体积
+> 0.3.10 开始，只是 [vill-v](https://www.npmjs.com/package/vill-v)的别名
+
+_只是个人项目，作为开发途中的经验总结，如有相似的需求，推荐copy或阅读源码，不建议将该包作为实际生产使用_
 
 <div>
 <a href="https://gitee.com/white-kite/seele-utils/wikis" style="font-size: 20px;font-weight: bold;">文档</a>

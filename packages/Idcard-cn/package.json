@@ -1,6 +1,6 @@
 {
   "name": "@vill-v/idcard-cn",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "files": [
     "dist"
   ],
@@ -23,11 +23,19 @@
     }
   },
   "scripts": {
-    "build": "tsup-node"
+    "build": "tsup-node",
+    "release": "standard-version"
   },
   "dependencies": {
     "@vill-v/regexp-match": "workspace:*",
     "@vill-v/vanilla": "workspace:*",
     "@vill-v/date": "workspace:*"
+  },
+  "standard-version": {
+    "skip": {
+      "commit": true,
+      "tag": true,
+      "changelog": true
+    }
   }
 }
