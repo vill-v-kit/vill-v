@@ -1,6 +1,7 @@
 {
   "name": "@whitekite/utils",
-  "version": "0.4.1",
+  "version": "0.4.2",
+  "description": "白鸢个人工具包",
   "files": [
     "dist"
   ],
@@ -23,17 +24,9 @@
     }
   },
   "scripts": {
-    "build": "tsup-node",
-    "release": "standard-version"
+    "build": "tsup-node"
   },
   "dependencies": {
     "vill-v": "workspace:*"
-  },
-  "standard-version": {
-    "skip": {
-      "commit": true,
-      "tag": true,
-      "changelog": true
-    }
   }
 }

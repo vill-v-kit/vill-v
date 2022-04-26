@@ -1,6 +1,7 @@
 {
   "name": "@vill-v/ts",
-  "version": "0.0.2",
+  "version": "0.0.3",
+  "description": "开发中总结的 typescript 扩展",
   "files": [
     "dist"
   ],
@@ -23,14 +24,6 @@
     }
   },
   "scripts": {
-    "build": "tsup-node",
-    "release": "standard-version"
-  },
-  "standard-version": {
-    "skip": {
-      "commit": true,
-      "tag": true,
-      "changelog": true
-    }
+    "build": "tsup-node"
   }
 }

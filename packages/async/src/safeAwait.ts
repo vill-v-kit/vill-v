@@ -1,3 +1,5 @@
+import { isFunction } from '@vill-v/vanilla'
+
 async function safeAwaitSingle(fn: Promise<any>) {
   try {
     await fn
@@ -20,7 +22,7 @@ export function safeAwait(arg: any) {
   if (arg instanceof Promise) {
     return safeAwaitSingle(arg)
   }
-  if (typeof arg === 'function') {
+  if (isFunction(arg)) {
     return safeAwaitAny(arg)
   }
   throw new Error('请传入一个Promise或者一个返回Promise的方法')
@@ -40,6 +42,6 @@ export function safeAwait(arg: any) {
  */
 export function safeAwaitFn(fn: (...args: any[]) => Promise<any>) {
   return (...args: any[]) => {
-    safeAwait(fn(...args))
+    safeAwaitSingle(fn(...args))
   }
 }

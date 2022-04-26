@@ -1,6 +1,7 @@
 {
   "name": "vill-v",
-  "version": "0.0.2",
+  "version": "0.0.3",
+  "description": "开发中对于技术的总结，归纳",
   "files": [
     "dist"
   ],
@@ -23,8 +24,7 @@
     }
   },
   "scripts": {
-    "build": "tsup-node",
-    "release": "standard-version"
+    "build": "tsup-node"
   },
   "dependencies": {
     "@vill-v/vanilla": "workspace:*",
@@ -34,12 +34,5 @@
     "@vill-v/broswer": "workspace:*",
     "@vill-v/async": "workspace:*",
     "@vill-v/idcard-cn": "workspace:*"
-  },
-  "standard-version": {
-    "skip": {
-      "commit": true,
-      "tag": true,
-      "changelog": true
-    }
   }
 }

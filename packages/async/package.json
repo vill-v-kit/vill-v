@@ -1,6 +1,7 @@
 {
   "name": "@vill-v/async",
-  "version": "0.0.2",
+  "version": "0.0.3",
+  "description": "开发中围绕异步行为的技术总结",
   "files": [
     "dist"
   ],
@@ -23,14 +24,9 @@
     }
   },
   "scripts": {
-    "build": "tsup-node",
-    "release": "standard-version"
+    "build": "tsup-node"
   },
-  "standard-version": {
-    "skip": {
-      "commit": true,
-      "tag": true,
-      "changelog": true
-    }
+  "dependencies": {
+    "@vill-v/vanilla": "workspace:*"
   }
 }

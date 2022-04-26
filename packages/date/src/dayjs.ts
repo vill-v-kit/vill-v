@@ -1,13 +1,14 @@
-import dayjs, { ConfigType, Dayjs } from 'dayjs'
-import customParseFormat from 'dayjs/plugin/customParseFormat'
-import duration from 'dayjs/plugin/duration'
-import arraySupport from 'dayjs/plugin/arraySupport'
-import isLeapYearPlugin from 'dayjs/plugin/isLeapYear'
+import dayjs, { ConfigType, Dayjs } from 'dayjs/esm'
+import customParseFormat from 'dayjs/esm/plugin/customParseFormat'
+import duration from 'dayjs/esm/plugin/duration'
+import arraySupport from 'dayjs/esm/plugin/arraySupport'
+import isLeapYearPlugin from 'dayjs/esm/plugin/isLeapYear'
 
 dayjs.extend(customParseFormat)
 dayjs.extend(duration)
 dayjs.extend(arraySupport)
 dayjs.extend(isLeapYearPlugin)
+
 /**
  * 计算年龄
  * @param birthday
@@ -22,6 +23,7 @@ export const age = (birthday: Dayjs, dateToCompare: Dayjs = dayjs()): number => 
 
 /**
  * 转换为dayjs工具
+ * 作用只是帮助项目不用显示安装dayJS
  * @param value
  * @param format
  */
@@ -37,7 +39,7 @@ export const checkDateValue = (value: ConfigType, error?: string): ConfigType =>
   if (!value) {
     return _error
   }
-  return toDayJs(value).isValid() ? value : _error
+  return dayjs(value).isValid() ? value : _error
 }
 
 /**
@@ -50,7 +52,7 @@ export const parseDateString = (value: ConfigType, format: string, error?: any) 
   if (error && !checkDateValue(value)) {
     return error || ''
   }
-  return toDayJs(value).format(format)
+  return dayjs(value).format(format)
 }
 
 /**
@@ -58,10 +60,10 @@ export const parseDateString = (value: ConfigType, format: string, error?: any) 
  * @param value
  * @param format
  */
-export const parseDate = (value: ConfigType, format: string) => toDayJs(value, format).toDate()
+export const parseDate = (value: ConfigType, format: string) => dayjs(value, format).toDate()
 
 /**
  * 是否是闰年
  * @param year
  */
-export const isLeapYear = (year: number): boolean => toDayJs([year]).isLeapYear()
+export const isLeapYear = (year: number): boolean => dayjs([year]).isLeapYear()

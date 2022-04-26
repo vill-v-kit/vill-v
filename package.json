@@ -1,12 +1,12 @@
 {
-  "name": "@whitekite/utils-memo",
-  "version": "0.3.9",
+  "name": "@vill-v/memo",
+  "version": "0.0.3",
   "private": true,
   "homepage": "https://gitee.com/white-kite/seele-utils/blob/master/README.md",
   "repository": "https://gitee.com/white-kite/seele-utils/blob/master",
   "scripts": {
     "build": "turbo run build",
-    "release": "turbo run release"
+    "release": "bumpp packages/*/package.json"
   },
   "devDependencies": {
     "@types/node": "^17.0.21",
@@ -23,6 +23,6 @@
     "vue": "^3.2.33",
     "tsup": "^5.12.6",
     "turbo": "^1.2.5",
-    "standard-version": "^9.3.2"
+    "bumpp": "^7.1.1"
   }
 }
