@@ -1,6 +1,6 @@
 {
   "name": "@vill-v/date",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "总结了开发中遇到的时间业务",
   "files": [
     "dist"

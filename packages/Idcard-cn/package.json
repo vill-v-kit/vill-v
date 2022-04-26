@@ -1,6 +1,6 @@
 {
   "name": "@vill-v/idcard-cn",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "一个身份证（中华人民共和国）验证器",
   "files": [
     "dist"
