@@ -1,6 +1,6 @@
 {
   "name": "@vill-v/vanilla",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "开发中对于ecmascript 或者说对 javascript本身的总结",
   "files": [
     "dist"

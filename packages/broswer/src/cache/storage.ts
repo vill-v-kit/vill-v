@@ -1,18 +1,6 @@
 import { isNil } from '@vill-v/vanilla'
 import { forceJsonParse } from '@vill-v/vanilla'
 
-export type StorageCacheStoreType = typeof localStorage | typeof sessionStorage
-
-export enum StorageCacheStoreEnum {
-  Local = 1,
-  Session = 1 << 1,
-}
-
-const StorageCacheStoreEnumObj = {
-  [StorageCacheStoreEnum.Local]: localStorage,
-  [StorageCacheStoreEnum.Session]: sessionStorage,
-}
-
 export interface StorageCacheStoreParseType<T = any> {
   get: (value: string) => T
   set: (value: T) => string
@@ -27,25 +15,31 @@ const JSONStorageCacheStoreParse = {
   get: (value) => forceJsonParse(value, 'null'),
   set: (value) => JSON.stringify(value),
 }
+
 /**
  * Storage缓存商店
+ * 提供自动json数据处理功能
  */
-export class StorageCacheStore<T = any> {
-  private readonly storage: StorageCacheStoreType
+export class StorageCache<T = any> {
+  /**
+   * Storage实例
+   * @private
+   */
+  private readonly storage: Storage
+  /**
+   * 解析器
+   * @private
+   */
   private readonly parse: StorageCacheStoreParseType<T>
   private readonly key: string
 
-  constructor(
-    storage: StorageCacheStoreEnum,
-    key: string,
-    parse?: StorageCacheStoreParseType<T> | true
-  ) {
-    this.storage = StorageCacheStoreEnumObj[storage]
-    this.parse = this.changeParse(parse)
+  constructor(storage: Storage, key: string, parse?: StorageCacheStoreParseType<T> | true) {
+    this.storage = storage
+    this.parse = this._changeParse(parse)
     this.key = key
   }
 
-  changeParse(parse?: StorageCacheStoreParseType<T> | true) {
+  private _changeParse(parse?: StorageCacheStoreParseType<T> | true) {
     if (!parse) {
       return NormalStorageCacheStoreParse
     }
@@ -55,8 +49,35 @@ export class StorageCacheStore<T = any> {
     return parse
   }
 
+  /**
+   * 是否存在该缓存
+   */
+  has() {
+    const value = this.rawGet()
+    return !isNil(value)
+  }
+
+  /**
+   * 获取原始值
+   */
+  rawGet() {
+    return this.storage.getItem(this.key)
+  }
+
+  /**
+   * 设置原始值
+   * @param value
+   */
+  rawSet(value?: string | null) {
+    if (isNil(value)) {
+      this.remove()
+      return
+    }
+    this.storage.setItem(this.key, value)
+  }
+
   get(): T | null {
-    const value = this.storage.getItem(this.key)
+    const value = this.rawGet()
     if (!value) {
       return null
     }
@@ -65,11 +86,13 @@ export class StorageCacheStore<T = any> {
 
   set(value?: T | null) {
     if (isNil(value)) {
+      this.remove()
       return
     }
+
     const setValue = this.parse.set(value)
 
-    this.storage.setItem(this.key, setValue as any)
+    this.rawSet(setValue)
   }
 
   get value(): T | null {
@@ -80,11 +103,24 @@ export class StorageCacheStore<T = any> {
     this.set(value)
   }
 
+  get rawValue() {
+    return this.rawGet()
+  }
+
+  set rawValue(value: string | null | undefined) {
+    this.rawSet(value)
+  }
+
   remove() {
     this.storage.removeItem(this.key)
   }
 
-  eq(value: any) {
-    return this.value === value
+  /**
+   * 值是否相等
+   * 暂时只支持原值比较
+   * @param value
+   */
+  eq(value?: string | null) {
+    return this.rawValue === value
   }
 }
