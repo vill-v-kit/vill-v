@@ -1,5 +1,4 @@
-import { isNil } from '../isNil'
-import { isString } from './isString'
+import { isNil, isString } from '@vill-v/type-as'
 
 /**
  * 是否空白符<br>

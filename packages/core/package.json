@@ -33,6 +33,6 @@
     "@vill-v/date": "workspace:*",
     "@vill-v/broswer": "workspace:*",
     "@vill-v/async": "workspace:*",
-    "@vill-v/idcard-cn": "workspace:*"
+    "@vill-v/type-as": "workspace:*"
   }
 }

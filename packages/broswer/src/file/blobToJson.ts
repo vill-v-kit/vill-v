@@ -1,4 +1,5 @@
-import { isString, isBlankString } from '@vill-v/vanilla'
+import { isBlankString } from '@vill-v/vanilla'
+import { isString } from '@vill-v/type-as'
 
 /**
  * blob转json

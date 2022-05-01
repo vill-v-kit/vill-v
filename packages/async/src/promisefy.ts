@@ -1,4 +1,4 @@
-import { isFunction } from '@vill-v/vanilla'
+import { isFunction } from '@vill-v/type-as'
 
 export function promisefy<T>(value: Promise<T>): Promise<T>
 export function promisefy<T>(value: (...args: any[]) => T): Promise<T>

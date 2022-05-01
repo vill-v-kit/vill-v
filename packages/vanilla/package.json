@@ -27,6 +27,6 @@
     "build": "tsup-node"
   },
   "dependencies": {
-    "@vill-v/ts": "workspace:*"
+    "@vill-v/type-as": "workspace:*"
   }
 }

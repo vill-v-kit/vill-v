@@ -1,7 +1,4 @@
-import { isObject } from './isObject'
-import { isMap } from './isMap'
-import { isSet } from './isSet'
-import { isString } from './string'
+import { isObject, isMap, isSet, isString } from '@vill-v/type-as'
 
 const isLengthEmpty = (value: any) => value.length === 0
 

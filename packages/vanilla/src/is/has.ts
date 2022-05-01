@@ -1,4 +1,4 @@
-import { isObject } from './isObject'
+import { isObject } from '@vill-v/type-as'
 
 /**
  * 对象是否有这个key

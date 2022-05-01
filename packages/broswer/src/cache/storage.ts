@@ -1,4 +1,4 @@
-import { isNil } from '@vill-v/vanilla'
+import { isNil } from '@vill-v/type-as'
 import { forceJsonParse } from '@vill-v/vanilla'
 
 export interface StorageCacheStoreParseType<T = any> {

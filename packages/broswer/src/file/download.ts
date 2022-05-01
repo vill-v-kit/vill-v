@@ -1,6 +1,6 @@
 import { LinkTargetContext } from '@vill-v/ts'
 import { openWindow } from '../dom'
-import { imgDataURLtoBlob, imgUrlToBase64 } from './index'
+import { imgDataURLtoBlob, imgUrlToBase64 } from './base64Convert'
 
 /**
  * 通过url下载在线图片

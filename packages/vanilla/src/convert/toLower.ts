@@ -1,4 +1,4 @@
-import { isNil } from '../is'
+import { isNil } from '@vill-v/type-as'
 
 export const toLower = (value: string) => {
   if (isNil(value)) {

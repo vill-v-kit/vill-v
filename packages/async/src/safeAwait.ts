@@ -1,4 +1,4 @@
-import { isFunction } from '@vill-v/vanilla'
+import { isFunction } from '@vill-v/type-as'
 
 async function safeAwaitSingle(fn: Promise<any>) {
   try {

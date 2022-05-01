@@ -1,4 +1,4 @@
-import { isBoolean, isNumber, isString } from '../is'
+import { isBoolean, isNumber, isString } from '@vill-v/type-as'
 
 /**
  * 切换原始布尔值
