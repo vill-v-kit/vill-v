@@ -1,6 +1,8 @@
 # vill-v
 neta了崩坏3 往世乐土的英杰维尔薇
 
+![npm](https://img.shields.io/npm/v/vill-v?style=flat-square)
+
 **开发中对于技术的总结，归纳**
 
 整合
