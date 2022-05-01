@@ -6,9 +6,11 @@
 
 开发中的一些总结
 
-> 0.3.10 开始，只是 [vill-v](https://www.npmjs.com/package/vill-v)的别名
+> 0.4.0 开始，只是 [vill-v](https://www.npmjs.com/package/vill-v)的别名
 
-_只是个人项目，作为开发途中的经验总结，如有相似的需求，推荐copy或阅读源码，不建议将该包作为实际生产使用_
+_只是个人项目，整体较为随便，作为开发途中的经验总结，如有相似的需求，推荐copy或阅读源码，不建议将该包在实际项目中使用_
+
+**如有幸被实际使用在项目内，不胜荣幸**
 
 <div>
 <a href="https://gitee.com/white-kite/seele-utils/wikis" style="font-size: 20px;font-weight: bold;">文档</a>
