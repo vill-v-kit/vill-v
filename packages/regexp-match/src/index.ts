@@ -1,2 +1,3 @@
-export * from './Pattern'
-export * from './MobileUtil'
+export * from './isMatchRegex'
+export * from './isMatchInteger'
+export * from './isMobile'
