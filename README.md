@@ -2,7 +2,7 @@
 
 白鸢个人工具包
 
-[![star](https://gitee.com/white-kite/seele-utils/badge/star.svg?theme=dark)](https://gitee.com/white-kite/seele-utils/stargazers) [![fork](https://gitee.com/white-kite/seele-utils/badge/fork.svg?theme=dark)](https://gitee.com/white-kite/seele-utils/members)
+[![star](https://gitee.com/white-kite/utils/badge/star.svg?theme=dark)](https://gitee.com/white-kite/seele-utils/stargazers) [![fork](https://gitee.com/white-kite/seele-utils/badge/fork.svg?theme=dark)](https://gitee.com/white-kite/seele-utils/members)
 
 开发中的一些总结
 
