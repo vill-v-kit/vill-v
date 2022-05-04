@@ -55,6 +55,7 @@ importers:
       '@vill-v/async': workspace:*
       '@vill-v/broswer': workspace:*
       '@vill-v/date': workspace:*
+      '@vill-v/path-prop': workspace:*
       '@vill-v/regexp-match': workspace:*
       '@vill-v/ts': workspace:*
       '@vill-v/type-as': workspace:*
@@ -63,6 +64,7 @@ importers:
       '@vill-v/async': link:../async
       '@vill-v/broswer': link:../broswer
       '@vill-v/date': link:../date
+      '@vill-v/path-prop': link:../path-prop
       '@vill-v/regexp-match': link:../regexp-match
       '@vill-v/ts': link:../ts
       '@vill-v/type-as': link:../type-as
@@ -75,6 +77,12 @@ importers:
     dependencies:
       '@vill-v/regexp-match': link:../regexp-match
       dayjs: 1.11.1
+
+  packages/path-prop:
+    specifiers:
+      '@vill-v/type-as': workspace:*
+    dependencies:
+      '@vill-v/type-as': link:../type-as
 
   packages/regexp-match:
     specifiers: {}

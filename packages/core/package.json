@@ -1,6 +1,6 @@
 {
   "name": "vill-v",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "开发中对于技术的总结，归纳",
   "files": [
     "dist"
@@ -33,6 +33,7 @@
     "@vill-v/date": "workspace:*",
     "@vill-v/broswer": "workspace:*",
     "@vill-v/async": "workspace:*",
-    "@vill-v/type-as": "workspace:*"
+    "@vill-v/type-as": "workspace:*",
+    "@vill-v/path-prop": "workspace:*"
   }
 }
