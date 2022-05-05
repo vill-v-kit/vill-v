@@ -116,11 +116,19 @@ export class StorageCache<T = any> {
   }
 
   /**
+   * 原值是否相等
+   * @param value
+   */
+  rawEq(value?: string | null) {
+    return this.rawValue === value
+  }
+
+  /**
    * 值是否相等
-   * 暂时只支持原值比较
+   * 暂时只是用===比较
    * @param value
    */
   eq(value?: string | null) {
-    return this.rawValue === value
+    return this.value === value
   }
 }
