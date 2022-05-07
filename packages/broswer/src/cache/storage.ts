@@ -31,12 +31,12 @@ export class StorageCache<T = any> {
    * @private
    */
   private readonly parse: StorageCacheStoreParseType<T>
-  private readonly key: string
+  private readonly _key: string
 
   constructor(storage: Storage, key: string, parse?: StorageCacheStoreParseType<T> | true) {
     this.storage = storage
     this.parse = this._changeParse(parse)
-    this.key = key
+    this._key = key
   }
 
   private _changeParse(parse?: StorageCacheStoreParseType<T> | true) {
@@ -47,6 +47,10 @@ export class StorageCache<T = any> {
       return JSONStorageCacheStoreParse
     }
     return parse
+  }
+
+  get key() {
+    return this._key
   }
 
   /**
@@ -61,7 +65,7 @@ export class StorageCache<T = any> {
    * 获取原始值
    */
   rawGet() {
-    return this.storage.getItem(this.key)
+    return this.storage.getItem(this._key)
   }
 
   /**
@@ -73,7 +77,7 @@ export class StorageCache<T = any> {
       this.remove()
       return
     }
-    this.storage.setItem(this.key, value)
+    this.storage.setItem(this._key, value)
   }
 
   get(): T | null {
@@ -112,7 +116,7 @@ export class StorageCache<T = any> {
   }
 
   remove() {
-    this.storage.removeItem(this.key)
+    this.storage.removeItem(this._key)
   }
 
   /**
