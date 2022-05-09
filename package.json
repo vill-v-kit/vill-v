@@ -7,7 +7,10 @@
   "packageManager": "pnpm@7.0.0",
   "scripts": {
     "build": "turbo run build",
-    "release": "bumpp packages/*/package.json"
+    "release": "bumpp packages/*/package.json",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
   },
   "devDependencies": {
     "@types/node": "^17.0.21",
@@ -22,6 +25,7 @@
     "vue": "^3.2.33",
     "tsup": "^5.12.6",
     "turbo": "^1.2.6",
-    "bumpp": "^7.1.1"
+    "bumpp": "^7.1.1",
+    "vitepress": "^0.22.4"
   }
 }
