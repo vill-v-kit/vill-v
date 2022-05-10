@@ -41,6 +41,7 @@ const getModules = () => {
 export default defineConfig({
   title: 'vill-v',
   lang: 'zh-CN',
+  base: '/utils',
   vite: { server: { port: 3001 } },
   description: '开发中对于技术的总结，归纳',
   themeConfig: {
