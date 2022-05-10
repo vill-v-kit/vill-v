@@ -1,0 +1,28 @@
+# downloadByData
+
+通过`blob` 下载文件
+
+## Demo
+
+```ts
+import {downloadByData} from '@vill-v/broswer'
+
+downloadByData({
+  data: new File(),
+  target: '_blank',
+  filename: 'xxx.pdf',
+})
+```
+
+### DTS
+
+```ts
+import {LinkTargetContext} from '@vill-v/ts'
+declare function downloadByData({data, target, filename, mime, bom,}: {
+  data: BlobPart;
+  target?: LinkTargetContext;
+  filename: string;
+  mime?: string;
+  bom?: BlobPart;
+}): void;
+```

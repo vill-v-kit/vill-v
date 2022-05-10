@@ -1,6 +1,6 @@
-export function getBoundingClientRect(element: Element): DOMRect | number {
+export function getBoundingClientRect(element: Element): DOMRect | undefined {
   if (!element || !element.getBoundingClientRect) {
-    return 0
+    return
   }
   return element.getBoundingClientRect()
 }
