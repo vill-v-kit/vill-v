@@ -1,0 +1,1 @@
+import{_ as n,c as s,o as a,a as t}from"./app.61e5eb8c.js";const _='{"title":"createStyleObject","description":"","frontmatter":{},"headers":[{"level":2,"title":"Demo","slug":"demo"}],"relativePath":"modules/broswer/createStyleObject.md"}',p={},e=t("",5),o=[e];function c(l,u,i,k,r,d){return a(),s("div",null,o)}var h=n(p,[["render",c]]);export{_ as __pageData,h as default};

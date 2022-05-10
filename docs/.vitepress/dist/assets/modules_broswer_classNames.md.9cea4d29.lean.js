@@ -1,0 +1,1 @@
+import{_ as s,c as a,o as n,a as t}from"./app.61e5eb8c.js";const m='{"title":"classNames","description":"","frontmatter":{},"headers":[{"level":2,"title":"Demo","slug":"demo"}],"relativePath":"modules/broswer/classNames.md"}',e={},p=t("",4),o=[p];function c(l,r,i,u,k,d){return n(),a("div",null,o)}var h=s(e,[["render",c]]);export{m as __pageData,h as default};
