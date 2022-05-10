@@ -6,7 +6,7 @@ dist
 
 packages/dist
 packages/*/.turbo
-
+!docs/.vitepress/dist
 .local
 # local env files
 .env.local
