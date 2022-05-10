@@ -18,7 +18,6 @@ const getModules = () => {
     const module: any[] = []
     obj['/modules/'].push({
       text: item,
-      link: `/modules/${item}`,
       children: module,
     })
     module.push({
@@ -42,6 +41,7 @@ const getModules = () => {
 export default defineConfig({
   title: 'vill-v',
   lang: 'zh-CN',
+  vite: { server: { port: 3001 } },
   description: '开发中对于技术的总结，归纳',
   themeConfig: {
     repo: 'https://gitee.com/white-kite/utils',
