@@ -1,6 +1,6 @@
 {
   "name": "@vill-v/date",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "总结了开发中遇到的时间业务",
   "files": [
     "dist"
@@ -11,7 +11,7 @@
     "email": "1075790909@qq.com"
   },
   "sideEffects": false,
-  "homepage": "https://gitee.com/white-kite/utils/blob/master/README.md",
+  "homepage": "https://white-kite.gitee.io/utils/modules/date/",
   "repository": "https://gitee.com/white-kite/utils/blob/master",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

@@ -1,6 +1,6 @@
 {
   "name": "@vill-v/ts",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "开发中总结的 typescript 扩展",
   "files": [
     "dist"
@@ -11,7 +11,7 @@
     "email": "1075790909@qq.com"
   },
   "sideEffects": false,
-  "homepage": "https://gitee.com/white-kite/utils/blob/master/README.md",
+  "homepage": "https://white-kite.gitee.io/utils/modules/ts/",
   "repository": "https://gitee.com/white-kite/utils/blob/master",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

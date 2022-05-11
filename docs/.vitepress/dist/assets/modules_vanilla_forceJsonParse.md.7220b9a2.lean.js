@@ -1,1 +1,0 @@
-import{_ as n,c as s,o as a,a as o}from"./app.61e5eb8c.js";const f='{"title":"forceJsonParse","description":"","frontmatter":{},"headers":[{"level":2,"title":"Demo","slug":"demo"}],"relativePath":"modules/vanilla/forceJsonParse.md"}',p={},t=o("",5),e=[t];function c(l,r,k,i,u,d){return a(),s("div",null,e)}var y=n(p,[["render",c]]);export{f as __pageData,y as default};

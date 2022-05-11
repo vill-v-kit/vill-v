@@ -1,1 +1,0 @@
-import{_ as e,c as a,o as n,a as s}from"./app.61e5eb8c.js";const v='{"title":"\u4ECB\u7ECD","description":"","frontmatter":{},"headers":[{"level":2,"title":"\u5B89\u88C5","slug":"\u5B89\u88C5"}],"relativePath":"modules/regexp-match/index.md"}',t={},c=s("",9),p=[c];function r(d,o,i,l,_,h){return n(),a("div",null,p)}var m=e(t,[["render",r]]);export{v as __pageData,m as default};

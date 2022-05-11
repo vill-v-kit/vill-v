@@ -1,1 +1,0 @@
-import{_ as a,c as e,o as n,a as s}from"./app.61e5eb8c.js";const v='{"title":"\u4ECB\u7ECD","description":"","frontmatter":{},"headers":[{"level":2,"title":"\u5B89\u88C5","slug":"\u5B89\u88C5"}],"relativePath":"modules/path-prop/index.md"}',p={},t=s("",9),o=[t];function c(r,d,i,l,_,h){return n(),e("div",null,o)}var f=a(p,[["render",c]]);export{v as __pageData,f as default};
