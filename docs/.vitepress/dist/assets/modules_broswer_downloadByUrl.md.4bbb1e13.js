@@ -1,0 +1,15 @@
+import{_ as n,c as a,o as s,a as t}from"./app.6672c7b4.js";const h='{"title":"downloadByUrl","description":"","frontmatter":{},"headers":[{"level":2,"title":"Demo","slug":"demo"},{"level":2,"title":"DTS","slug":"dts"}],"relativePath":"modules/broswer/downloadByUrl.md","lastUpdated":1652177014000}',o={},e=t(`<h1 id="downloadbyurl" tabindex="-1">downloadByUrl <a class="header-anchor" href="#downloadbyurl" aria-hidden="true">#</a></h1><p>\u901A\u8FC7<code>&lt;a&gt;</code> \u6807\u7B7E\u4E0B\u8F7D\u6587\u4EF6</p><h2 id="demo" tabindex="-1">Demo <a class="header-anchor" href="#demo" aria-hidden="true">#</a></h2><div class="language-ts"><pre><code><span class="token keyword">import</span> <span class="token punctuation">{</span>downloadByUrl<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&#39;@vill-v/broswer&#39;</span>
+
+<span class="token function">downloadByUrl</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  url<span class="token operator">:</span> <span class="token string">&#39;https://xxx.xxx.xxx&#39;</span><span class="token punctuation">,</span>
+  target<span class="token operator">:</span> <span class="token string">&#39;_blank&#39;</span><span class="token punctuation">,</span>
+  fileName<span class="token operator">:</span> <span class="token string">&#39;xxx.pdf&#39;</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="dts" tabindex="-1">DTS <a class="header-anchor" href="#dts" aria-hidden="true">#</a></h2><div class="language-ts"><pre><code><span class="token keyword">import</span> <span class="token punctuation">{</span>LinkTargetContext<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&#39;@vill-v/ts&#39;</span>
+
+<span class="token keyword">declare</span> <span class="token keyword">function</span> <span class="token function">downloadByUrl</span><span class="token punctuation">(</span><span class="token punctuation">{</span>url<span class="token punctuation">,</span> target<span class="token punctuation">,</span> fileName<span class="token punctuation">,</span><span class="token punctuation">}</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+  url<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+  target<span class="token operator">?</span><span class="token operator">:</span> LinkTargetContext<span class="token punctuation">;</span>
+  fileName<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">;</span>
+</code></pre></div>`,6),p=[e];function c(l,r,i,u,d,k){return s(),a("div",null,p)}var g=n(o,[["render",c]]);export{h as __pageData,g as default};
