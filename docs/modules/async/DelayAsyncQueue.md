@@ -13,16 +13,16 @@ const pool = new DelayAsyncQueue()
 // 新增一份请求
 pool.add(()=>Promise.resolve())
 
-// 清空整个并发池
+// 清空整个请求池
 pool.clear()
 
-// 并发池内部请求数量
+// 请求池内部请求数量
 pool.size
 
-// 并发池内部请求是否不为空
+// 请求池内部请求是否不为空
 pool.isNotEmpty()
 
-// 并发池内部请求是否为空
+// 请求池内部请求是否为空
 pool.isEmpty()
 
 // 消费所有请求
