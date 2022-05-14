@@ -18,9 +18,11 @@
  */
 export class TsEnumText<Enum = any> {
   private readonly enumTextObj: Record<any, string>
+  private readonly formatNumber: boolean
 
-  constructor(enumTextObj: Record<any, string>) {
+  constructor(enumTextObj: Record<any, string>, formatNumber = false) {
     this.enumTextObj = enumTextObj
+    this.formatNumber = formatNumber
   }
 
   text(type: Enum, error = '') {
@@ -33,7 +35,7 @@ export class TsEnumText<Enum = any> {
 
   select(labelKey = 'label', valueKey: 'value') {
     return Object.keys(this.enumTextObj).map((value) => ({
-      [valueKey]: value,
+      [valueKey]: this.formatNumber ? +value : value,
       [labelKey]: this.enumTextObj[value],
     }))
   }
