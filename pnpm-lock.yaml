@@ -9,6 +9,7 @@ importers:
       '@vill-v/eslint-config': ^0.0.1
       '@vill-v/prettier-config': ^0.0.1
       '@vill-v/tsconfig': ^0.0.1
+      '@vue/theme': ^1.0.2
       bumpp: ^7.1.1
       eslint: ^8.14.0
       eslint-define-config: ^1.0.8
@@ -24,6 +25,7 @@ importers:
       '@vill-v/eslint-config': 0.0.1_gltuyiipm2t4bfmeodooqzc7fm
       '@vill-v/prettier-config': 0.0.1
       '@vill-v/tsconfig': 0.0.1
+      '@vue/theme': registry.npmmirror.com/@vue/theme/1.0.2
       bumpp: registry.npmmirror.com/bumpp/7.1.1
       eslint: 8.14.0
       eslint-define-config: 1.2.0
@@ -739,7 +741,7 @@ packages:
       normalize-path: 3.0.0
       readdirp: 3.6.0
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: registry.npmmirror.com/fsevents/2.3.2
     dev: true
 
   /color-convert/2.0.1:
@@ -819,212 +821,32 @@ packages:
       esutils: 2.0.3
     dev: true
 
-  /esbuild-android-64/0.14.38:
-    resolution: {integrity: sha512-aRFxR3scRKkbmNuGAK+Gee3+yFxkTJO/cx83Dkyzo4CnQl/2zVSurtG6+G86EQIZ+w+VYngVyK7P3HyTBKu3nw==}
-    engines: {node: '>=12'}
-    cpu: [x64]
-    os: [android]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /esbuild-android-arm64/0.14.38:
-    resolution: {integrity: sha512-L2NgQRWuHFI89IIZIlpAcINy9FvBk6xFVZ7xGdOwIm8VyhX1vNCEqUJO3DPSSy945Gzdg98cxtNt8Grv1CsyhA==}
-    engines: {node: '>=12'}
-    cpu: [arm64]
-    os: [android]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /esbuild-darwin-64/0.14.38:
-    resolution: {integrity: sha512-5JJvgXkX87Pd1Og0u/NJuO7TSqAikAcQQ74gyJ87bqWRVeouky84ICoV4sN6VV53aTW+NE87qLdGY4QA2S7KNA==}
-    engines: {node: '>=12'}
-    cpu: [x64]
-    os: [darwin]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /esbuild-darwin-arm64/0.14.38:
-    resolution: {integrity: sha512-eqF+OejMI3mC5Dlo9Kdq/Ilbki9sQBw3QlHW3wjLmsLh+quNfHmGMp3Ly1eWm981iGBMdbtSS9+LRvR2T8B3eQ==}
-    engines: {node: '>=12'}
-    cpu: [arm64]
-    os: [darwin]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /esbuild-freebsd-64/0.14.38:
-    resolution: {integrity: sha512-epnPbhZUt93xV5cgeY36ZxPXDsQeO55DppzsIgWM8vgiG/Rz+qYDLmh5ts3e+Ln1wA9dQ+nZmVHw+RjaW3I5Ig==}
-    engines: {node: '>=12'}
-    cpu: [x64]
-    os: [freebsd]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /esbuild-freebsd-arm64/0.14.38:
-    resolution: {integrity: sha512-/9icXUYJWherhk+y5fjPI5yNUdFPtXHQlwP7/K/zg8t8lQdHVj20SqU9/udQmeUo5pDFHMYzcEFfJqgOVeKNNQ==}
-    engines: {node: '>=12'}
-    cpu: [arm64]
-    os: [freebsd]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /esbuild-linux-32/0.14.38:
-    resolution: {integrity: sha512-QfgfeNHRFvr2XeHFzP8kOZVnal3QvST3A0cgq32ZrHjSMFTdgXhMhmWdKzRXP/PKcfv3e2OW9tT9PpcjNvaq6g==}
-    engines: {node: '>=12'}
-    cpu: [ia32]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /esbuild-linux-64/0.14.38:
-    resolution: {integrity: sha512-uuZHNmqcs+Bj1qiW9k/HZU3FtIHmYiuxZ/6Aa+/KHb/pFKr7R3aVqvxlAudYI9Fw3St0VCPfv7QBpUITSmBR1Q==}
-    engines: {node: '>=12'}
-    cpu: [x64]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /esbuild-linux-arm/0.14.38:
-    resolution: {integrity: sha512-FiFvQe8J3VKTDXG01JbvoVRXQ0x6UZwyrU4IaLBZeq39Bsbatd94Fuc3F1RGqPF5RbIWW7RvkVQjn79ejzysnA==}
-    engines: {node: '>=12'}
-    cpu: [arm]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /esbuild-linux-arm64/0.14.38:
-    resolution: {integrity: sha512-HlMGZTEsBrXrivr64eZ/EO0NQM8H8DuSENRok9d+Jtvq8hOLzrxfsAT9U94K3KOGk2XgCmkaI2KD8hX7F97lvA==}
-    engines: {node: '>=12'}
-    cpu: [arm64]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /esbuild-linux-mips64le/0.14.38:
-    resolution: {integrity: sha512-qd1dLf2v7QBiI5wwfil9j0HG/5YMFBAmMVmdeokbNAMbcg49p25t6IlJFXAeLzogv1AvgaXRXvgFNhScYEUXGQ==}
-    engines: {node: '>=12'}
-    cpu: [mips64el]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /esbuild-linux-ppc64le/0.14.38:
-    resolution: {integrity: sha512-mnbEm7o69gTl60jSuK+nn+pRsRHGtDPfzhrqEUXyCl7CTOCLtWN2bhK8bgsdp6J/2NyS/wHBjs1x8aBWwP2X9Q==}
-    engines: {node: '>=12'}
-    cpu: [ppc64]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /esbuild-linux-riscv64/0.14.38:
-    resolution: {integrity: sha512-+p6YKYbuV72uikChRk14FSyNJZ4WfYkffj6Af0/Tw63/6TJX6TnIKE+6D3xtEc7DeDth1fjUOEqm+ApKFXbbVQ==}
-    engines: {node: '>=12'}
-    cpu: [riscv64]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /esbuild-linux-s390x/0.14.38:
-    resolution: {integrity: sha512-0zUsiDkGJiMHxBQ7JDU8jbaanUY975CdOW1YDrurjrM0vWHfjv9tLQsW9GSyEb/heSK1L5gaweRjzfUVBFoybQ==}
-    engines: {node: '>=12'}
-    cpu: [s390x]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /esbuild-netbsd-64/0.14.38:
-    resolution: {integrity: sha512-cljBAApVwkpnJZfnRVThpRBGzCi+a+V9Ofb1fVkKhtrPLDYlHLrSYGtmnoTVWDQdU516qYI8+wOgcGZ4XIZh0Q==}
-    engines: {node: '>=12'}
-    cpu: [x64]
-    os: [netbsd]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /esbuild-openbsd-64/0.14.38:
-    resolution: {integrity: sha512-CDswYr2PWPGEPpLDUO50mL3WO/07EMjnZDNKpmaxUPsrW+kVM3LoAqr/CE8UbzugpEiflYqJsGPLirThRB18IQ==}
-    engines: {node: '>=12'}
-    cpu: [x64]
-    os: [openbsd]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /esbuild-sunos-64/0.14.38:
-    resolution: {integrity: sha512-2mfIoYW58gKcC3bck0j7lD3RZkqYA7MmujFYmSn9l6TiIcAMpuEvqksO+ntBgbLep/eyjpgdplF7b+4T9VJGOA==}
-    engines: {node: '>=12'}
-    cpu: [x64]
-    os: [sunos]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /esbuild-windows-32/0.14.38:
-    resolution: {integrity: sha512-L2BmEeFZATAvU+FJzJiRLFUP+d9RHN+QXpgaOrs2klshoAm1AE6Us4X6fS9k33Uy5SzScn2TpcgecbqJza1Hjw==}
-    engines: {node: '>=12'}
-    cpu: [ia32]
-    os: [win32]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /esbuild-windows-64/0.14.38:
-    resolution: {integrity: sha512-Khy4wVmebnzue8aeSXLC+6clo/hRYeNIm0DyikoEqX+3w3rcvrhzpoix0S+MF9vzh6JFskkIGD7Zx47ODJNyCw==}
-    engines: {node: '>=12'}
-    cpu: [x64]
-    os: [win32]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /esbuild-windows-arm64/0.14.38:
-    resolution: {integrity: sha512-k3FGCNmHBkqdJXuJszdWciAH77PukEyDsdIryEHn9cKLQFxzhT39dSumeTuggaQcXY57UlmLGIkklWZo2qzHpw==}
-    engines: {node: '>=12'}
-    cpu: [arm64]
-    os: [win32]
-    requiresBuild: true
-    dev: true
-    optional: true
-
   /esbuild/0.14.38:
     resolution: {integrity: sha512-12fzJ0fsm7gVZX1YQ1InkOE5f9Tl7cgf6JPYXRJtPIoE0zkWAbHdPHVPPaLi9tYAcEBqheGzqLn/3RdTOyBfcA==}
     engines: {node: '>=12'}
     hasBin: true
     requiresBuild: true
     optionalDependencies:
-      esbuild-android-64: 0.14.38
-      esbuild-android-arm64: 0.14.38
-      esbuild-darwin-64: 0.14.38
-      esbuild-darwin-arm64: 0.14.38
-      esbuild-freebsd-64: 0.14.38
-      esbuild-freebsd-arm64: 0.14.38
-      esbuild-linux-32: 0.14.38
-      esbuild-linux-64: 0.14.38
-      esbuild-linux-arm: 0.14.38
-      esbuild-linux-arm64: 0.14.38
-      esbuild-linux-mips64le: 0.14.38
-      esbuild-linux-ppc64le: 0.14.38
-      esbuild-linux-riscv64: 0.14.38
-      esbuild-linux-s390x: 0.14.38
-      esbuild-netbsd-64: 0.14.38
-      esbuild-openbsd-64: 0.14.38
-      esbuild-sunos-64: 0.14.38
-      esbuild-windows-32: 0.14.38
-      esbuild-windows-64: 0.14.38
-      esbuild-windows-arm64: 0.14.38
+      esbuild-android-64: registry.npmmirror.com/esbuild-android-64/0.14.38
+      esbuild-android-arm64: registry.npmmirror.com/esbuild-android-arm64/0.14.38
+      esbuild-darwin-64: registry.npmmirror.com/esbuild-darwin-64/0.14.38
+      esbuild-darwin-arm64: registry.npmmirror.com/esbuild-darwin-arm64/0.14.38
+      esbuild-freebsd-64: registry.npmmirror.com/esbuild-freebsd-64/0.14.38
+      esbuild-freebsd-arm64: registry.npmmirror.com/esbuild-freebsd-arm64/0.14.38
+      esbuild-linux-32: registry.npmmirror.com/esbuild-linux-32/0.14.38
+      esbuild-linux-64: registry.npmmirror.com/esbuild-linux-64/0.14.38
+      esbuild-linux-arm: registry.npmmirror.com/esbuild-linux-arm/0.14.38
+      esbuild-linux-arm64: registry.npmmirror.com/esbuild-linux-arm64/0.14.38
+      esbuild-linux-mips64le: registry.npmmirror.com/esbuild-linux-mips64le/0.14.38
+      esbuild-linux-ppc64le: registry.npmmirror.com/esbuild-linux-ppc64le/0.14.38
+      esbuild-linux-riscv64: registry.npmmirror.com/esbuild-linux-riscv64/0.14.38
+      esbuild-linux-s390x: registry.npmmirror.com/esbuild-linux-s390x/0.14.38
+      esbuild-netbsd-64: registry.npmmirror.com/esbuild-netbsd-64/0.14.38
+      esbuild-openbsd-64: registry.npmmirror.com/esbuild-openbsd-64/0.14.38
+      esbuild-sunos-64: registry.npmmirror.com/esbuild-sunos-64/0.14.38
+      esbuild-windows-32: registry.npmmirror.com/esbuild-windows-32/0.14.38
+      esbuild-windows-64: registry.npmmirror.com/esbuild-windows-64/0.14.38
+      esbuild-windows-arm64: registry.npmmirror.com/esbuild-windows-arm64/0.14.38
     dev: true
 
   /escape-string-regexp/4.0.0:
@@ -1279,14 +1101,6 @@ packages:
   /fs.realpath/1.0.0:
     resolution: {integrity: sha1-FQStJSMVjKpA20onh8sBQRmU6k8=}
     dev: true
-
-  /fsevents/2.3.2:
-    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
-    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
-    os: [darwin]
-    requiresBuild: true
-    dev: true
-    optional: true
 
   /function-bind/1.1.1:
     resolution: {integrity: sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==}
@@ -1776,7 +1590,7 @@ packages:
     engines: {node: '>=10.0.0'}
     hasBin: true
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: registry.npmmirror.com/fsevents/2.3.2
     dev: true
 
   /run-parallel/1.2.0:
@@ -1956,110 +1770,6 @@ packages:
       typescript: 4.6.4
     dev: true
 
-  /turbo-darwin-64/1.2.6:
-    resolution: {integrity: sha512-YNH49cZKw6rrq6ef/PMuryk3lKzE9QI0R72Yj3lcA4C5FIekUA7RZY8xZK7152r6YNgZ6aPWOQN9lauSN58gPQ==}
-    cpu: [x64]
-    os: [darwin]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /turbo-darwin-arm64/1.2.6:
-    resolution: {integrity: sha512-1yk0UK59qGQjFkhmSnrNrGMIVxTeMZSaJ9YhJquyQG7PPHxIpCnz4uQQkZFRb0HQDGMEmsPC49Sx4h6UBQ/3aA==}
-    cpu: [arm64]
-    os: [darwin]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /turbo-freebsd-64/1.2.6:
-    resolution: {integrity: sha512-m5G86zILy0Qc/fy/2Auu74c5St/yS+SQi8ka2Wb/uVMPQjh7VpM3mB/z7U5pZTv92w2HJ8q5krC0uLT+pH4n8Q==}
-    cpu: [x64]
-    os: [freebsd]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /turbo-freebsd-arm64/1.2.6:
-    resolution: {integrity: sha512-tjbrRoN8fMuyfyKJ/Dw97cNy9CVlzoT8zZbpo1rVZkMRYpnizIDECdecoiMttBZIP9/ktNcj6nJVHh40+a0EMw==}
-    cpu: [arm64]
-    os: [freebsd]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /turbo-linux-32/1.2.6:
-    resolution: {integrity: sha512-NBCeqsNbTQKuP+5rTwfd4dyd/LTdfUuX+4B6FxXswz6IuCHymUaCRwmRfN6TdeGRFnSP4y2tAymU5zqrI4/Leg==}
-    cpu: [ia32]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /turbo-linux-64/1.2.6:
-    resolution: {integrity: sha512-27NGdEaAOkM/2Bj/QwSNI0b8VxWj9TrfqIE7ATENaMV4B+ukFgFvUkXQuJhnmb4InMxZSc8q01KaSou5P034Sw==}
-    cpu: [x64]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /turbo-linux-arm/1.2.6:
-    resolution: {integrity: sha512-a0aw0kUfvUVLRV7K+5CjscJKDCLwLtb8p28KLHpjvy8EP7Us+n9DH0tZ2M/CAy02cZI7yOzbWEx0L4Q3a1Dajw==}
-    cpu: [arm]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /turbo-linux-arm64/1.2.6:
-    resolution: {integrity: sha512-zvk7vQ3N3QU2kKKJQ/qalAen3wkPhcoBD3NIlEwKVL2OYaSCa4UDgOSjpwLw+FAmbWh0zB5Jm8mcLXcok9xyUQ==}
-    cpu: [arm64]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /turbo-linux-mips64le/1.2.6:
-    resolution: {integrity: sha512-5sLTNpXedD4aPCtKzbGOo3THImQVgywivFzbLgD5apkF5eYImG/1oRPH0tjdIN/uEqKFJdxniN5EnLE3uUA76g==}
-    cpu: [mips64el]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /turbo-linux-ppc64le/1.2.6:
-    resolution: {integrity: sha512-dNIDtCXZolAdm84tCWynntcTbaOErCEbT0onuWwwhJ3CZfC68vqghkYJu7o4T8rMek0RLLcIh/Y4dNM3bp1Mvg==}
-    cpu: [ppc64]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /turbo-windows-32/1.2.6:
-    resolution: {integrity: sha512-1rzktj68Ohqi+OPeSvWqbb6Er0yS7FidRku8IQIZJ0bmwP/a5OMqIHXHoIEbn5/ceXry6vJm8aYDgm1FAKkbZw==}
-    cpu: [ia32]
-    os: [win32]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /turbo-windows-64/1.2.6:
-    resolution: {integrity: sha512-91m+np5oxTRVORjkFVf2BypYjrhB+Q7ZaKqti5q4A0qLIvYs0dqGitT45j547XKWtlk2dP2ziXhYs2btDOCr4w==}
-    cpu: [x64]
-    os: [win32]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /turbo-windows-arm64/1.2.6:
-    resolution: {integrity: sha512-92vhzWNu+ZrjMK1D6y1bjHTQjIVx0YViYCHDSQNY56STQgUleRW+aColVGs2MnZ4lv7vHhA9FIDJ19CRYpTiNA==}
-    cpu: [arm64]
-    os: [win32]
-    requiresBuild: true
-    dev: true
-    optional: true
-
   /type-check/0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
     engines: {node: '>= 0.8.0'}
@@ -2113,7 +1823,7 @@ packages:
       resolve: 1.22.0
       rollup: 2.61.1
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: registry.npmmirror.com/fsevents/2.3.2
     dev: true
 
   /vitepress/0.22.4:
@@ -2191,6 +1901,172 @@ packages:
     engines: {node: '>= 6'}
     dev: true
 
+  registry.npmmirror.com/@algolia/autocomplete-core/1.5.2:
+    resolution: {integrity: sha512-DY0bhyczFSS1b/CqJlTE/nQRtnTAHl6IemIkBy0nEWnhDzRDdtdx4p5Uuk3vwAFxwEEgi1WqKwgSSMx6DpNL4A==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/@algolia/autocomplete-core/-/autocomplete-core-1.5.2.tgz}
+    name: '@algolia/autocomplete-core'
+    version: 1.5.2
+    dependencies:
+      '@algolia/autocomplete-shared': registry.npmmirror.com/@algolia/autocomplete-shared/1.5.2
+    dev: true
+
+  registry.npmmirror.com/@algolia/autocomplete-preset-algolia/1.5.2:
+    resolution: {integrity: sha512-3MRYnYQFJyovANzSX2CToS6/5cfVjbLLqFsZTKcvF3abhQzxbqwwaMBlJtt620uBUOeMzhdfasKhCc40+RHiZw==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/@algolia/autocomplete-preset-algolia/-/autocomplete-preset-algolia-1.5.2.tgz}
+    name: '@algolia/autocomplete-preset-algolia'
+    version: 1.5.2
+    dependencies:
+      '@algolia/autocomplete-shared': registry.npmmirror.com/@algolia/autocomplete-shared/1.5.2
+    dev: true
+
+  registry.npmmirror.com/@algolia/autocomplete-shared/1.5.2:
+    resolution: {integrity: sha512-ylQAYv5H0YKMfHgVWX0j0NmL8XBcAeeeVQUmppnnMtzDbDnca6CzhKj3Q8eF9cHCgcdTDdb5K+3aKyGWA0obug==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/@algolia/autocomplete-shared/-/autocomplete-shared-1.5.2.tgz}
+    name: '@algolia/autocomplete-shared'
+    version: 1.5.2
+    dev: true
+
+  registry.npmmirror.com/@algolia/cache-browser-local-storage/4.13.0:
+    resolution: {integrity: sha512-nj1vHRZauTqP/bluwkRIgEADEimqojJgoTRCel5f6q8WCa9Y8QeI4bpDQP28FoeKnDRYa3J5CauDlN466jqRhg==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/@algolia/cache-browser-local-storage/-/cache-browser-local-storage-4.13.0.tgz}
+    name: '@algolia/cache-browser-local-storage'
+    version: 4.13.0
+    dependencies:
+      '@algolia/cache-common': registry.npmmirror.com/@algolia/cache-common/4.13.0
+    dev: true
+
+  registry.npmmirror.com/@algolia/cache-common/4.13.0:
+    resolution: {integrity: sha512-f9mdZjskCui/dA/fA/5a+6hZ7xnHaaZI5tM/Rw9X8rRB39SUlF/+o3P47onZ33n/AwkpSbi5QOyhs16wHd55kA==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/@algolia/cache-common/-/cache-common-4.13.0.tgz}
+    name: '@algolia/cache-common'
+    version: 4.13.0
+    dev: true
+
+  registry.npmmirror.com/@algolia/cache-in-memory/4.13.0:
+    resolution: {integrity: sha512-hHdc+ahPiMM92CQMljmObE75laYzNFYLrNOu0Q3/eyvubZZRtY2SUsEEgyUEyzXruNdzrkcDxFYa7YpWBJYHAg==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/@algolia/cache-in-memory/-/cache-in-memory-4.13.0.tgz}
+    name: '@algolia/cache-in-memory'
+    version: 4.13.0
+    dependencies:
+      '@algolia/cache-common': registry.npmmirror.com/@algolia/cache-common/4.13.0
+    dev: true
+
+  registry.npmmirror.com/@algolia/client-account/4.13.0:
+    resolution: {integrity: sha512-FzFqFt9b0g/LKszBDoEsW+dVBuUe1K3scp2Yf7q6pgHWM1WqyqUlARwVpLxqyc+LoyJkTxQftOKjyFUqddnPKA==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/@algolia/client-account/-/client-account-4.13.0.tgz}
+    name: '@algolia/client-account'
+    version: 4.13.0
+    dependencies:
+      '@algolia/client-common': registry.npmmirror.com/@algolia/client-common/4.13.0
+      '@algolia/client-search': registry.npmmirror.com/@algolia/client-search/4.13.0
+      '@algolia/transporter': registry.npmmirror.com/@algolia/transporter/4.13.0
+    dev: true
+
+  registry.npmmirror.com/@algolia/client-analytics/4.13.0:
+    resolution: {integrity: sha512-klmnoq2FIiiMHImkzOm+cGxqRLLu9CMHqFhbgSy9wtXZrqb8BBUIUE2VyBe7azzv1wKcxZV2RUyNOMpFqmnRZA==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/@algolia/client-analytics/-/client-analytics-4.13.0.tgz}
+    name: '@algolia/client-analytics'
+    version: 4.13.0
+    dependencies:
+      '@algolia/client-common': registry.npmmirror.com/@algolia/client-common/4.13.0
+      '@algolia/client-search': registry.npmmirror.com/@algolia/client-search/4.13.0
+      '@algolia/requester-common': registry.npmmirror.com/@algolia/requester-common/4.13.0
+      '@algolia/transporter': registry.npmmirror.com/@algolia/transporter/4.13.0
+    dev: true
+
+  registry.npmmirror.com/@algolia/client-common/4.13.0:
+    resolution: {integrity: sha512-GoXfTp0kVcbgfSXOjfrxx+slSipMqGO9WnNWgeMmru5Ra09MDjrcdunsiiuzF0wua6INbIpBQFTC2Mi5lUNqGA==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/@algolia/client-common/-/client-common-4.13.0.tgz}
+    name: '@algolia/client-common'
+    version: 4.13.0
+    dependencies:
+      '@algolia/requester-common': registry.npmmirror.com/@algolia/requester-common/4.13.0
+      '@algolia/transporter': registry.npmmirror.com/@algolia/transporter/4.13.0
+    dev: true
+
+  registry.npmmirror.com/@algolia/client-personalization/4.13.0:
+    resolution: {integrity: sha512-KneLz2WaehJmNfdr5yt2HQETpLaCYagRdWwIwkTqRVFCv4DxRQ2ChPVW9jeTj4YfAAhfzE6F8hn7wkQ/Jfj6ZA==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/@algolia/client-personalization/-/client-personalization-4.13.0.tgz}
+    name: '@algolia/client-personalization'
+    version: 4.13.0
+    dependencies:
+      '@algolia/client-common': registry.npmmirror.com/@algolia/client-common/4.13.0
+      '@algolia/requester-common': registry.npmmirror.com/@algolia/requester-common/4.13.0
+      '@algolia/transporter': registry.npmmirror.com/@algolia/transporter/4.13.0
+    dev: true
+
+  registry.npmmirror.com/@algolia/client-search/4.13.0:
+    resolution: {integrity: sha512-blgCKYbZh1NgJWzeGf+caKE32mo3j54NprOf0LZVCubQb3Kx37tk1Hc8SDs9bCAE8hUvf3cazMPIg7wscSxspA==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/@algolia/client-search/-/client-search-4.13.0.tgz}
+    name: '@algolia/client-search'
+    version: 4.13.0
+    dependencies:
+      '@algolia/client-common': registry.npmmirror.com/@algolia/client-common/4.13.0
+      '@algolia/requester-common': registry.npmmirror.com/@algolia/requester-common/4.13.0
+      '@algolia/transporter': registry.npmmirror.com/@algolia/transporter/4.13.0
+    dev: true
+
+  registry.npmmirror.com/@algolia/logger-common/4.13.0:
+    resolution: {integrity: sha512-8yqXk7rMtmQJ9wZiHOt/6d4/JDEg5VCk83gJ39I+X/pwUPzIsbKy9QiK4uJ3aJELKyoIiDT1hpYVt+5ia+94IA==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/@algolia/logger-common/-/logger-common-4.13.0.tgz}
+    name: '@algolia/logger-common'
+    version: 4.13.0
+    dev: true
+
+  registry.npmmirror.com/@algolia/logger-console/4.13.0:
+    resolution: {integrity: sha512-YepRg7w2/87L0vSXRfMND6VJ5d6699sFJBRWzZPOlek2p5fLxxK7O0VncYuc/IbVHEgeApvgXx0WgCEa38GVuQ==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/@algolia/logger-console/-/logger-console-4.13.0.tgz}
+    name: '@algolia/logger-console'
+    version: 4.13.0
+    dependencies:
+      '@algolia/logger-common': registry.npmmirror.com/@algolia/logger-common/4.13.0
+    dev: true
+
+  registry.npmmirror.com/@algolia/requester-browser-xhr/4.13.0:
+    resolution: {integrity: sha512-Dj+bnoWR5MotrnjblzGKZ2kCdQi2cK/VzPURPnE616NU/il7Ypy6U6DLGZ/ZYz+tnwPa0yypNf21uqt84fOgrg==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/@algolia/requester-browser-xhr/-/requester-browser-xhr-4.13.0.tgz}
+    name: '@algolia/requester-browser-xhr'
+    version: 4.13.0
+    dependencies:
+      '@algolia/requester-common': registry.npmmirror.com/@algolia/requester-common/4.13.0
+    dev: true
+
+  registry.npmmirror.com/@algolia/requester-common/4.13.0:
+    resolution: {integrity: sha512-BRTDj53ecK+gn7ugukDWOOcBRul59C4NblCHqj4Zm5msd5UnHFjd/sGX+RLOEoFMhetILAnmg6wMrRrQVac9vw==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/@algolia/requester-common/-/requester-common-4.13.0.tgz}
+    name: '@algolia/requester-common'
+    version: 4.13.0
+    dev: true
+
+  registry.npmmirror.com/@algolia/requester-node-http/4.13.0:
+    resolution: {integrity: sha512-9b+3O4QFU4azLhGMrZAr/uZPydvzOR4aEZfSL8ZrpLZ7fbbqTO0S/5EVko+QIgglRAtVwxvf8UJ1wzTD2jvKxQ==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/@algolia/requester-node-http/-/requester-node-http-4.13.0.tgz}
+    name: '@algolia/requester-node-http'
+    version: 4.13.0
+    dependencies:
+      '@algolia/requester-common': registry.npmmirror.com/@algolia/requester-common/4.13.0
+    dev: true
+
+  registry.npmmirror.com/@algolia/transporter/4.13.0:
+    resolution: {integrity: sha512-8tSQYE+ykQENAdeZdofvtkOr5uJ9VcQSWgRhQ9h01AehtBIPAczk/b2CLrMsw5yQZziLs5cZ3pJ3478yI+urhA==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/@algolia/transporter/-/transporter-4.13.0.tgz}
+    name: '@algolia/transporter'
+    version: 4.13.0
+    dependencies:
+      '@algolia/cache-common': registry.npmmirror.com/@algolia/cache-common/4.13.0
+      '@algolia/logger-common': registry.npmmirror.com/@algolia/logger-common/4.13.0
+      '@algolia/requester-common': registry.npmmirror.com/@algolia/requester-common/4.13.0
+    dev: true
+
+  registry.npmmirror.com/@docsearch/css/3.0.0:
+    resolution: {integrity: sha512-1kkV7tkAsiuEd0shunYRByKJe3xQDG2q7wYg24SOw1nV9/2lwEd4WrUYRJC/ukGTl2/kHeFxsaUvtiOy0y6fFA==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/@docsearch/css/-/css-3.0.0.tgz}
+    name: '@docsearch/css'
+    version: 3.0.0
+    dev: true
+
+  registry.npmmirror.com/@docsearch/js/3.0.0:
+    resolution: {integrity: sha512-j3tUJWlgW3slYqzGB8fm7y05kh2qqrIK1dZOXHeMUm/5gdKE85fiz/ltfCPMDFb/MXF+bLZChJXSMzqY0Ck30Q==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/@docsearch/js/-/js-3.0.0.tgz}
+    name: '@docsearch/js'
+    version: 3.0.0
+    dependencies:
+      '@docsearch/react': registry.npmmirror.com/@docsearch/react/3.0.0
+      preact: registry.npmmirror.com/preact/10.7.2
+    dev: true
+
+  registry.npmmirror.com/@docsearch/react/3.0.0:
+    resolution: {integrity: sha512-yhMacqS6TVQYoBh/o603zszIb5Bl8MIXuOc6Vy617I74pirisDzzcNh0NEaYQt50fVVR3khUbeEhUEWEWipESg==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/@docsearch/react/-/react-3.0.0.tgz}
+    name: '@docsearch/react'
+    version: 3.0.0
+    dependencies:
+      '@algolia/autocomplete-core': registry.npmmirror.com/@algolia/autocomplete-core/1.5.2
+      '@algolia/autocomplete-preset-algolia': registry.npmmirror.com/@algolia/autocomplete-preset-algolia/1.5.2
+      '@docsearch/css': registry.npmmirror.com/@docsearch/css/3.0.0
+      algoliasearch: registry.npmmirror.com/algoliasearch/4.13.0
+    dev: true
+
   registry.npmmirror.com/@jsdevtools/ez-spawn/3.0.4:
     resolution: {integrity: sha512-f5DRIOZf7wxogefH03RjMPMdBF7ADTWUMoOs9kaJo06EfwF+aFhMZMDZxHg/Xe12hptN9xoZjGso2fdjapBRIA==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/@jsdevtools/ez-spawn/-/ez-spawn-3.0.4.tgz}
     name: '@jsdevtools/ez-spawn'
@@ -2230,6 +2106,57 @@ packages:
       fastq: registry.npmmirror.com/fastq/1.13.0
     dev: true
 
+  registry.npmmirror.com/@vue/theme/1.0.2:
+    resolution: {integrity: sha512-jBALidvFMLgcR76UQ2foi4yD5gHn1YrigXJglZe3Rb0rm4KRVLxPeCe/CAfD42Wsm9xAfSNDUxRneQfbQpA1eg==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/@vue/theme/-/theme-1.0.2.tgz}
+    name: '@vue/theme'
+    version: 1.0.2
+    dependencies:
+      '@docsearch/css': registry.npmmirror.com/@docsearch/css/3.0.0
+      '@docsearch/js': registry.npmmirror.com/@docsearch/js/3.0.0
+      '@vueuse/core': registry.npmmirror.com/@vueuse/core/7.7.1
+      body-scroll-lock: registry.npmmirror.com/body-scroll-lock/3.1.5
+      normalize.css: registry.npmmirror.com/normalize.css/8.0.1
+      shiki: registry.npmmirror.com/shiki/0.9.15
+    dev: true
+
+  registry.npmmirror.com/@vueuse/core/7.7.1:
+    resolution: {integrity: sha512-PRRgbATMpoeUmkCEBtUeJgOwtew8s+4UsEd+Pm7MhkjL2ihCNrSqxNVtM6NFE4uP2sWnkGcZpCjPuNSxowJ1Ow==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/@vueuse/core/-/core-7.7.1.tgz}
+    name: '@vueuse/core'
+    version: 7.7.1
+    dependencies:
+      '@vueuse/shared': registry.npmmirror.com/@vueuse/shared/7.7.1
+      vue-demi: registry.npmmirror.com/vue-demi/0.12.5
+    dev: true
+
+  registry.npmmirror.com/@vueuse/shared/7.7.1:
+    resolution: {integrity: sha512-rN2qd22AUl7VdBxihagWyhUNHCyVk9IpvBTTfHoLH9G7rGE552X1f+zeCfehuno0zXif13jPw+icW/wn2a0rnQ==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/@vueuse/shared/-/shared-7.7.1.tgz}
+    name: '@vueuse/shared'
+    version: 7.7.1
+    dependencies:
+      vue-demi: registry.npmmirror.com/vue-demi/0.12.5
+    dev: true
+
+  registry.npmmirror.com/algoliasearch/4.13.0:
+    resolution: {integrity: sha512-oHv4faI1Vl2s+YC0YquwkK/TsaJs79g2JFg5FDm2rKN12VItPTAeQ7hyJMHarOPPYuCnNC5kixbtcqvb21wchw==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/algoliasearch/-/algoliasearch-4.13.0.tgz}
+    name: algoliasearch
+    version: 4.13.0
+    dependencies:
+      '@algolia/cache-browser-local-storage': registry.npmmirror.com/@algolia/cache-browser-local-storage/4.13.0
+      '@algolia/cache-common': registry.npmmirror.com/@algolia/cache-common/4.13.0
+      '@algolia/cache-in-memory': registry.npmmirror.com/@algolia/cache-in-memory/4.13.0
+      '@algolia/client-account': registry.npmmirror.com/@algolia/client-account/4.13.0
+      '@algolia/client-analytics': registry.npmmirror.com/@algolia/client-analytics/4.13.0
+      '@algolia/client-common': registry.npmmirror.com/@algolia/client-common/4.13.0
+      '@algolia/client-personalization': registry.npmmirror.com/@algolia/client-personalization/4.13.0
+      '@algolia/client-search': registry.npmmirror.com/@algolia/client-search/4.13.0
+      '@algolia/logger-common': registry.npmmirror.com/@algolia/logger-common/4.13.0
+      '@algolia/logger-console': registry.npmmirror.com/@algolia/logger-console/4.13.0
+      '@algolia/requester-browser-xhr': registry.npmmirror.com/@algolia/requester-browser-xhr/4.13.0
+      '@algolia/requester-common': registry.npmmirror.com/@algolia/requester-common/4.13.0
+      '@algolia/requester-node-http': registry.npmmirror.com/@algolia/requester-node-http/4.13.0
+      '@algolia/transporter': registry.npmmirror.com/@algolia/transporter/4.13.0
+    dev: true
+
   registry.npmmirror.com/ansi-styles/4.3.0:
     resolution: {integrity: sha512-zbB9rCJAT1rbjiVDb2hqKFHNYLxgtk8NURxZ3IZwD3F6NtxbXZQCnnSi1Lkx+IDohdPlFp222wVALIheZJQSEg==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/ansi-styles/-/ansi-styles-4.3.0.tgz}
     name: ansi-styles
@@ -2251,6 +2178,12 @@ packages:
     name: array-union
     version: 2.1.0
     engines: {node: '>=8'}
+    dev: true
+
+  registry.npmmirror.com/body-scroll-lock/3.1.5:
+    resolution: {integrity: sha512-Yi1Xaml0EvNA0OYWxXiYNqY24AfWkbA6w5vxE7GWxtKfzIbZM+Qw+aSmkgsbWzbHiy/RCSkUZBplVxTA+E4jJg==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/body-scroll-lock/-/body-scroll-lock-3.1.5.tgz}
+    name: body-scroll-lock
+    version: 3.1.5
     dev: true
 
   registry.npmmirror.com/braces/3.0.2:
@@ -2340,6 +2273,186 @@ packages:
       path-type: registry.npmmirror.com/path-type/4.0.0
     dev: true
 
+  registry.npmmirror.com/esbuild-android-64/0.14.38:
+    resolution: {integrity: sha512-aRFxR3scRKkbmNuGAK+Gee3+yFxkTJO/cx83Dkyzo4CnQl/2zVSurtG6+G86EQIZ+w+VYngVyK7P3HyTBKu3nw==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/esbuild-android-64/-/esbuild-android-64-0.14.38.tgz}
+    name: esbuild-android-64
+    version: 0.14.38
+    engines: {node: '>=12'}
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/esbuild-android-arm64/0.14.38:
+    resolution: {integrity: sha512-L2NgQRWuHFI89IIZIlpAcINy9FvBk6xFVZ7xGdOwIm8VyhX1vNCEqUJO3DPSSy945Gzdg98cxtNt8Grv1CsyhA==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/esbuild-android-arm64/-/esbuild-android-arm64-0.14.38.tgz}
+    name: esbuild-android-arm64
+    version: 0.14.38
+    engines: {node: '>=12'}
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/esbuild-darwin-64/0.14.38:
+    resolution: {integrity: sha512-5JJvgXkX87Pd1Og0u/NJuO7TSqAikAcQQ74gyJ87bqWRVeouky84ICoV4sN6VV53aTW+NE87qLdGY4QA2S7KNA==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/esbuild-darwin-64/-/esbuild-darwin-64-0.14.38.tgz}
+    name: esbuild-darwin-64
+    version: 0.14.38
+    engines: {node: '>=12'}
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/esbuild-darwin-arm64/0.14.38:
+    resolution: {integrity: sha512-eqF+OejMI3mC5Dlo9Kdq/Ilbki9sQBw3QlHW3wjLmsLh+quNfHmGMp3Ly1eWm981iGBMdbtSS9+LRvR2T8B3eQ==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/esbuild-darwin-arm64/-/esbuild-darwin-arm64-0.14.38.tgz}
+    name: esbuild-darwin-arm64
+    version: 0.14.38
+    engines: {node: '>=12'}
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/esbuild-freebsd-64/0.14.38:
+    resolution: {integrity: sha512-epnPbhZUt93xV5cgeY36ZxPXDsQeO55DppzsIgWM8vgiG/Rz+qYDLmh5ts3e+Ln1wA9dQ+nZmVHw+RjaW3I5Ig==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/esbuild-freebsd-64/-/esbuild-freebsd-64-0.14.38.tgz}
+    name: esbuild-freebsd-64
+    version: 0.14.38
+    engines: {node: '>=12'}
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/esbuild-freebsd-arm64/0.14.38:
+    resolution: {integrity: sha512-/9icXUYJWherhk+y5fjPI5yNUdFPtXHQlwP7/K/zg8t8lQdHVj20SqU9/udQmeUo5pDFHMYzcEFfJqgOVeKNNQ==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/esbuild-freebsd-arm64/-/esbuild-freebsd-arm64-0.14.38.tgz}
+    name: esbuild-freebsd-arm64
+    version: 0.14.38
+    engines: {node: '>=12'}
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/esbuild-linux-32/0.14.38:
+    resolution: {integrity: sha512-QfgfeNHRFvr2XeHFzP8kOZVnal3QvST3A0cgq32ZrHjSMFTdgXhMhmWdKzRXP/PKcfv3e2OW9tT9PpcjNvaq6g==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/esbuild-linux-32/-/esbuild-linux-32-0.14.38.tgz}
+    name: esbuild-linux-32
+    version: 0.14.38
+    engines: {node: '>=12'}
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/esbuild-linux-64/0.14.38:
+    resolution: {integrity: sha512-uuZHNmqcs+Bj1qiW9k/HZU3FtIHmYiuxZ/6Aa+/KHb/pFKr7R3aVqvxlAudYI9Fw3St0VCPfv7QBpUITSmBR1Q==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/esbuild-linux-64/-/esbuild-linux-64-0.14.38.tgz}
+    name: esbuild-linux-64
+    version: 0.14.38
+    engines: {node: '>=12'}
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/esbuild-linux-arm/0.14.38:
+    resolution: {integrity: sha512-FiFvQe8J3VKTDXG01JbvoVRXQ0x6UZwyrU4IaLBZeq39Bsbatd94Fuc3F1RGqPF5RbIWW7RvkVQjn79ejzysnA==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/esbuild-linux-arm/-/esbuild-linux-arm-0.14.38.tgz}
+    name: esbuild-linux-arm
+    version: 0.14.38
+    engines: {node: '>=12'}
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/esbuild-linux-arm64/0.14.38:
+    resolution: {integrity: sha512-HlMGZTEsBrXrivr64eZ/EO0NQM8H8DuSENRok9d+Jtvq8hOLzrxfsAT9U94K3KOGk2XgCmkaI2KD8hX7F97lvA==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/esbuild-linux-arm64/-/esbuild-linux-arm64-0.14.38.tgz}
+    name: esbuild-linux-arm64
+    version: 0.14.38
+    engines: {node: '>=12'}
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/esbuild-linux-mips64le/0.14.38:
+    resolution: {integrity: sha512-qd1dLf2v7QBiI5wwfil9j0HG/5YMFBAmMVmdeokbNAMbcg49p25t6IlJFXAeLzogv1AvgaXRXvgFNhScYEUXGQ==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/esbuild-linux-mips64le/-/esbuild-linux-mips64le-0.14.38.tgz}
+    name: esbuild-linux-mips64le
+    version: 0.14.38
+    engines: {node: '>=12'}
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/esbuild-linux-ppc64le/0.14.38:
+    resolution: {integrity: sha512-mnbEm7o69gTl60jSuK+nn+pRsRHGtDPfzhrqEUXyCl7CTOCLtWN2bhK8bgsdp6J/2NyS/wHBjs1x8aBWwP2X9Q==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/esbuild-linux-ppc64le/-/esbuild-linux-ppc64le-0.14.38.tgz}
+    name: esbuild-linux-ppc64le
+    version: 0.14.38
+    engines: {node: '>=12'}
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/esbuild-linux-riscv64/0.14.38:
+    resolution: {integrity: sha512-+p6YKYbuV72uikChRk14FSyNJZ4WfYkffj6Af0/Tw63/6TJX6TnIKE+6D3xtEc7DeDth1fjUOEqm+ApKFXbbVQ==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/esbuild-linux-riscv64/-/esbuild-linux-riscv64-0.14.38.tgz}
+    name: esbuild-linux-riscv64
+    version: 0.14.38
+    engines: {node: '>=12'}
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/esbuild-linux-s390x/0.14.38:
+    resolution: {integrity: sha512-0zUsiDkGJiMHxBQ7JDU8jbaanUY975CdOW1YDrurjrM0vWHfjv9tLQsW9GSyEb/heSK1L5gaweRjzfUVBFoybQ==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/esbuild-linux-s390x/-/esbuild-linux-s390x-0.14.38.tgz}
+    name: esbuild-linux-s390x
+    version: 0.14.38
+    engines: {node: '>=12'}
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/esbuild-netbsd-64/0.14.38:
+    resolution: {integrity: sha512-cljBAApVwkpnJZfnRVThpRBGzCi+a+V9Ofb1fVkKhtrPLDYlHLrSYGtmnoTVWDQdU516qYI8+wOgcGZ4XIZh0Q==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/esbuild-netbsd-64/-/esbuild-netbsd-64-0.14.38.tgz}
+    name: esbuild-netbsd-64
+    version: 0.14.38
+    engines: {node: '>=12'}
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/esbuild-openbsd-64/0.14.38:
+    resolution: {integrity: sha512-CDswYr2PWPGEPpLDUO50mL3WO/07EMjnZDNKpmaxUPsrW+kVM3LoAqr/CE8UbzugpEiflYqJsGPLirThRB18IQ==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/esbuild-openbsd-64/-/esbuild-openbsd-64-0.14.38.tgz}
+    name: esbuild-openbsd-64
+    version: 0.14.38
+    engines: {node: '>=12'}
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/esbuild-sunos-64/0.14.38:
+    resolution: {integrity: sha512-2mfIoYW58gKcC3bck0j7lD3RZkqYA7MmujFYmSn9l6TiIcAMpuEvqksO+ntBgbLep/eyjpgdplF7b+4T9VJGOA==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/esbuild-sunos-64/-/esbuild-sunos-64-0.14.38.tgz}
+    name: esbuild-sunos-64
+    version: 0.14.38
+    engines: {node: '>=12'}
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/esbuild-windows-32/0.14.38:
+    resolution: {integrity: sha512-L2BmEeFZATAvU+FJzJiRLFUP+d9RHN+QXpgaOrs2klshoAm1AE6Us4X6fS9k33Uy5SzScn2TpcgecbqJza1Hjw==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/esbuild-windows-32/-/esbuild-windows-32-0.14.38.tgz}
+    name: esbuild-windows-32
+    version: 0.14.38
+    engines: {node: '>=12'}
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/esbuild-windows-64/0.14.38:
+    resolution: {integrity: sha512-Khy4wVmebnzue8aeSXLC+6clo/hRYeNIm0DyikoEqX+3w3rcvrhzpoix0S+MF9vzh6JFskkIGD7Zx47ODJNyCw==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/esbuild-windows-64/-/esbuild-windows-64-0.14.38.tgz}
+    name: esbuild-windows-64
+    version: 0.14.38
+    engines: {node: '>=12'}
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/esbuild-windows-arm64/0.14.38:
+    resolution: {integrity: sha512-k3FGCNmHBkqdJXuJszdWciAH77PukEyDsdIryEHn9cKLQFxzhT39dSumeTuggaQcXY57UlmLGIkklWZo2qzHpw==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/esbuild-windows-arm64/-/esbuild-windows-arm64-0.14.38.tgz}
+    name: esbuild-windows-arm64
+    version: 0.14.38
+    engines: {node: '>=12'}
+    requiresBuild: true
+    dev: true
+    optional: true
+
   registry.npmmirror.com/fast-glob/3.2.7:
     resolution: {integrity: sha512-rYGMRwip6lUMvYD3BTScMwT1HtAs2d71SMv66Vrxs0IekGZEjhM0pcMfjQPnknBt2zeCwQMEupiN02ZP4DiT1Q==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/fast-glob/-/fast-glob-3.2.7.tgz}
     name: fast-glob
@@ -2378,6 +2491,15 @@ packages:
     dependencies:
       array-back: registry.npmmirror.com/array-back/3.1.0
     dev: true
+
+  registry.npmmirror.com/fsevents/2.3.2:
+    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/fsevents/-/fsevents-2.3.2.tgz}
+    name: fsevents
+    version: 2.3.2
+    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
+    requiresBuild: true
+    dev: true
+    optional: true
 
   registry.npmmirror.com/glob-parent/5.1.2:
     resolution: {integrity: sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/glob-parent/-/glob-parent-5.1.2.tgz}
@@ -2445,6 +2567,12 @@ packages:
     version: 2.0.0
     dev: true
 
+  registry.npmmirror.com/jsonc-parser/3.0.0:
+    resolution: {integrity: sha512-fQzRfAbIBnR0IQvftw9FJveWiHp72Fg20giDrHz6TdfB12UH/uue0D3hm57UB5KgAVuniLMCaS8P1IMj9NR7cA==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/jsonc-parser/-/jsonc-parser-3.0.0.tgz}
+    name: jsonc-parser
+    version: 3.0.0
+    dev: true
+
   registry.npmmirror.com/kleur/3.0.3:
     resolution: {integrity: sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/kleur/-/kleur-3.0.3.tgz}
     name: kleur
@@ -2484,6 +2612,12 @@ packages:
       picomatch: registry.npmmirror.com/picomatch/2.3.0
     dev: true
 
+  registry.npmmirror.com/normalize.css/8.0.1:
+    resolution: {integrity: sha512-qizSNPO93t1YUuUhP22btGOo3chcvDFqFaj2TRybP0DMxkHOCTYwp3n34fel4a31ORXy4m1Xq0Gyqpb5m33qIg==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/normalize.css/-/normalize.css-8.0.1.tgz}
+    name: normalize.css
+    version: 8.0.1
+    dev: true
+
   registry.npmmirror.com/path-key/3.1.1:
     resolution: {integrity: sha512-ojmeN0qd+y0jszEtoY48r0Peq5dwMEkIlCOu6Q5f41lfkswXuKtYrhgoTpLnyIcHm24Uhqx+5Tqm2InSwLhE6Q==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/path-key/-/path-key-3.1.1.tgz}
     name: path-key
@@ -2503,6 +2637,12 @@ packages:
     name: picomatch
     version: 2.3.0
     engines: {node: '>=8.6'}
+    dev: true
+
+  registry.npmmirror.com/preact/10.7.2:
+    resolution: {integrity: sha512-GLjn0I3r6ka+NvxJUppsVFqb4V0qDTEHT/QxHlidPuClGaxF/4AI2Qti4a0cv3XMh5n1+D3hLScW10LRIm5msQ==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/preact/-/preact-10.7.2.tgz}
+    name: preact
+    version: 10.7.2
     dev: true
 
   registry.npmmirror.com/prompts/2.4.2:
@@ -2562,6 +2702,16 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
+  registry.npmmirror.com/shiki/0.9.15:
+    resolution: {integrity: sha512-/Y0z9IzhJ8nD9nbceORCqu6NgT9X6I8Fk8c3SICHI5NbZRLdZYFaB233gwct9sU0vvSypyaL/qaKvzyQGJBZSw==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/shiki/-/shiki-0.9.15.tgz}
+    name: shiki
+    version: 0.9.15
+    dependencies:
+      jsonc-parser: registry.npmmirror.com/jsonc-parser/3.0.0
+      vscode-oniguruma: registry.npmmirror.com/vscode-oniguruma/1.6.2
+      vscode-textmate: registry.npmmirror.com/vscode-textmate/5.2.0
+    dev: true
+
   registry.npmmirror.com/sisteransi/1.0.5:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/sisteransi/-/sisteransi-1.0.5.tgz}
     name: sisteransi
@@ -2600,6 +2750,110 @@ packages:
       is-number: registry.npmmirror.com/is-number/7.0.0
     dev: true
 
+  registry.npmmirror.com/turbo-darwin-64/1.2.6:
+    resolution: {integrity: sha512-YNH49cZKw6rrq6ef/PMuryk3lKzE9QI0R72Yj3lcA4C5FIekUA7RZY8xZK7152r6YNgZ6aPWOQN9lauSN58gPQ==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/turbo-darwin-64/-/turbo-darwin-64-1.2.6.tgz}
+    name: turbo-darwin-64
+    version: 1.2.6
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/turbo-darwin-arm64/1.2.6:
+    resolution: {integrity: sha512-1yk0UK59qGQjFkhmSnrNrGMIVxTeMZSaJ9YhJquyQG7PPHxIpCnz4uQQkZFRb0HQDGMEmsPC49Sx4h6UBQ/3aA==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/turbo-darwin-arm64/-/turbo-darwin-arm64-1.2.6.tgz}
+    name: turbo-darwin-arm64
+    version: 1.2.6
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/turbo-freebsd-64/1.2.6:
+    resolution: {integrity: sha512-m5G86zILy0Qc/fy/2Auu74c5St/yS+SQi8ka2Wb/uVMPQjh7VpM3mB/z7U5pZTv92w2HJ8q5krC0uLT+pH4n8Q==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/turbo-freebsd-64/-/turbo-freebsd-64-1.2.6.tgz}
+    name: turbo-freebsd-64
+    version: 1.2.6
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/turbo-freebsd-arm64/1.2.6:
+    resolution: {integrity: sha512-tjbrRoN8fMuyfyKJ/Dw97cNy9CVlzoT8zZbpo1rVZkMRYpnizIDECdecoiMttBZIP9/ktNcj6nJVHh40+a0EMw==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/turbo-freebsd-arm64/-/turbo-freebsd-arm64-1.2.6.tgz}
+    name: turbo-freebsd-arm64
+    version: 1.2.6
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/turbo-linux-32/1.2.6:
+    resolution: {integrity: sha512-NBCeqsNbTQKuP+5rTwfd4dyd/LTdfUuX+4B6FxXswz6IuCHymUaCRwmRfN6TdeGRFnSP4y2tAymU5zqrI4/Leg==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/turbo-linux-32/-/turbo-linux-32-1.2.6.tgz}
+    name: turbo-linux-32
+    version: 1.2.6
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/turbo-linux-64/1.2.6:
+    resolution: {integrity: sha512-27NGdEaAOkM/2Bj/QwSNI0b8VxWj9TrfqIE7ATENaMV4B+ukFgFvUkXQuJhnmb4InMxZSc8q01KaSou5P034Sw==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/turbo-linux-64/-/turbo-linux-64-1.2.6.tgz}
+    name: turbo-linux-64
+    version: 1.2.6
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/turbo-linux-arm/1.2.6:
+    resolution: {integrity: sha512-a0aw0kUfvUVLRV7K+5CjscJKDCLwLtb8p28KLHpjvy8EP7Us+n9DH0tZ2M/CAy02cZI7yOzbWEx0L4Q3a1Dajw==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/turbo-linux-arm/-/turbo-linux-arm-1.2.6.tgz}
+    name: turbo-linux-arm
+    version: 1.2.6
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/turbo-linux-arm64/1.2.6:
+    resolution: {integrity: sha512-zvk7vQ3N3QU2kKKJQ/qalAen3wkPhcoBD3NIlEwKVL2OYaSCa4UDgOSjpwLw+FAmbWh0zB5Jm8mcLXcok9xyUQ==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/turbo-linux-arm64/-/turbo-linux-arm64-1.2.6.tgz}
+    name: turbo-linux-arm64
+    version: 1.2.6
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/turbo-linux-mips64le/1.2.6:
+    resolution: {integrity: sha512-5sLTNpXedD4aPCtKzbGOo3THImQVgywivFzbLgD5apkF5eYImG/1oRPH0tjdIN/uEqKFJdxniN5EnLE3uUA76g==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/turbo-linux-mips64le/-/turbo-linux-mips64le-1.2.6.tgz}
+    name: turbo-linux-mips64le
+    version: 1.2.6
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/turbo-linux-ppc64le/1.2.6:
+    resolution: {integrity: sha512-dNIDtCXZolAdm84tCWynntcTbaOErCEbT0onuWwwhJ3CZfC68vqghkYJu7o4T8rMek0RLLcIh/Y4dNM3bp1Mvg==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/turbo-linux-ppc64le/-/turbo-linux-ppc64le-1.2.6.tgz}
+    name: turbo-linux-ppc64le
+    version: 1.2.6
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/turbo-windows-32/1.2.6:
+    resolution: {integrity: sha512-1rzktj68Ohqi+OPeSvWqbb6Er0yS7FidRku8IQIZJ0bmwP/a5OMqIHXHoIEbn5/ceXry6vJm8aYDgm1FAKkbZw==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/turbo-windows-32/-/turbo-windows-32-1.2.6.tgz}
+    name: turbo-windows-32
+    version: 1.2.6
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/turbo-windows-64/1.2.6:
+    resolution: {integrity: sha512-91m+np5oxTRVORjkFVf2BypYjrhB+Q7ZaKqti5q4A0qLIvYs0dqGitT45j547XKWtlk2dP2ziXhYs2btDOCr4w==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/turbo-windows-64/-/turbo-windows-64-1.2.6.tgz}
+    name: turbo-windows-64
+    version: 1.2.6
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/turbo-windows-arm64/1.2.6:
+    resolution: {integrity: sha512-92vhzWNu+ZrjMK1D6y1bjHTQjIVx0YViYCHDSQNY56STQgUleRW+aColVGs2MnZ4lv7vHhA9FIDJ19CRYpTiNA==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/turbo-windows-arm64/-/turbo-windows-arm64-1.2.6.tgz}
+    name: turbo-windows-arm64
+    version: 1.2.6
+    requiresBuild: true
+    dev: true
+    optional: true
+
   registry.npmmirror.com/turbo/1.2.6:
     resolution: {integrity: sha512-7zh48qI2dTb1ktVhTyVLvleRWYVIDNlYnZt9rb8nA/evwZJC5x7ETK4a86f0f4WBAzp3A/TRbE8HNF4cGSkWvw==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/turbo/-/turbo-1.2.6.tgz}
     name: turbo
@@ -2607,19 +2861,19 @@ packages:
     hasBin: true
     requiresBuild: true
     optionalDependencies:
-      turbo-darwin-64: 1.2.6
-      turbo-darwin-arm64: 1.2.6
-      turbo-freebsd-64: 1.2.6
-      turbo-freebsd-arm64: 1.2.6
-      turbo-linux-32: 1.2.6
-      turbo-linux-64: 1.2.6
-      turbo-linux-arm: 1.2.6
-      turbo-linux-arm64: 1.2.6
-      turbo-linux-mips64le: 1.2.6
-      turbo-linux-ppc64le: 1.2.6
-      turbo-windows-32: 1.2.6
-      turbo-windows-64: 1.2.6
-      turbo-windows-arm64: 1.2.6
+      turbo-darwin-64: registry.npmmirror.com/turbo-darwin-64/1.2.6
+      turbo-darwin-arm64: registry.npmmirror.com/turbo-darwin-arm64/1.2.6
+      turbo-freebsd-64: registry.npmmirror.com/turbo-freebsd-64/1.2.6
+      turbo-freebsd-arm64: registry.npmmirror.com/turbo-freebsd-arm64/1.2.6
+      turbo-linux-32: registry.npmmirror.com/turbo-linux-32/1.2.6
+      turbo-linux-64: registry.npmmirror.com/turbo-linux-64/1.2.6
+      turbo-linux-arm: registry.npmmirror.com/turbo-linux-arm/1.2.6
+      turbo-linux-arm64: registry.npmmirror.com/turbo-linux-arm64/1.2.6
+      turbo-linux-mips64le: registry.npmmirror.com/turbo-linux-mips64le/1.2.6
+      turbo-linux-ppc64le: registry.npmmirror.com/turbo-linux-ppc64le/1.2.6
+      turbo-windows-32: registry.npmmirror.com/turbo-windows-32/1.2.6
+      turbo-windows-64: registry.npmmirror.com/turbo-windows-64/1.2.6
+      turbo-windows-arm64: registry.npmmirror.com/turbo-windows-arm64/1.2.6
     dev: true
 
   registry.npmmirror.com/type-detect/4.0.8:
@@ -2634,6 +2888,27 @@ packages:
     name: typical
     version: 4.0.0
     engines: {node: '>=8'}
+    dev: true
+
+  registry.npmmirror.com/vscode-oniguruma/1.6.2:
+    resolution: {integrity: sha512-KH8+KKov5eS/9WhofZR8M8dMHWN2gTxjMsG4jd04YhpbPR91fUj7rYQ2/XjeHCJWbg7X++ApRIU9NUwM2vTvLA==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/vscode-oniguruma/-/vscode-oniguruma-1.6.2.tgz}
+    name: vscode-oniguruma
+    version: 1.6.2
+    dev: true
+
+  registry.npmmirror.com/vscode-textmate/5.2.0:
+    resolution: {integrity: sha512-Uw5ooOQxRASHgu6C7GVvUxisKXfSgW4oFlO+aa+PAkgmH89O3CXxEEzNRNtHSqtXFTl0nAC1uYj0GMSH27uwtQ==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/vscode-textmate/-/vscode-textmate-5.2.0.tgz}
+    name: vscode-textmate
+    version: 5.2.0
+    dev: true
+
+  registry.npmmirror.com/vue-demi/0.12.5:
+    resolution: {integrity: sha512-BREuTgTYlUr0zw0EZn3hnhC3I6gPWv+Kwh4MCih6QcAeaTlaIX0DwOVN0wHej7hSvDPecz4jygy/idsgKfW58Q==, registry: https://packages.aliyun.com/6183ac66041d450d2c25202d/npm/npm-registry/, tarball: https://registry.npmmirror.com/vue-demi/-/vue-demi-0.12.5.tgz}
+    name: vue-demi
+    version: 0.12.5
+    engines: {node: '>=12'}
+    hasBin: true
+    requiresBuild: true
     dev: true
 
   registry.npmmirror.com/which/2.0.2:

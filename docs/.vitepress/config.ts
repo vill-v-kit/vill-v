@@ -1,7 +1,8 @@
-import { defineConfig } from 'vitepress'
+import { defineConfigWithTheme } from 'vitepress'
 import * as fs from 'fs'
 import path from 'path'
-
+import { Config } from '@vue/theme'
+import baseConfig from '@vue/theme/config'
 const getModules = () => {
   const obj = {
     '/modules/': [] as any[],
@@ -38,12 +39,13 @@ const getModules = () => {
 
   return obj
 }
-export default defineConfig({
+export default defineConfigWithTheme<Config>({
+  extends: baseConfig,
   title: 'vill-v',
   lang: 'zh-CN',
   base: '/utils',
   lastUpdated: true,
-  vite: { server: { port: 3001 } },
+  vite: { server: { port: 3002 } },
   description: '开发中对于技术的总结，归纳',
   themeConfig: {
     repo: 'https://gitee.com/white-kite/utils',
