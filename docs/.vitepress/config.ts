@@ -1,7 +1,7 @@
 import { defineConfigWithTheme } from 'vitepress'
 import * as fs from 'fs'
 import path from 'path'
-import { Config } from '@vue/theme'
+// @ts-ignore
 import baseConfig from '@vue/theme/config'
 const getModules = () => {
   const obj = {
@@ -39,7 +39,7 @@ const getModules = () => {
 
   return obj
 }
-export default defineConfigWithTheme<Config>({
+export default defineConfigWithTheme({
   extends: baseConfig,
   title: 'vill-v',
   lang: 'zh-CN',
@@ -52,6 +52,11 @@ export default defineConfigWithTheme<Config>({
     repoLabel: 'gitee',
     docsDir: 'docs',
     lastUpdated: '最后更新时间',
+    algolia: {
+      appId: 'X96S81Q5WC',
+      apiKey: 'd1987244be90b6fe1f272e21c194338c',
+      indexName: 'white-kite',
+    },
     nav: [
       {
         text: '指引',
