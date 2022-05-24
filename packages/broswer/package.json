@@ -30,6 +30,7 @@
     "@vill-v/vanilla": "workspace:*",
     "@vill-v/type-as": "workspace:*",
     "@vill-v/ts": "workspace:*",
+    "void-cache": "0.0.2",
     "csstype": "^3.0.11"
   }
 }

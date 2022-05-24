@@ -1,5 +1,6 @@
 import { isNil } from '@vill-v/type-as'
 import { forceJsonParse } from '@vill-v/vanilla'
+import { createStorageLikeCache, CacheModel } from 'void-cache'
 
 export interface StorageCacheStoreParseType<T = any> {
   get: (value: string) => T
@@ -25,7 +26,7 @@ export class StorageCache<T = any> {
    * Storage实例
    * @private
    */
-  private readonly storage: Storage
+  private readonly storage: CacheModel<string | null>
   /**
    * 解析器
    * @private
@@ -34,7 +35,7 @@ export class StorageCache<T = any> {
   private readonly _key: string
 
   constructor(storage: Storage, key: string, parse?: StorageCacheStoreParseType<T> | true) {
-    this.storage = storage
+    this.storage = createStorageLikeCache({ storageLike: storage })
     this.parse = this._changeParse(parse)
     this._key = key
   }
@@ -65,7 +66,7 @@ export class StorageCache<T = any> {
    * 获取原始值
    */
   rawGet() {
-    return this.storage.getItem(this._key)
+    return this.storage.get(this._key)
   }
 
   /**
@@ -77,7 +78,7 @@ export class StorageCache<T = any> {
       this.remove()
       return
     }
-    this.storage.setItem(this._key, value)
+    this.storage.set(this._key, value)
   }
 
   get(): T | null {
@@ -116,7 +117,7 @@ export class StorageCache<T = any> {
   }
 
   remove() {
-    this.storage.removeItem(this._key)
+    this.storage.delete(this._key)
   }
 
   /**
