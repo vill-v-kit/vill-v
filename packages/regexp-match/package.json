@@ -1,6 +1,6 @@
 {
   "name": "@vill-v/regexp-match",
-  "version": "0.0.15",
+  "version": "0.1.3",
   "description": "开发中总结的常用正则",
   "files": [
     "dist"

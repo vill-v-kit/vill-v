@@ -1,6 +1,6 @@
 {
   "name": "@whitekite/utils",
-  "version": "0.4.14",
+  "version": "0.5.2",
   "description": "白鸢个人工具包",
   "files": [
     "dist"
