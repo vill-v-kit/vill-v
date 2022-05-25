@@ -58,8 +58,7 @@ export class StorageCache<T = any> {
    * 是否存在该缓存
    */
   has() {
-    const value = this.rawGet()
-    return !isNil(value)
+    return this.storage.has(this._key)
   }
 
   /**
