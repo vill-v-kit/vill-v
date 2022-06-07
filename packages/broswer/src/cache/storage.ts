@@ -1,6 +1,7 @@
 import { isNil } from '@vill-v/type-as'
 import { forceJsonParse } from '@vill-v/vanilla'
-import { createStorageLikeCache, CacheModel } from 'void-cache'
+import { createStorageLikeCache } from '@void-cache/storage-like'
+import { type CacheModel } from '@void-cache/core'
 
 export interface StorageCacheStoreParseType<T = any> {
   get: (value: string) => T
@@ -116,7 +117,7 @@ export class StorageCache<T = any> {
   }
 
   remove() {
-    this.storage.delete(this._key)
+    this.storage.remove(this._key)
   }
 
   /**

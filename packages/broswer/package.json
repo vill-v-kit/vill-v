@@ -1,6 +1,6 @@
 {
   "name": "@vill-v/broswer",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "开发中围绕浏览器的技术总结",
   "files": [
     "dist"
@@ -30,7 +30,10 @@
     "@vill-v/vanilla": "workspace:*",
     "@vill-v/type-as": "workspace:*",
     "@vill-v/ts": "workspace:*",
-    "void-cache": "0.0.2",
+    "@void-cache/storage-like": "0.1.1",
     "csstype": "^3.0.11"
+  },
+  "devDependencies": {
+    "@void-cache/core": "0.1.1"
   }
 }
