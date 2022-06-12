@@ -7,7 +7,7 @@ hero:
   actions:
     - theme: brand
       text: 开始
-      link: /guide/
+      link: /utils/guide/
 
 features:
 - title: ESM+CJS
