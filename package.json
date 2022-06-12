@@ -26,7 +26,6 @@
     "turbo": "^1.2.16",
     "bumpp": "^7.1.1",
     "vitepress": "^1.0.0-alpha.1",
-    "@vue/theme": "^1.0.2",
     "vitest": "^0.14.2"
   }
 }
