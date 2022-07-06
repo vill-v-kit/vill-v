@@ -4,8 +4,12 @@ dist
 .npmrc
 .cache
 
-packages/dist
+packages/*/dist
 packages/*/.turbo
+
+legacy/*/dist
+legacy/*/.turbo
+
 !docs/.vitepress/dist
 .local
 # local env files
