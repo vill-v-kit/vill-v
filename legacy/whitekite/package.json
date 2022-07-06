@@ -1,6 +1,6 @@
 {
   "name": "@whitekite/utils",
-  "version": "0.1.6",
+  "version": "0.5.4",
   "description": "白鸢个人工具包",
   "files": [
     "dist"
@@ -13,8 +13,8 @@
   "sideEffects": false,
   "homepage": "https://gitee.com/white-kite/utils/blob/master/README.md",
   "repository": "https://gitee.com/white-kite/utils/blob/master",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {

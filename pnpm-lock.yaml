@@ -36,6 +36,12 @@ importers:
       vitest: 0.16.0
       vue: 3.2.37
 
+  legacy/whitekite:
+    specifiers:
+      vill-v: workspace:*
+    dependencies:
+      vill-v: link:../../packages/core
+
   packages/async:
     specifiers:
       '@vill-v/type-as': workspace:*
@@ -110,12 +116,6 @@ importers:
       '@vill-v/type-as': workspace:*
     dependencies:
       '@vill-v/type-as': link:../type-as
-
-  packages/whitekite:
-    specifiers:
-      vill-v: workspace:*
-    dependencies:
-      vill-v: link:../core
 
 packages:
 
