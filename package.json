@@ -10,7 +10,8 @@
     "release": "bumpp package.json packages/*/package.json",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:serve": "vitepress serve docs"
+    "docs:serve": "vitepress serve docs",
+    "changelogen": "changelogen"
   },
   "devDependencies": {
     "@types/node": "^17.0.21",
@@ -25,6 +26,7 @@
     "tsup": "^6.1.2",
     "turbo": "^1.3.1",
     "bumpp": "^8.2.1",
+    "changelogen": "^0.1.1",
     "vitepress": "^1.0.0-alpha.4",
     "vitest": "^0.16.0"
   }
