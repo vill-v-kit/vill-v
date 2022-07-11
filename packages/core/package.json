@@ -11,8 +11,8 @@
     "email": "1075790909@qq.com"
   },
   "sideEffects": false,
-  "homepage": "https://white-kite.gitee.io/utils",
-  "repository": "https://gitee.com/white-kite/utils/blob/master",
+  "homepage": "https://vill-v.gitee.io/core",
+  "repository": "https://gitee.com/vill-v/core",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
