@@ -1,6 +1,6 @@
 {
   "name": "@vill-v/ts",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "开发中总结的 typescript 扩展",
   "files": [
     "dist"
