@@ -47,9 +47,9 @@ export default defineConfig({
   themeConfig: {
     lastUpdatedText: '最后更新时间',
     algolia: {
-      appId: 'X96S81Q5WC',
-      apiKey: 'd1987244be90b6fe1f272e21c194338c',
-      indexName: 'white-kite',
+      appId: 'A1A18HNLQ4',
+      apiKey: '76d659bc7b9afbb6ea9e937cdfe1d488',
+      indexName: 'vill-v',
     },
     socialLinks: [{ link: 'https://gitee.com/white-kite/utils', icon: 'github' }],
     footer: {
