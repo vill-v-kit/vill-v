@@ -51,7 +51,7 @@ export default defineConfig({
       apiKey: '76d659bc7b9afbb6ea9e937cdfe1d488',
       indexName: 'vill-v',
     },
-    socialLinks: [{ link: 'https://gitee.com/white-kite/utils', icon: 'github' }],
+    socialLinks: [{ link: 'https://gitee.com/vill-v/core', icon: 'github' }],
     footer: {
       message: 'Released under the MIT License.',
       copyright: 'Copyright © 2022-present White Kite',
