@@ -11,15 +11,4 @@ export default {
     test: { title: '✅ 测试' },
     BreakingChange: { title: '⚠️ 破坏性改动' },
   },
-  scopeMap: {
-    async: 'async',
-    broswer: 'broswer',
-    core: 'core',
-    date: 'date',
-    'path-prop': 'path-prop',
-    'regexp-match': 'regexp-match',
-    ts: 'ts',
-    'type-as': 'type-as',
-    vanilla: 'vanilla',
-  },
 }

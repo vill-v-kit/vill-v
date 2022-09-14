@@ -27,7 +27,7 @@
     "build": "tsup-node"
   },
   "dependencies": {
-    "dayjs": "^1.11.1",
-    "@vill-v/regexp-match": "workspace:*"
+    "@vill-v/regexp-match": "workspace:*",
+    "dayjs": "^1.11.5"
   }
 }

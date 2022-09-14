@@ -27,13 +27,13 @@
     "build": "tsup-node"
   },
   "dependencies": {
-    "@vill-v/vanilla": "workspace:*",
-    "@vill-v/ts": "workspace:*",
-    "@vill-v/regexp-match": "workspace:*",
-    "@vill-v/date": "workspace:*",
-    "@vill-v/broswer": "workspace:*",
     "@vill-v/async": "workspace:*",
+    "@vill-v/broswer": "workspace:*",
+    "@vill-v/date": "workspace:*",
+    "@vill-v/path-prop": "workspace:*",
+    "@vill-v/regexp-match": "workspace:*",
+    "@vill-v/ts": "workspace:*",
     "@vill-v/type-as": "workspace:*",
-    "@vill-v/path-prop": "workspace:*"
+    "@vill-v/vanilla": "workspace:*"
   }
 }
