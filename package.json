@@ -7,7 +7,7 @@
   "packageManager": "pnpm@7.2.1",
   "scripts": {
     "build": "turbo run build",
-    "release": "bumpp package.json packages/*/package.json && bumpp legacy/*/package.json",
+    "release": "bumpp package.json packages/*/package.json",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs",
