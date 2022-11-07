@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 import * as fs from 'fs'
 import path from 'path'
+import pkg from '../../package.json'
 const getModules = () => {
   const obj = {
     '/modules/': [] as any[],
@@ -64,6 +65,15 @@ export default defineConfig({
       {
         text: '模块',
         link: '/modules/',
+      },
+      {
+        text: pkg.version,
+        items: [
+          {
+            text: 'Changelog',
+            link: 'https://gitee.com/vill-v/core/blob/master/CHANGELOG.md',
+          },
+        ],
       },
     ],
     sidebar: {
