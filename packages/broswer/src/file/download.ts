@@ -60,10 +60,9 @@ export function downloadByData({
 }) {
   const blobData = typeof bom !== 'undefined' ? [bom, data] : [data]
   const blob = new Blob(blobData, { type: mime || 'application/octet-stream' })
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+
   // @ts-ignore
   if (typeof window.navigator.msSaveBlob !== 'undefined') {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     window.navigator.msSaveBlob(blob, filename)
   } else {
@@ -97,20 +96,15 @@ export function downloadByUrlRequest({
   target?: LinkTargetContext
   fileName?: string
 }) {
-  const xhr = new XMLHttpRequest()
-  xhr.open('get', url, true)
-  xhr.responseType = 'blob'
-  xhr.onload = () => {
-    if (xhr.status !== 200) {
-      return
-    }
-    downloadByData({
-      data: xhr.response,
-      target,
-      filename: fileName || url.substring(url.lastIndexOf('/') + 1, url.length),
-    })
-  }
-  xhr.send()
+  return fetch(url, { method: 'get' })
+    .then((res) => res.blob())
+    .then((data) =>
+      downloadByData({
+        data,
+        target,
+        filename: fileName || url.substring(url.lastIndexOf('/') + 1, url.length),
+      })
+    )
 }
 
 /**
