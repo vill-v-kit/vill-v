@@ -97,7 +97,12 @@ export function downloadByUrlRequest({
   fileName?: string
 }) {
   return fetch(url, { method: 'get' })
-    .then((res) => res.blob())
+    .then((res) => {
+      if (res.status !== 200) {
+        return Promise.reject()
+      }
+      return res.blob()
+    })
     .then((data) =>
       downloadByData({
         data,
