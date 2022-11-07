@@ -1,6 +1,6 @@
 {
   "name": "@vill-v/path-prop",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "一个基于路径字符串对对象进行操作的工具",
   "files": [
     "dist"
