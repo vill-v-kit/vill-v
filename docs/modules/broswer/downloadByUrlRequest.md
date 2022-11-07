@@ -5,21 +5,40 @@
 ## Demo
 
 ```ts
-import {downloadByUrlRequest} from '@vill-v/broswer'
+import { downloadByUrlRequest } from '@vill-v/broswer'
 
 downloadByUrlRequest({
   url: 'https://xxx.xxx.xxx',
   target: '_blank',
   fileName: 'xxx.pdf',
 })
+  .then(() => {
+    console.log('下载成功')
+  })
+  .catch(() => {
+    console.log('下载失败')
+  })
+  .finally(() => {
+    console.log('下载完成')
+  })
 ```
 
 ## DTS
 
 ```ts
-declare function downloadByUrlRequest({url, target, fileName,}: {
-  url: string;
-  target?: LinkTargetContext;
-  fileName?: string;
-}): void;
+/**
+ * 通过请求的方式下载
+ * @param url
+ * @param target
+ * @param fileName
+ */
+declare function downloadByUrlRequest({
+  url,
+  target,
+  fileName,
+}: {
+  url: string
+  target?: LinkTargetContext
+  fileName?: string
+}): Promise<void>
 ```
