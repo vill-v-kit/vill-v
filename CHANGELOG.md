@@ -1,6 +1,36 @@
 # Changelog
 
 
+## v1.1.0 (v1.0.0..v1.1.0)
+
+
+### 🚀 特性
+
+  - **browser:** ⚠️  `downloadByUrlRequest` 内部实现从 `XMLHttpRequest` 替换为 `fetch`,并修改返回类型为 `Promise` ,用于监听下载完成 (c7bf911)
+  - 修改 `downloadByUrlRequest` res.status !== 200 时,返回 Promise.reject (fce1d70)
+
+### 📖 文档
+
+  - Build docs (d90f7a8)
+  - 更新 `downloadByUrlRequest` 文档 (fd0cdfd)
+  - 修改 文档主题色 (1922355)
+  - 增加 版本 显示与changelog链接🔗 (84bea99)
+
+### 🏡 框架
+
+  - 修改 bumpp 规则 (45bc929)
+  - Generate CHANGELOG.md (38aa172)
+  - 使用 pnpm --filter 进行monorepo打包 (7f0d75e)
+  - Release v1.1.0 (f710ffb)
+
+#### ⚠️  Breaking Changes
+
+  - **browser:** ⚠️  `downloadByUrlRequest` 内部实现从 `XMLHttpRequest` 替换为 `fetch`,并修改返回类型为 `Promise` ,用于监听下载完成 (c7bf911)
+
+### ❤️  Contributors
+
+- Whitekite
+
 ## v1.0.0 (0.0.2..v1.0.0)
 
 
