@@ -2,8 +2,8 @@
   "name": "@vill-v/memo",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://gitee.com/white-kite/seele-utils/blob/master/README.md",
-  "repository": "https://gitee.com/white-kite/seele-utils/blob/master",
+  "homepage": "https://vill-v.gitee.io/",
+  "repository": "https://gitee.com/vill-v/core",
   "packageManager": "pnpm@7.11.0",
   "scripts": {
     "build": "turbo run build",
@@ -14,20 +14,20 @@
     "changelogen": "changelogen --output CHANGELOG.md"
   },
   "devDependencies": {
-    "@rushstack/eslint-patch": "^1.1.4",
+    "@rushstack/eslint-patch": "^1.2.0",
     "@types/node": "^17.0.45",
     "@vill-v/eslint-config": "^0.0.8",
     "@vill-v/prettier-config": "^0.0.8",
     "@vill-v/tsconfig": "^0.0.8",
     "bumpp": "^8.2.1",
     "changelogen": "^0.3.0",
-    "eslint": "^8.23.1",
+    "eslint": "^8.27.0",
     "prettier": "^2.7.1",
-    "tsup": "^6.2.3",
-    "turbo": "^1.4.6",
-    "typescript": "^4.8.3",
-    "vitepress": "^1.0.0-alpha.14",
-    "vitest": "^0.23.2",
-    "vue": "^3.2.39"
+    "tsup": "^6.4.0",
+    "turbo": "^1.6.3",
+    "typescript": "^4.8.4",
+    "vitepress": "^1.0.0-alpha.27",
+    "vitest": "^0.25.0",
+    "vue": "^3.2.41"
   }
 }
