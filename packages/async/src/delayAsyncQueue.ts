@@ -16,7 +16,7 @@ export class DelayAsyncQueue {
   }
 
   private activeIndex: number
-  private readonly result: { state?: AsyncQueueSate }[]
+  readonly result: { state?: AsyncQueueSate; data?: any }[]
 
   constructor() {
     this.result = []
@@ -73,12 +73,14 @@ export class DelayAsyncQueue {
   /**
    * 更新队列状态
    * @param state
+   * @param data
    * @private
    */
-  private updateResult(state: AsyncQueueSate) {
+  private updateResult(state: AsyncQueueSate, data: any) {
     this.activeIndex++
     this.result[this.activeIndex] ||= {}
     this.result[this.activeIndex].state = state
+    this.result[this.activeIndex].data = data
   }
 
   /**
@@ -100,13 +102,13 @@ export class DelayAsyncQueue {
             }
 
             return curr(prevRes).then((currentRes: any) => {
-              this.updateResult(this.promiseState.fulfilled)
+              this.updateResult(this.promiseState.fulfilled, currentRes)
               this.activeIndex === this.queue.length - 1 && resolve()
               return currentRes
             })
           })
           .catch((e) => {
-            this.updateResult(this.promiseState.rejected)
+            this.updateResult(this.promiseState.rejected, e)
             reject()
             return e
           })
