@@ -1,6 +1,45 @@
 # Changelog
 
 
+## v1.1.1...v1.1.2
+
+
+### 🚀 特性
+
+  - 新增 `resolveImage` 方法异步加载图片 (9a6acc2)
+
+### 📖 文档
+
+  - 新增 resolveImage 文档 (fcf5b5a)
+
+### 🏡 框架
+
+  - Release v1.1.2 (018973c)
+
+### ❤️  Contributors
+
+- Whitekite <1075790909@qq.com>
+
+## v1.1.0...v1.1.1
+
+
+### 🚀 特性
+
+  - 修改 `delayAsyncQueue` 记录 返回结果 (643ce75)
+
+### 📖 文档
+
+  - Build docs (5a11e25)
+
+### 🏡 框架
+
+  - Generate CHANGELOG.md (050826c)
+  - Release v1.1.1 (8129628)
+
+### ❤️  Contributors
+
+- Whitekite <1075790909@qq.com>
+
 ## v1.1.0 (v1.0.0..v1.1.0)
 
 
