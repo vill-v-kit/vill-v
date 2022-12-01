@@ -1,3 +1,4 @@
+import { resolveImage } from './resolveImage'
 /**
  * base64 to blob
  * @param base64Buf
@@ -25,19 +26,18 @@ export function imgUrlToBase64(url: string, mineType?: string): Promise<string> 
     let canvas = document.createElement('CANVAS') as HTMLCanvasElement | null
     const ctx = canvas?.getContext('2d')
 
-    const img = new Image()
-    img.crossOrigin = ''
-    img.onload = function () {
-      if (!canvas || !ctx) {
-        return reject()
-      }
-      canvas.height = img.height
-      canvas.width = img.width
-      ctx.drawImage(img, 0, 0)
-      const dataURL = canvas.toDataURL(mineType || 'image/png')
-      canvas = null
-      resolve(dataURL)
-    }
-    img.src = url
+    return resolveImage(url)
+      .then((img) => {
+        if (!canvas || !ctx) {
+          return reject()
+        }
+        canvas.height = img.height
+        canvas.width = img.width
+        ctx.drawImage(img, 0, 0)
+        const dataURL = canvas.toDataURL(mineType || 'image/png')
+        canvas = null
+        resolve(dataURL)
+      })
+      .catch(reject)
   })
 }
