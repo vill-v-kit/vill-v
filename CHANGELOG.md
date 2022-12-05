@@ -1,6 +1,23 @@
 # Changelog
 
 
+## v1.1.2...v1.1.3
+
+
+### 📖 文档
+
+  - Build docs (0362f9b)
+
+### 🏡 框架
+
+  - Generate CHANGELOG.md (80a380e)
+  - **build:** 修改打包策略 (edc57d3)
+  - Release v1.1.3 (b0025a0)
+
+### ❤️  Contributors
+
+- Whitekite <1075790909@qq.com>
+
 ## v1.1.1...v1.1.2
 
 
