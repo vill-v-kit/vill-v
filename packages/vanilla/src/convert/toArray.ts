@@ -1,4 +1,4 @@
-import { isString, isMap, isSet } from '@vill-v/type-as'
+import { isMap, isSet, isString } from '@vill-v/type-as'
 
 export const stringToArray = (value: string) => {
   return [...value]

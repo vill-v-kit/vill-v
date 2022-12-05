@@ -1,4 +1,4 @@
-import { describe, test, expect } from 'vitest'
+import { describe, expect, test } from 'vitest'
 import { AsyncPool } from './asyncPool'
 
 describe('asyncPool 普通调用', () => {

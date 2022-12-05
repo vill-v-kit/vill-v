@@ -1,4 +1,4 @@
-import { isObject, isMap, isSet, isString } from '@vill-v/type-as'
+import { isMap, isObject, isSet, isString } from '@vill-v/type-as'
 
 const isLengthEmpty = (value: any) => value.length === 0
 
