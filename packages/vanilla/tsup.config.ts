@@ -7,5 +7,7 @@ export default defineConfig({
   dts: true,
   format: ['cjs', 'esm'],
   platform: 'browser',
+  splitting: true,
+  treeshake: true,
   target: 'es2015',
 })
