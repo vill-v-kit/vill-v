@@ -9,6 +9,11 @@ export class LocalStorageCache<T = any> extends StorageCache<T> {
   }
 }
 
+/**
+ * localStorage缓存商店
+ * @param key
+ * @param parse
+ */
 export const createLocalStorageCache = <T = any>(
   key: string,
   parse?: StorageCacheStoreParseType<T> | true
