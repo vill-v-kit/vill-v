@@ -1,6 +1,42 @@
 # Changelog
 
 
+## v1.1.3...v1.2.0
+
+
+### 🚀 特性
+
+  - **date:** ⚠️  所有插件完全按需调用，不再默认装载 (021cc00)
+  - **vanilla:** ToArray 方法在入参类型 为 array时，将直接返回入参 (34699d5)
+  - **vanilla:** 新增 asArray 方法，将任何入参包装成数组 (4ab0c6a)
+  - **vanilla:** `isEmpty` 当入参为 null (undefined 时，直接返回 true)
+  - **broswer:** 新增 `createStorageCache` 方法 作为 `StorageCache` 的函数式调用方法 (239ff55)
+  - **broswer:** 新增 `LocalStorageCache`,`createLocalStorageCache`  作为 `StorageCache` 的 localStorage 预设 (72408e2)
+  - **broswer:** 新增 `SessionStorageCache`,`createSessionStorageCache`  作为 `StorageCache` 的 sessionStorage 预设 (c4ac221)
+  - **broswer:** 优化 模块导出 (144a90b)
+  - **path-prop:** 导出路径解析器 (d9373c3)
+  - **broswer:** 导出raf 方法的别名 wrapperRaf (ea4e40a)
+
+### 📖 文档
+
+  - Build docs (25ba271)
+  - 更新部分文档 (aa47a70)
+
+### 🏡 框架
+
+  - Generate CHANGELOG.md (6255d22)
+  - .gitignore 忽略 docs/.vitepress/cache (fec3aaa)
+  - Release v1.2.0 (f35aca4)
+
+#### ⚠️  Breaking Changes
+
+  - **date:** ⚠️  所有插件完全按需调用，不再默认装载 (021cc00)
+
+### ❤️  Contributors
+
+- Whitekite <1075790909@qq.com>
+- C9f5a3d <whitekite>
+
 ## v1.1.2...v1.1.3
 
 
