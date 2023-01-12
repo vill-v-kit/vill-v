@@ -1,6 +1,6 @@
 import { isWindow } from '@vill-v/vanilla'
-import raf from './raf'
-import getScroll from './getScroll'
+import { wrapperRaf as raf } from './raf'
+import { getScroll } from './getScroll'
 import { easeInOutCubic } from './easings'
 
 export interface ScrollToOptions {

@@ -1,15 +1,16 @@
 # StorageCache
 
-对浏览器localStorage和sessionStorage或者localStorage Like 的统一封装
+对浏览器 localStorage 和 sessionStorage 或者 localStorage Like 的统一封装
 
 ## Demo
 
 普通使用
 
 ```ts
-import {StorageCache} from '@vill-v/broswer'
+import { StorageCache, createStorageCache } from '@vill-v/broswer'
 
 const normalStorage = new StorageCache(localStorage, 'token')
+// or createStorageCache(localStorage, 'token')
 // 移除
 normalStorage.remove()
 // 是否存在
@@ -37,7 +38,7 @@ normalStorage.rawEq('bar')
 对值进行解析
 
 ```ts
-import {StorageCache} from '@vill-v/broswer'
+import { StorageCache, createStorageCache } from '@vill-v/broswer'
 
 /**
  * 自定义值的解析规则
@@ -50,6 +51,7 @@ const storage = new StorageCache(localStorage, 'userInfo', {
  * 第三参数为true时默认使用JSON AP进行解析与序列化
  */
 const normalStorage = new StorageCache(localStorage, 'userInfo', true)
+// or createStorageCache(localStorage, 'userInfo', true)
 
 // 移除
 normalStorage.remove()
@@ -85,8 +87,8 @@ normalStorage.rawEq('{userId:1}')
  *  值解析规则
  */
 interface StorageCacheStoreParseType<T = any> {
-  get: (value: string) => T;
-  set: (value: T) => string;
+  get: (value: string) => T
+  set: (value: T) => string
 }
 
 /**
@@ -100,80 +102,86 @@ declare class StorageCache<T = any> {
    * @param key 定义储存的key
    * @param parse 定义解析规则
    */
-  constructor(storage: Storage, key: string, parse?: StorageCacheStoreParseType<T> | true);
+  constructor(storage: Storage, key: string, parse?: StorageCacheStoreParseType<T> | true)
 
-  private _changeParse;
+  private _changeParse
 
   /**
    * 获取key值
    * 在缓存统一管理，并对key进行混淆之后它很有用
    */
-  get key(): string;
+  get key(): string
 
   /**
    * 是否存在该缓存
    */
-  has(): boolean;
+  has(): boolean
 
   /**
    * 获取原始值
    */
-  rawGet(): string | null;
+  rawGet(): string | null
 
   /**
    * 设置原始值
    * @param value
    */
-  rawSet(value?: string | null): void;
+  rawSet(value?: string | null): void
 
   /**
    * 获取值
    */
-  get(): T | null;
+  get(): T | null
 
   /**
    * 设置值
    * @param value
    */
-  set(value?: T | null): void;
+  set(value?: T | null): void
 
   /**
    * 获取值
    */
-  get value(): T | null;
+  get value(): T | null
   /**
    * 设置值
    * @param value
    */
-  set value(value: T | null | undefined);
+  set value(value: T | null | undefined)
 
   /**
    * 获取原始值
    */
-  get rawValue(): string | null | undefined;
+  get rawValue(): string | null | undefined
 
   /**
    * 设置原始值
    * @param value
    */
-  set rawValue(value: string | null | undefined);
+  set rawValue(value: string | null | undefined)
 
   /**
    * 移除该缓存
    */
-  remove(): void;
+  remove(): void
 
   /**
    * 原值是否相等
    * @param value
    */
-  rawEq(value?: string | null): boolean;
+  rawEq(value?: string | null): boolean
 
   /**
    * 值是否相等
    * 暂时只是用===比较
    * @param value
    */
-  eq(value?: string | null): boolean;
+  eq(value?: string | null): boolean
 }
+
+declare const createStorageCache: <T = any>(
+  storage: Storage,
+  key: string,
+  parse?: true | StorageCacheStoreParseType<T> | undefined
+) => StorageCache<T>
 ```

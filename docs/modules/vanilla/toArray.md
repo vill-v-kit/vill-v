@@ -4,28 +4,38 @@
 
 ::: tip 提示
 
-暂时只支持 string map set 的转换
-:::
+暂时只支持 string map set 的转换 :::
 
 ## Demo
 
 ```ts
 import { stringToArray, mapToArray, setToArray, toArray } from '@vill-v/vanilla'
 
-stringToArray('xxxxxx')// => ['x','x','x','x','x','x']
-mapToArray(new Map([[1, 1], [1, 1]])) // => [[1,1],[1,1]]
+stringToArray('xxxxxx') // => ['x','x','x','x','x','x']
+mapToArray(
+  new Map([
+    [1, 1],
+    [1, 1],
+  ])
+) // => [[1,1],[1,1]]
 setToArray(new Set([1, 2, 3, 4])) // => [1, 2, 3, 4]
 
-toArray('xxxxxx')// => ['x','x','x','x','x','x']
-toArray(new Map([[1, 1], [1, 1]])) // => [[1,1],[1,1]]
+toArray('xxxxxx') // => ['x','x','x','x','x','x']
+toArray(
+  new Map([
+    [1, 1],
+    [1, 1],
+  ])
+) // => [[1,1],[1,1]]
 toArray(new Set([1, 2, 3, 4])) // => [1, 2, 3, 4]
+toArray([1, 2, 3, 4]) // => [1, 2, 3, 4]
 ```
 
 ## DTS
 
 ```ts
-declare const stringToArray: (value: string) => string[];
-declare const mapToArray: <Key, Value>(data: Map<Key, Value>) => [Key, Value][];
-declare const setToArray: <Value>(data: Set<Value>) => Value[];
-declare const toArray: (value: any) => any[];
+declare const stringToArray: (value: string) => string[]
+declare const mapToArray: <Key, Value>(data: Map<Key, Value>) => [Key, Value][]
+declare const setToArray: <Value>(data: Set<Value>) => Value[]
+declare const toArray: (value: any) => any[]
 ```
