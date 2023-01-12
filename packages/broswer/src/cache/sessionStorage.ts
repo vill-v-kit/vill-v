@@ -9,6 +9,11 @@ export class SessionStorageCache<T = any> extends StorageCache<T> {
   }
 }
 
+/**
+ * sessionStorage缓存商店
+ * @param key
+ * @param parse
+ */
 export const createSessionStorageCache = <T = any>(
   key: string,
   parse?: StorageCacheStoreParseType<T> | true
