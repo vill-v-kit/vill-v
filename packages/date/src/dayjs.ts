@@ -1,13 +1,8 @@
-import dayjs, { ConfigType, Dayjs } from 'dayjs/esm'
-import customParseFormat from 'dayjs/esm/plugin/customParseFormat'
-import duration from 'dayjs/esm/plugin/duration'
-import arraySupport from 'dayjs/esm/plugin/arraySupport'
-import isLeapYearPlugin from 'dayjs/esm/plugin/isLeapYear'
-
-dayjs.extend(customParseFormat)
-dayjs.extend(duration)
-dayjs.extend(arraySupport)
-dayjs.extend(isLeapYearPlugin)
+import dayjs, { ConfigType, Dayjs } from 'dayjs'
+import customParseFormat from 'dayjs/plugin/customParseFormat'
+import duration from 'dayjs/plugin/duration'
+import arraySupport from 'dayjs/plugin/arraySupport'
+import isLeapYearPlugin from 'dayjs/plugin/isLeapYear'
 
 /**
  * 计算年龄
@@ -15,6 +10,7 @@ dayjs.extend(isLeapYearPlugin)
  * @param dateToCompare
  */
 export const age = (birthday: Dayjs, dateToCompare: Dayjs = dayjs()): number => {
+  dayjs.extend(duration)
   if (!birthday) {
     return 0
   }
@@ -27,7 +23,11 @@ export const age = (birthday: Dayjs, dateToCompare: Dayjs = dayjs()): number => 
  * @param value
  * @param format
  */
-export const toDayJs = (value: ConfigType, format?: string): Dayjs => dayjs(value, format)
+export const toDayJs = (value: ConfigType, format?: string): Dayjs => {
+  dayjs.extend(arraySupport)
+  dayjs.extend(customParseFormat)
+  return dayjs(value, format)
+}
 
 /**
  * 检查dayJs是否合法，并返回错误占位值
@@ -49,6 +49,8 @@ export const checkDateValue = (value: ConfigType, error?: string): ConfigType =>
  * @param error 是否验证时间合法，验证则填写验证失败返回值
  */
 export const parseDateString = (value: ConfigType, format: string, error?: any) => {
+  dayjs.extend(arraySupport)
+  dayjs.extend(customParseFormat)
   if (error && !checkDateValue(value)) {
     return error || ''
   }
@@ -60,10 +62,18 @@ export const parseDateString = (value: ConfigType, format: string, error?: any) 
  * @param value
  * @param format
  */
-export const parseDate = (value: ConfigType, format: string) => dayjs(value, format).toDate()
+export const parseDate = (value: ConfigType, format: string) => {
+  dayjs.extend(arraySupport)
+  dayjs.extend(customParseFormat)
+  return dayjs(value, format).toDate()
+}
 
 /**
  * 是否是闰年
  * @param year
  */
-export const isLeapYear = (year: number): boolean => dayjs([year]).isLeapYear()
+export const isLeapYear = (year: number): boolean => {
+  dayjs.extend(isLeapYearPlugin)
+  dayjs.extend(arraySupport)
+  return dayjs([year]).isLeapYear()
+}

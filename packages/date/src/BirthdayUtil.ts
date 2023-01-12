@@ -1,5 +1,6 @@
 import { thisYear } from './date'
 import dayjs from 'dayjs'
+import customParseFormat from 'dayjs/plugin/customParseFormat'
 
 /**
  * 验证是否为生日
@@ -16,6 +17,7 @@ import dayjs from 'dayjs'
  * @return 是否为生日
  */
 export const isBirthday = (value: string): boolean => {
+  dayjs.extend(customParseFormat)
   const dayJs = dayjs(value, [
     'YYYY-MM-DD',
     'YYYYMMDD',
