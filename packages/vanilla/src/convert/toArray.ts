@@ -40,3 +40,14 @@ export const toArray = (value: any): any[] => {
   }
   return []
 }
+
+/**
+ * 将任何入参都包装成数组
+ * @param value
+ */
+export const asArray = <T>(value: T | T[]): T[] => {
+  if (Array.isArray(value)) {
+    return value
+  }
+  return [value]
+}
