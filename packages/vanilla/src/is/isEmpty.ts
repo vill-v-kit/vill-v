@@ -1,4 +1,4 @@
-import { isMap, isObject, isSet, isString } from '@vill-v/type-as'
+import { isMap, isNil, isObject, isSet, isString } from '@vill-v/type-as'
 
 const isLengthEmpty = (value: any) => value.length === 0
 
@@ -20,6 +20,9 @@ export const isSetEmpty = (value: Set<any>) => isSizeEmpty(value)
  * @param value
  */
 export const isEmpty = (value: any) => {
+  if (isNil(value)) {
+    return true
+  }
   if (isString(value)) {
     return isStringEmpty(value)
   }
