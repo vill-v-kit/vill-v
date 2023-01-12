@@ -137,3 +137,9 @@ export class StorageCache<T = any> {
     return this.value === value
   }
 }
+
+export const createStorageCache = <T = any>(
+  storage: Storage,
+  key: string,
+  parse?: StorageCacheStoreParseType<T> | true
+) => new StorageCache<T>(storage, key, parse)
