@@ -5,7 +5,7 @@ import { isObject, isString } from '@vill-v/type-as'
  * {@link https://github.com/vueComponent/ant-design-vue/blob/next/components/_util/classNames.ts}
  * @param args
  */
-function classNames(...args: any[]) {
+export function classNames(...args: any[]) {
   const classes: string[] = []
   for (let i = 0; i < args.length; i++) {
     const value = args[i]
@@ -29,5 +29,3 @@ function classNames(...args: any[]) {
   }
   return classes.join(' ')
 }
-
-export default classNames

@@ -3,7 +3,7 @@ import raf from './raf'
 import getScroll from './getScroll'
 import { easeInOutCubic } from './easings'
 
-interface ScrollToOptions {
+export interface ScrollToOptions {
   // 默认滚动距离，模式是window
   getContainer?: () => HTMLElement | Window | Document
   // 滚动返回函数
@@ -17,7 +17,7 @@ interface ScrollToOptions {
  * @param y
  * @param options
  */
-export default function scrollTo(y: number, options: ScrollToOptions = {}) {
+export function scrollTo(y: number, options: ScrollToOptions = {}) {
   const { getContainer = () => window, callback, duration = 450 } = options
   const container = getContainer()
   const scrollTop = getScroll(container, true)

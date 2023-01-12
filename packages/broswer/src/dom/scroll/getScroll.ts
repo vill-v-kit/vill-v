@@ -6,10 +6,7 @@ import { isWindow } from '@vill-v/vanilla'
  * @param target
  * @param top
  */
-export default function getScroll(
-  target: HTMLElement | Window | Document | null,
-  top: boolean
-): number {
+export function getScroll(target: HTMLElement | Window | Document | null, top: boolean): number {
   if (typeof window === 'undefined') {
     return 0
   }

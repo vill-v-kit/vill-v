@@ -10,7 +10,7 @@ const ids: RafMap = {}
  * @param callback
  * @param delayFrames
  */
-export default function wrapperRaf(callback: () => void, delayFrames = 1): number {
+export function wrapperRaf(callback: () => void, delayFrames = 1): number {
   const myId: number = id++
   let restFrames: number = delayFrames
 
