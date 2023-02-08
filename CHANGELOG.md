@@ -1,6 +1,29 @@
 # Changelog
 
 
+## v1.2.1
+
+
+### 🚀 特性
+
+  - Add `lastOfArray`, `omit`,`pick` (907c603)
+  - Update `lastOfArray`, `omit`,`pick` unit test (9b3293f)
+
+### 📖 文档
+
+  - Build docs (96d40ad)
+  - Add `lastOfArray`, `omit`,`pick` (45cd7e2)
+
+### 🏡 框架
+
+  - Generate CHANGELOG.md (0c739b6)
+  - Update repository README.md (88d3b3f)
+  - Update `release` script (9733b4c)
+
+### ❤️  Contributors
+
+- Whitekite <1075790909@qq.com>
+
 ## v1.1.3...v1.2.0
 
 
