@@ -1,6 +1,6 @@
 {
   "name": "@vill-v/type-as",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "开发中常用的类型判断",
   "files": [
     "dist"
