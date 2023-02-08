@@ -13,5 +13,6 @@ describe('pick', () => {
     expect(source).toEqual({ test: '', test1: [], test2: [] })
     result.test2.push(1)
     expect(source).toEqual({ test: '', test1: [], test2: [1] })
+    expect(result).toEqual({ test1: [], test2: [1] })
   })
 })

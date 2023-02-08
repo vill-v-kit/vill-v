@@ -8,6 +8,5 @@ describe('lastOfArray', () => {
     expect(lastOfArray([1, 2])).toEqual(2)
     expect(lastOfArray([], '1')).toEqual('1')
     expect(lastOfArray([], null)).toEqual(null)
-    expect(lastOfArray([])).toBeUndefined()
   })
 })

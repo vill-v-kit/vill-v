@@ -13,5 +13,6 @@ describe('omit', () => {
     expect(source).toEqual({ test: '', test1: [], test2: [] })
     result.test1.push(1)
     expect(source).toEqual({ test: '', test1: [1], test2: [] })
+    expect(result).toEqual({ test1: [1] })
   })
 })
