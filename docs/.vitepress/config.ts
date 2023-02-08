@@ -53,6 +53,16 @@ export default defineConfig({
       indexName: 'vill-v',
     },
     socialLinks: [{ link: 'https://gitee.com/vill-v/core', icon: 'github' }],
+    outline: {
+      label: '本页',
+    },
+    docFooter: {
+      prev: '上一页',
+      next: '下一页',
+    },
+    sidebarMenuLabel: '菜单',
+    returnToTopLabel: '返回顶部',
+    darkModeSwitchLabel: '暗色模式',
     footer: {
       message: 'Released under the MIT License.',
       copyright: 'Copyright © 2022-present White Kite',
