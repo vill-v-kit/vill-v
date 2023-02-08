@@ -4,7 +4,10 @@
 
 ::: tip 提示
 
-暂时只支持 string map set object array 的转换 :::
+暂时只支持 string map set object array 的转换
+
+<!-- prettier-ignore -->
+:::
 
 ## Demo
 
