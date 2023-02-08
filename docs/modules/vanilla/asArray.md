@@ -5,7 +5,7 @@
 ## Demo
 
 ```ts
-import { asArray } from '@vill-v/path-prop'
+import { asArray } from '@vill-v/vanilla'
 asArray('')
 // ['']
 
