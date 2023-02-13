@@ -4,20 +4,18 @@
 
 ## 安装
 
-使用npm
+:::code-group
 
-```bash
+```bash [npm]
 $ npm i @vill-v/date
 ```
 
-使用yarn
-
-```bash
+```bash [yarn]
 $ yarn add @vill-v/date
 ```
 
-使用pnpm
-
-```bash
+```bash [pnpm]
 $ pnpm add @vill-v/date
 ```
+
+:::

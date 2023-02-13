@@ -1,23 +1,21 @@
 # 介绍
 
-开发中对于ecmascript的总结
+开发中对于 ecmascript 的总结
 
 ## 安装
 
-使用npm
+:::code-group
 
-```bash
+```bash [npm]
 $ npm i @vill-v/vanilla
 ```
 
-使用yarn
-
-```bash
+```bash [yarn]
 $ yarn add @vill-v/vanilla
 ```
 
-使用pnpm
-
-```bash
+```bash [pnpm]
 $ pnpm add @vill-v/vanilla
 ```
+
+:::

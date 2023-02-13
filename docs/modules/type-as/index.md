@@ -4,23 +4,21 @@
 
 ## 安装
 
-使用npm
+:::code-group
 
-```bash
+```bash [npm]
 $ npm i @vill-v/type-as
 ```
 
-使用yarn
-
-```bash
+```bash [yarn]
 $ yarn add @vill-v/type-as
 ```
 
-使用pnpm
-
-```bash
+```bash [pnpm]
 $ pnpm add @vill-v/type-as
 ```
+
+:::
 
 ## 可判断的类型
 
@@ -41,7 +39,7 @@ isNull(null)
 
 isNumber(1)
 
-isObject({foor: 'bar'})
+isObject({ foor: 'bar' })
 
 isSet(new Set())
 

@@ -2,6 +2,9 @@ import { defineConfig } from 'vitepress'
 import * as fs from 'fs'
 import path from 'path'
 import pkg from '../../package.json'
+import { giteeIcon } from './gitee-icon'
+import UnoCss from 'unocss/vite'
+import { presetUno } from 'unocss/preset-uno'
 const getModules = () => {
   const obj = {
     '/modules/': [] as any[],
@@ -19,6 +22,7 @@ const getModules = () => {
     obj['/modules/'].push({
       text: item,
       items: module,
+      collapsed: true,
     })
     module.push({
       text: '介绍',
@@ -43,7 +47,7 @@ export default defineConfig({
   lang: 'zh-CN',
   base: '/core/',
   lastUpdated: true,
-  vite: { server: { port: 3002 } },
+  vite: { server: { port: 3002 }, plugins: [UnoCss({ presets: [presetUno()] })] },
   description: '开发中对于技术的总结，归纳',
   themeConfig: {
     lastUpdatedText: '最后更新时间',
@@ -52,7 +56,14 @@ export default defineConfig({
       apiKey: '76d659bc7b9afbb6ea9e937cdfe1d488',
       indexName: 'vill-v',
     },
-    socialLinks: [{ link: 'https://gitee.com/vill-v/core', icon: 'github' }],
+    socialLinks: [
+      {
+        link: 'https://gitee.com/vill-v/core',
+        icon: {
+          svg: giteeIcon,
+        },
+      },
+    ],
     outline: {
       label: '本页',
     },
