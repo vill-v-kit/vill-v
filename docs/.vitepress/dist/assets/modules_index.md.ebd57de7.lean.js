@@ -1,1 +1,0 @@
-import{_ as e,c as a,o,a as c}from"./app.de79c6c2.js";const v=JSON.parse('{"title":"所有模块","description":"","frontmatter":{},"headers":[],"relativePath":"modules/index.md","lastUpdated":1652155280000}'),r={name:"modules/index.md"},d=c("",9),t=[d];function s(p,l,i,n,_,h){return o(),a("div",null,t)}const f=e(r,[["render",s]]);export{v as __pageData,f as default};
