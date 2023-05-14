@@ -53,13 +53,13 @@ export default defineConfig({
     lastUpdatedText: '最后更新时间',
     search: {
       provider: 'local',
-      options:{
+      options: {
         locales: {
           root: {
             translations: {
               button: {
                 buttonText: '搜索文档',
-                buttonAriaLabel: '搜索文档'
+                buttonAriaLabel: '搜索文档',
               },
               modal: {
                 noResultsText: '无法找到相关结果',
@@ -67,13 +67,13 @@ export default defineConfig({
                 footer: {
                   selectText: '选择',
                   navigateText: '切换',
-                  closeText: '关闭'
-                }
-              }
-            }
-          }
-        }
-      }
+                  closeText: '关闭',
+                },
+              },
+            },
+          },
+        },
+      },
     },
     socialLinks: [
       {
@@ -101,10 +101,12 @@ export default defineConfig({
       {
         text: '指引',
         link: '/guide/',
+        activeMatch: '^/guide/',
       },
       {
         text: '模块',
         link: '/modules/',
+        activeMatch: '^/modules/',
       },
       {
         text: pkg.version,
