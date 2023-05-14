@@ -51,10 +51,29 @@ export default defineConfig({
   description: '开发中对于技术的总结，归纳',
   themeConfig: {
     lastUpdatedText: '最后更新时间',
-    algolia: {
-      appId: 'A1A18HNLQ4',
-      apiKey: '76d659bc7b9afbb6ea9e937cdfe1d488',
-      indexName: 'vill-v',
+    search: {
+      provider: 'local',
+      options:{
+        locales: {
+          root: {
+            translations: {
+              button: {
+                buttonText: '搜索文档',
+                buttonAriaLabel: '搜索文档'
+              },
+              modal: {
+                noResultsText: '无法找到相关结果',
+                resetButtonTitle: '清除查询条件',
+                footer: {
+                  selectText: '选择',
+                  navigateText: '切换',
+                  closeText: '关闭'
+                }
+              }
+            }
+          }
+        }
+      }
     },
     socialLinks: [
       {
