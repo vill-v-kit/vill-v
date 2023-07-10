@@ -1,6 +1,36 @@
 # Changelog
 
 
+## v1.2.3
+
+
+### 🚀 特性
+
+- `vill-v` 包支持子路径按需加载所有包 (97f7a1f)
+
+### 📖 文档
+
+- Build docs (20c0b6c)
+- Fix docs error (84da4b6)
+- Build docs (4032b86)
+- Update docs (a801df0)
+- Build docs (9fe8997)
+- Build docs (a07ee1c)
+- Build docs (d0fe77e)
+- Build docs (bad53ff)
+- Build docs (dc83479)
+- Change search algolia to local (0174e47)
+- Fix nav active match error (0343985)
+- Update docs (3bd9692)
+
+### 🏡 框架
+
+- **eslint:** Fix code with new rules (9eedc1f)
+
+### ❤️  贡献者
+
+- Whitekite <1075790909@qq.com>
+
 ## v1.2.2
 
 
