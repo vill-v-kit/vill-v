@@ -1,6 +1,21 @@
 # Changelog
 
 
+## v1.2.5
+
+
+### 🚀 特性
+
+- **broswer:** `blobToJson` 可以根据兼容性自适应使用更现代的  `blob.text()` 特性 ，并开放 `blobToJsonModern` `blobToJsonLegacy`  函数支持直接分别调用新老 特性 (d06e13e)
+
+### 📖 文档
+
+- Build docs (1fe8653)
+
+### ❤️  贡献者
+
+- Whitekite <1075790909@qq.com>
+
 ## v1.2.4
 
 
