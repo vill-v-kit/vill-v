@@ -3,7 +3,8 @@
   "version": "1.2.2",
   "description": "开发中对于技术的总结，归纳",
   "files": [
-    "dist"
+    "dist",
+    ".d.ts"
   ],
   "license": "MIT",
   "author": {
@@ -15,16 +16,57 @@
   "repository": "https://gitee.com/vill-v/core",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "types": "index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/index.mjs",
       "require": "./dist/index.js",
       "types": "./dist/index.d.ts"
+    },
+    "./async": {
+      "import": "./dist/async.mjs",
+      "require": "./dist/async.js",
+      "types": "./dist/async.d.ts"
+    },
+    "./broswer": {
+      "import": "./dist/broswer.mjs",
+      "require": "./dist/broswer.js",
+      "types": "./dist/broswer.d.ts"
+    },
+    "./date": {
+      "import": "./dist/date.mjs",
+      "require": "./dist/date.js",
+      "types": "./dist/date.d.ts"
+    },
+    "./path-prop": {
+      "import": "./dist/path-prop.mjs",
+      "require": "./dist/path-prop.js",
+      "types": "./dist/path-prop.d.ts"
+    },
+    "./regexp-match": {
+      "import": "./dist/regexp-match.mjs",
+      "require": "./dist/regexp-match.js",
+      "types": "./dist/regexp-match.d.ts"
+    },
+    "./ts": {
+      "import": "./dist/ts.mjs",
+      "require": "./dist/ts.js",
+      "types": "./dist/ts.d.ts"
+    },
+    "./type-as": {
+      "import": "./dist/type-as.mjs",
+      "require": "./dist/type-as.js",
+      "types": "./dist/type-as.d.ts"
+    },
+    "./vanilla": {
+      "import": "./dist/vanilla.mjs",
+      "require": "./dist/vanilla.js",
+      "types": "./dist/vanilla.d.ts"
     }
   },
   "scripts": {
-    "build": "tsup-node"
+    "build": "tsup-node",
+    "gen:file": "node ./build.mjs"
   },
   "dependencies": {
     "@vill-v/async": "workspace:*",
