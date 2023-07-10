@@ -4,7 +4,7 @@
   "description": "开发中对于技术的总结，归纳",
   "files": [
     "dist",
-    ".d.ts"
+    "*.d.ts"
   ],
   "license": "MIT",
   "author": {
