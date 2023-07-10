@@ -2,7 +2,13 @@
 
 开发中对于 ecmascript 的总结
 
-## 安装
+## 简单使用
+
+```ts
+import {} from 'vill-v/vanilla'
+```
+
+## 独立安装
 
 :::code-group
 

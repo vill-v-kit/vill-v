@@ -2,7 +2,13 @@
 
 开发中总结的常用正则
 
-## 安装
+## 简单使用
+
+```ts
+import {} from 'vill-v/regexp-match'
+```
+
+## 独立安装
 
 :::code-group
 

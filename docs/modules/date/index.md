@@ -2,7 +2,13 @@
 
 开发中围绕时间处理的总结
 
-## 安装
+## 简单使用
+
+```ts
+import {} from 'vill-v/date'
+```
+
+## 独立安装
 
 :::code-group
 

@@ -2,7 +2,13 @@
 
 开发中总结的 typescript 扩展
 
-## 安装
+## 简单使用
+
+```ts
+import {} from 'vill-v/ts'
+```
+
+## 独立安装
 
 :::code-group
 

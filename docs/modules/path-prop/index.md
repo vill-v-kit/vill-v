@@ -2,7 +2,13 @@
 
 一个基于路径字符串对对象进行操作的工具
 
-## 安装
+## 简单使用
+
+```ts
+import {} from 'vill-v/path-prop'
+```
+
+## 独立安装
 
 :::code-group
 

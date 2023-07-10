@@ -2,7 +2,13 @@
 
 开发中总结的类型判断
 
-## 安装
+## 简单使用
+
+```ts
+import {} from 'vill-v/type-as'
+```
+
+## 独立安装
 
 :::code-group
 

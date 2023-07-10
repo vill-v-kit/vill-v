@@ -2,7 +2,13 @@
 
 开发中围绕异步行为的技术总结
 
-## 安装
+## 简单使用
+
+```ts
+import {} from 'vill-v/async'
+```
+
+## 独立安装
 
 :::code-group
 
