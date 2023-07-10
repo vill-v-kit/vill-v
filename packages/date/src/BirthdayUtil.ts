@@ -1,6 +1,6 @@
-import { thisYear } from './date'
 import dayjs from 'dayjs'
 import customParseFormat from 'dayjs/plugin/customParseFormat'
+import { thisYear } from './date'
 
 /**
  * 验证是否为生日

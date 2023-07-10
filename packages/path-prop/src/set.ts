@@ -1,5 +1,5 @@
-import { Path } from './interface'
 import { isNil, isNumber, isObject } from '@vill-v/type-as'
+import { Path } from './interface'
 import { pathParse } from './pathParse'
 
 export const setByPath = (value: any, path: Path, setValue: any) => {

@@ -1,5 +1,6 @@
 import { describe, expect, test } from 'vitest'
 import { date, isBirthday, toDayJs } from '.'
+
 describe('时间工具', () => {
   test('按需连续加载插件', () => {
     const time = date()

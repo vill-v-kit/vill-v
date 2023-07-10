@@ -1,5 +1,5 @@
-import { Path } from './interface'
 import { isNil, isObject } from '@vill-v/type-as'
+import { Path } from './interface'
 import { pathParse } from './pathParse'
 
 export const delByPath = (value: any, path: Path) => {

@@ -1,5 +1,5 @@
-import { Path } from './interface'
 import { isNil, isObject } from '@vill-v/type-as'
+import { Path } from './interface'
 import { pathParse } from './pathParse'
 
 const unsafePath = new Set(['__proto__', 'prototype', 'constructor'])
