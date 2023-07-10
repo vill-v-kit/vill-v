@@ -1,6 +1,6 @@
 {
   "name": "@vill-v/broswer",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "开发中围绕浏览器的技术总结",
   "files": [
     "dist"
