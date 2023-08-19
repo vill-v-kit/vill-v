@@ -33,7 +33,7 @@ export class TsEnumText<Enum = any> {
     return type === compare
   }
 
-  select(labelKey = 'label', valueKey: 'value') {
+  select(labelKey = 'label', valueKey = 'value') {
     return Object.keys(this.enumTextObj).map((value) => ({
       [valueKey]: this.formatNumber ? +value : value,
       [labelKey]: this.enumTextObj[value],
