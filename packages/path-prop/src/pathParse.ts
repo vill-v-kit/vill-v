@@ -1,5 +1,5 @@
 import { isString } from '@vill-v/type-as'
-import { Path } from './interface'
+import { Path, ToPath } from './interface'
 
 enum PathDelimiter {
   START,
@@ -9,7 +9,25 @@ enum PathDelimiter {
 }
 
 const correctIndexPath = new Set('0123456789')
-export const pathParse = (path: Path) => {
+/**
+ * 解析路径
+ *
+ * @example
+ * pathParse('data[0].test[\'foo.bar\']')
+ * // type ['data',0,'test','foo.bar']
+ * // result ['data',0,'test','foo.bar']
+ *
+ * pathParse(['data',0,'test','foo.bar'] as const)
+ * // type ['data',0,'test','foo.bar']
+ * // result ['data',0,'test','foo.bar']
+ *
+ * pathParse(['data',0,'test','foo.bar'])
+ * // type (string|number)[]
+ * // result ['data',0,'test','foo.bar']
+ * @param path
+ */
+export function pathParse<T extends Path>(path: T): ToPath<T>
+export function pathParse(path: Path) {
   if (Array.isArray(path)) {
     return path
   }
@@ -54,7 +72,12 @@ export const pathParse = (path: Path) => {
         if (currentPathDelimiter !== PathDelimiter.INDEX_START) {
           throw new Error('路径非法')
         }
-        pathArray.push(+currentPath)
+        // 去除匹配字符串的字符串描述符 "",``,''
+        if (/^("([\S\s]*)")|('([\S\s]*)')|(`([\S\s]*)`)$/.test(currentPath)) {
+          currentPath = currentPath.substring(1, currentPath.length + 1)
+        }
+        const numbericPath = +currentPath
+        pathArray.push(isNaN(numbericPath) ? currentPath : numbericPath)
         currentPath = ''
         currentPathDelimiter = PathDelimiter.INDEX_END
         break
