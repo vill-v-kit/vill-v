@@ -8,7 +8,6 @@ enum PathDelimiter {
   INDEX_END,
 }
 
-const correctIndexPath = new Set('0123456789')
 /**
  * 解析路径
  *
@@ -44,7 +43,8 @@ export function pathParse(path: Path) {
     switch (pathElement) {
       case '.': {
         if (currentPathDelimiter === PathDelimiter.INDEX_START) {
-          throw new Error('路径非法')
+          currentPath += pathElement
+          break
         }
         if ([PathDelimiter.INDEX_END, PathDelimiter.START].includes(currentPathDelimiter)) {
           currentPathDelimiter = PathDelimiter.PROP
@@ -74,7 +74,7 @@ export function pathParse(path: Path) {
         }
         // 去除匹配字符串的字符串描述符 "",``,''
         if (/^("([\S\s]*)")|('([\S\s]*)')|(`([\S\s]*)`)$/.test(currentPath)) {
-          currentPath = currentPath.substring(1, currentPath.length + 1)
+          currentPath = currentPath.substring(1, currentPath.length -1)
         }
         const numbericPath = +currentPath
         pathArray.push(isNaN(numbericPath) ? currentPath : numbericPath)
@@ -83,12 +83,12 @@ export function pathParse(path: Path) {
         break
       }
       default: {
-        if (
-          currentPathDelimiter === PathDelimiter.INDEX_START &&
-          !correctIndexPath.has(pathElement)
-        ) {
-          throw new Error('路径非法')
-        }
+        // if (
+        //   currentPathDelimiter === PathDelimiter.INDEX_START &&
+        //   !correctIndexPath.has(pathElement)
+        // ) {
+        //   throw new Error('路径非法')
+        // }
         if (currentPathDelimiter === PathDelimiter.INDEX_END) {
           throw new Error('下标信息有误,请勿使用类似的下标路径 `[0]]` ')
         }
