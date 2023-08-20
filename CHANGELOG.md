@@ -1,6 +1,32 @@
 # Changelog
 
 
+## v1.3.0
+
+
+### 🚀 特性
+
+- **path-prop:** 完善 getByPath ts 类型 (13ab62d)
+- **path-prop:** 路径支持解析 `['foo.bar']` 类型路径 (a327cc8)
+
+### 🩹 修复
+
+- **ts:** 修复`TsEnumText.select` 类型错误 (f637975)
+
+### 📖 文档
+
+- Build docs (1fd45d8)
+- Update docs (f29e4d5)
+- Update docs (450836e)
+
+### ✅ 测试
+
+- **path-prop:** 添加 单元测试 (eccf638)
+
+### ❤️  贡献者
+
+- Whitekite <1075790909@qq.com>
+
 ## v1.2.5
 
 
