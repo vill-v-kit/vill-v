@@ -4,18 +4,10 @@ dist
 .npmrc
 .cache
 
-packages/*/dist
-packages/*/.turbo
+dist
+.turbo
 
-legacy/*/dist
-legacy/*/.turbo
-
-!docs/.vitepress/dist
 docs/.vitepress/cache
-.local
-# local env files
-.env.local
-.env.*.local
 
 # Log files
 npm-debug.log*

@@ -1,11 +1,11 @@
-import { StorageCache, StorageCacheStoreParseType } from './storage'
+import { StorageCache, StorageCacheStoreParseType, fallbackStorage } from './storage'
 
 /**
  * sessionStorage缓存商店
  */
 export class SessionStorageCache<T = any> extends StorageCache<T> {
   constructor(key: string, parse?: StorageCacheStoreParseType<T> | true) {
-    super(window.sessionStorage, key, parse)
+    super(window?.sessionStorage || fallbackStorage, key, parse)
   }
 }
 

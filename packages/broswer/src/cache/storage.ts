@@ -19,6 +19,23 @@ const JSONStorageCacheStoreParse = {
 }
 
 /**
+ * 一个如果当前平台不存在 `Storage` 的实现时的，后备选项
+ * 主要为了兼容 ssr
+ */
+export const fallbackStorage: Storage = {
+  length: 0,
+  clear() {},
+  getItem() {
+    return null
+  },
+  key() {
+    return null
+  },
+  removeItem() {},
+  setItem() {},
+}
+
+/**
  * Storage缓存商店
  * 提供自动json数据处理功能
  */

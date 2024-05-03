@@ -1,11 +1,11 @@
-import { StorageCache, StorageCacheStoreParseType } from './storage'
+import { StorageCache, StorageCacheStoreParseType, fallbackStorage } from './storage'
 
 /**
  * localStorage缓存商店
  */
 export class LocalStorageCache<T = any> extends StorageCache<T> {
   constructor(key: string, parse?: StorageCacheStoreParseType<T> | true) {
-    super(window.localStorage, key, parse)
+    super(window?.localStorage || fallbackStorage, key, parse)
   }
 }
 
