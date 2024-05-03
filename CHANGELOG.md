@@ -1,6 +1,31 @@
 # Changelog
 
 
+## v1.3.1
+
+[compare changes](https://github.com/vill-v-kit/vill-v/compare/v1.3.0...v1.3.1)
+
+### 🩹 修复
+
+- **browser:** 修复常作为顶层方法导出 的`LocalStorageCache` `createLocalStorageCache` `SessionStorageCache` `createSessionStorageCache` 这些方法在 ssr 环境报错的问题 ([06dff1b](https://github.com/vill-v-kit/vill-v/commit/06dff1b))
+
+### 📖 文档
+
+- Build docs ([0771a03](https://github.com/vill-v-kit/vill-v/commit/0771a03))
+
+### 🏡 框架
+
+- **date:** Update `dayjs@1.11.11` ([f00b45e](https://github.com/vill-v-kit/vill-v/commit/f00b45e))
+- **broswer:** Update `csstype@3.1.3` ([fe13062](https://github.com/vill-v-kit/vill-v/commit/fe13062))
+- **browser:** 修改打包脚本，使打包产物的引包处于文件最顶层 ([84ade17](https://github.com/vill-v-kit/vill-v/commit/84ade17))
+- 项目储存位置从 gitee 迁移至 github ([a0fe528](https://github.com/vill-v-kit/vill-v/commit/a0fe528))
+- Add github pages build actions ([ff22551](https://github.com/vill-v-kit/vill-v/commit/ff22551))
+- Update release script ([2093abf](https://github.com/vill-v-kit/vill-v/commit/2093abf))
+
+### ❤️ 贡献者
+
+- Whitekite <1075790909@qq.com>
+
 ## v1.3.0
 
 
