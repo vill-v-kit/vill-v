@@ -28,6 +28,6 @@
   },
   "dependencies": {
     "@vill-v/regexp-match": "workspace:*",
-    "dayjs": "^1.11.9"
+    "dayjs": "^1.11.11"
   }
 }
