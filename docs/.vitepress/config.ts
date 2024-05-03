@@ -1,10 +1,10 @@
+import * as fs from 'node:fs'
+import path from 'node:path'
 import { defineConfig } from 'vitepress'
-import * as fs from 'fs'
-import path from 'path'
-import pkg from '../../package.json'
-import { giteeIcon } from './gitee-icon'
 import UnoCss from 'unocss/vite'
-import { presetUno } from 'unocss/preset-uno'
+import { presetUno } from 'unocss'
+import pkg from '../../package.json'
+
 const getModules = () => {
   const obj = {
     '/modules/': [] as any[],
@@ -45,7 +45,7 @@ const getModules = () => {
 export default defineConfig({
   title: 'vill-v',
   lang: 'zh-CN',
-  base: '/core/',
+  base: '/vill-v/',
   lastUpdated: true,
   vite: { server: { port: 3002 }, plugins: [UnoCss({ presets: [presetUno()] })] },
   description: '开发中对于技术的总结，归纳',
@@ -77,10 +77,8 @@ export default defineConfig({
     },
     socialLinks: [
       {
-        link: 'https://gitee.com/vill-v/core',
-        icon: {
-          svg: giteeIcon,
-        },
+        link: 'https://github.com/vill-v-kit/vill-v',
+        icon: 'github',
       },
     ],
     outline: {
@@ -113,7 +111,7 @@ export default defineConfig({
         items: [
           {
             text: 'Changelog',
-            link: 'https://gitee.com/vill-v/core/blob/master/CHANGELOG.md',
+            link: 'https://github.com/vill-v-kit/vill-v/blob/master/CHANGELOG.md',
           },
         ],
       },

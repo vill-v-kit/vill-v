@@ -12,8 +12,8 @@
     "email": "1075790909@qq.com"
   },
   "sideEffects": false,
-  "homepage": "https://vill-v.gitee.io/core",
-  "repository": "https://gitee.com/vill-v/core",
+  "homepage": "https://vill-v-kit.github.io/vill-v/",
+  "repository": "https://github.com/vill-v-kit/vill-v.git",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "index.d.ts",
