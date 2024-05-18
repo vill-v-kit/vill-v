@@ -4,7 +4,7 @@
 
 ## Demo
 
-```ts
+```ts twoslash
 import {forceJsonParse} from '@vill-v/vanilla'
 
 forceJsonParse('[', 'string') // => ''

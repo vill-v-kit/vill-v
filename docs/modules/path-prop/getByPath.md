@@ -4,7 +4,7 @@
 
 ## Demo
 
-```ts
+```ts twoslash
 import {getByPath} from '@vill-v/path-prop'
 
 getByPath([{test: {foo: 'bar'}}], '[0].test.foo') // => bar

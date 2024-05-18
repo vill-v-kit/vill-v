@@ -4,7 +4,9 @@
 
 ## Demo
 
-```ts
+```ts twoslash
+import { TsEnumText } from '@vill-v/ts'
+
 enum Enum {
   ENUM1,
   ENUM2,

@@ -4,8 +4,9 @@
 
 ## Demo
 
-```ts
+```ts twoslash
 import { resolveImage } from '@vill-v/broswer'
+
 const image = await resolveImage('http://xxxx.png')
 ```
 

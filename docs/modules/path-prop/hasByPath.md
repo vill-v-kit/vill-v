@@ -4,7 +4,7 @@
 
 ## Demo
 
-```ts
+```ts twoslash
 import {hasByPath} from '@vill-v/path-prop'
 
 hasByPath([{test: {foor: 'bar'}}], '[0].test.foor') // => true

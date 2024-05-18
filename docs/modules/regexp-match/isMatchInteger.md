@@ -4,7 +4,7 @@
 
 ## Demo
 
-```ts
+```ts twoslash
 import {isMatchInteger} from '@vill-v/regexp-match'
 
 /**
@@ -17,7 +17,7 @@ import {isMatchInteger} from '@vill-v/regexp-match'
  */
 isMatchInteger('01233')
 
-isMatchInteger(01233)
+isMatchInteger(1233)
 ```
 
 ## DTS

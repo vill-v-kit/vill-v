@@ -4,7 +4,7 @@
 
 ## Demo
 
-```ts
+```ts twoslash
 import {downloadByUrl} from '@vill-v/broswer'
 
 downloadByUrl({
@@ -16,7 +16,7 @@ downloadByUrl({
 
 ## DTS
 
-```ts
+```ts twoslash
 import {LinkTargetContext} from '@vill-v/ts'
 
 declare function downloadByUrl({url, target, fileName,}: {

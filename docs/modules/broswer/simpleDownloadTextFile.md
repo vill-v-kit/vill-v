@@ -4,7 +4,7 @@
 
 ## Demo
 
-```ts
+```ts twoslash
 import {simpleDownloadTextFile} from '@vill-v/broswer'
 
 simpleDownloadTextFile('<div>foor</div>', 'foor.xml')

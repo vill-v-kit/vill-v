@@ -4,8 +4,9 @@
 
 ## Demo
 
-```ts
-import {downloadByData} from '@vill-v/broswer'
+```ts twoslash
+// @noErrors
+import { downloadByData } from '@vill-v/broswer'
 
 downloadByData({
   data: new File(),
@@ -16,8 +17,9 @@ downloadByData({
 
 ### DTS
 
-```ts
+```ts twoslash
 import {LinkTargetContext} from '@vill-v/ts'
+
 declare function downloadByData({data, target, filename, mime, bom,}: {
   data: BlobPart;
   target?: LinkTargetContext;

@@ -4,7 +4,9 @@
 
 ## Demo
 
-```ts
+```ts twoslash
+import {pick} from '@vill-v/vanilla'
+
 const source = {
   test: '',
   test1: [] as any[],

@@ -4,7 +4,7 @@
 
 ## Demo
 
-```ts
+```ts twoslash
 import {imgDataURLtoBlob} from '@vill-v/broswer'
 
 imgDataURLtoBlob('data:base64')

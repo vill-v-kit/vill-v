@@ -6,7 +6,7 @@
 
 普通使用
 
-```ts
+```ts twoslash
 import { StorageCache, createStorageCache } from '@vill-v/broswer'
 
 const normalStorage = new StorageCache(localStorage, 'token')

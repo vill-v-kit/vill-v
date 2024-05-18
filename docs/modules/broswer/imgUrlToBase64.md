@@ -8,7 +8,7 @@
 
 ## Demo
 
-```ts
+```ts twoslash
 import {imgUrlToBase64} from '@vill-v/broswer'
 
 imgUrlToBase64('https://**.com/logo.png', 'image/png')

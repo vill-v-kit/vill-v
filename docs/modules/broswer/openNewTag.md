@@ -4,7 +4,7 @@
 
 ## Demo
 
-```ts
+```ts twoslash
 import {openNewTag} from '@vill-v/broswer'
 
 openNewTag('https://developer.mozilla.org/zh-CN/', {target: '_blank'})

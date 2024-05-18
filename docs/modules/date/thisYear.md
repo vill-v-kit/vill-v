@@ -4,7 +4,7 @@
 
 ## Demo
 
-```ts
+```ts twoslash
 import {thisYear} from '@vill-v/date'
 
 thisYear()

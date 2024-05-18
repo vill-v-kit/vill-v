@@ -4,7 +4,7 @@
 
 ## Demo
 
-```ts
+```ts twoslash
 import { DelayAsyncQueue } from '@vill-v/async'
 
 // 初始化
@@ -26,7 +26,7 @@ pool.isNotEmpty()
 pool.isEmpty()
 
 // 消费所有请求
-pool.consume().then(([...res])=>{
+pool.consume().then(()=>{
   
 })
 ```

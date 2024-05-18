@@ -4,7 +4,7 @@
 
 ## Demo
 
-```ts
+```ts twoslash
 import { hideStringWithStartAndEnd } from '@vill-v/vanilla'
 
 hideStringWithStartAndEnd('foor_bar', 0, 4, '*') // => '****_bar'

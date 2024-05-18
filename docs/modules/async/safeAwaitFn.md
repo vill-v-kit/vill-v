@@ -6,7 +6,9 @@
 
 ## Demo
 
-```ts
+```ts twoslash
+import { safeAwaitFn } from '@vill-v/async'
+
 const test= safeAwaitFn(async ()=>{
   await Promise.reject()
 })

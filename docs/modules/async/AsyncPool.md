@@ -7,7 +7,7 @@
 
 ## Demo
 
-```ts
+```ts twoslash
 import { AsyncPool } from '@vill-v/async'
 
 // 初始化

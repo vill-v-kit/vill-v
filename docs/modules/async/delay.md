@@ -4,7 +4,7 @@
 
 ## Demo
 
-```ts
+```ts twoslash
 import { delay } from '@vill-v/async'
 
 console.log('1')

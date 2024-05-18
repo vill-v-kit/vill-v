@@ -4,7 +4,7 @@
 
 ## Demo
 
-```ts
+```ts twoslash
 import { lastOfArray } from '@vill-v/vanilla'
 
 lastOfArray([]) // undefined

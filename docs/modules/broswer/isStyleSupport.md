@@ -4,7 +4,7 @@ js 检测当前浏览器是否支持某一个css前沿特性
 
 ## Demo
 
-```ts
+```ts twoslash
 import {isStyleSupport} from '@vill-v/broswer'
 
 isStyleSupport('gap')

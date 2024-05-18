@@ -4,7 +4,7 @@
 
 ## Demo
 
-```ts
+```ts twoslash
 import {downloadImageByBase64} from '@vill-v/broswer'
 
 downloadImageByBase64('data:base64', 'xxx.png')

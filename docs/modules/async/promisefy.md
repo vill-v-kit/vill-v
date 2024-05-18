@@ -4,7 +4,7 @@
 
 ## Demo
 
-```ts
+```ts twoslash
 import {promisefy} from '@vill-v/async'
 
 await promisefy(0)

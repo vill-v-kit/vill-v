@@ -4,7 +4,7 @@
 
 ## Demo
 
-```ts
+```ts twoslash
 import { toggle, toggleBoolean, toggleNumber, toggleText } from '@vill-v/vanilla'
 
 toggle('是') // => '否'

@@ -4,7 +4,7 @@
 
 ## Demo
 
-```ts
+```ts twoslash
 import { textDecode } from '@vill-v/vanilla'
 
 textDecode(new Uint8Array(8), 'utf-8')

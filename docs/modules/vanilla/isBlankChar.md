@@ -7,7 +7,7 @@
 
 ## Demo
 
-```ts
+```ts twoslash
 import { isBlankChar } from '@vill-v/vanilla'
 
 isBlankChar('\r') // =>true

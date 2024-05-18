@@ -4,7 +4,7 @@
 
 ## Demo
 
-```ts
+```ts twoslash
 import { isWindow } from '@vill-v/vanilla'
 
 isWindow(window) //=>true 

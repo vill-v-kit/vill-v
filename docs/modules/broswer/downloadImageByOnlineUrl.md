@@ -4,7 +4,7 @@
 
 ## Demo
 
-```ts
+```ts twoslash
 import {downloadImageByOnlineUrl} from '@vill-v/broswer'
 
 downloadImageByOnlineUrl('http://xxxx.xxx.xxx', 'xxx.png')

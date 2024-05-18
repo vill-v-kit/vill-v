@@ -5,7 +5,7 @@
 
 ## Demo
 
-```ts
+```ts twoslash
 import { textEncode } from '@vill-v/vanilla'
 
 textEncode('xxxxx')

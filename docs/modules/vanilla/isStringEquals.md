@@ -4,7 +4,7 @@
 
 ## Demo
 
-```ts
+```ts twoslash
 import { isStringEquals } from '@vill-v/vanilla'
 
 isStringEquals('xxxx', 'Xxxx') //=>false

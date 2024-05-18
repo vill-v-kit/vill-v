@@ -1,6 +1,7 @@
 import * as fs from 'node:fs'
 import path from 'node:path'
 import { defineConfig } from 'vitepress'
+import { transformerTwoslash } from '@shikijs/vitepress-twoslash'
 import UnoCss from 'unocss/vite'
 import { presetUno } from 'unocss'
 import pkg from '../../package.json'
@@ -9,7 +10,7 @@ const getModules = () => {
   const obj = {
     '/modules/': [] as any[],
   }
-  const dir = 'docs/modules'
+  const dir = 'modules'
   obj['/modules/'].push({
     text: '模块',
     items: [{ text: '模块', link: '/modules/' }],
@@ -49,6 +50,9 @@ export default defineConfig({
   lastUpdated: true,
   vite: { server: { port: 3002 }, plugins: [UnoCss({ presets: [presetUno()] })] },
   description: '开发中对于技术的总结，归纳',
+  markdown: {
+    codeTransformers: [transformerTwoslash()],
+  },
   themeConfig: {
     lastUpdatedText: '最后更新时间',
     search: {
@@ -111,7 +115,7 @@ export default defineConfig({
         items: [
           {
             text: 'Changelog',
-            link: 'https://github.com/vill-v-kit/vill-v/blob/master/CHANGELOG.md',
+            link: 'https://github.com/vill-v-kit/vill-v/blob/main/CHANGELOG.md',
           },
         ],
       },

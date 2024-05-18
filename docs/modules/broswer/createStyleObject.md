@@ -6,8 +6,9 @@
 
 ## Demo
 
-```tsx
-import {cso, CSSProperties, createStyleObject} from '@vill-v/broswer'
+```tsx twoslash
+// @noErrors
+import { CSSProperties, createStyleObject, cso } from '@vill-v/broswer'
 
 const App = () => {
   return <ul>

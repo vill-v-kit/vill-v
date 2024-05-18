@@ -2,7 +2,7 @@
 
 ## Demo
 
-```ts
+```ts twoslash
 import { isAllItemVerified } from '@vill-v/vanilla'
 import { isNumber } from '@vill-v/type-as'
 

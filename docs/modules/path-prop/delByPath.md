@@ -4,7 +4,7 @@
 
 ## Demo
 
-```ts
+```ts twoslash
 import {delByPath} from '@vill-v/path-prop'
 
 delByPath([{test: {foor: 'bar'}}], '[0].test.foor') // => [{test: {}}]

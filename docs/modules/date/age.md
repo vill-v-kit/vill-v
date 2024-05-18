@@ -4,7 +4,7 @@
 
 ## Demo
 
-```ts
+```ts twoslash
 import {age, toDayJs} from '@vill-v/date'
 
 age(toDayJs('1970-11-06'), toDayJs('2021-11-11'))

@@ -4,10 +4,10 @@
 
 ## Demo
 
-```ts
+```ts twoslash
 import {isLeapYear} from '@vill-v/date'
 
-isLeapYear('1999')
+isLeapYear(1970)
 ```
 
 ## DTS

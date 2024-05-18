@@ -7,7 +7,7 @@
 
 ## Demo
 
-```ts
+```ts twoslash
 import { isNotBlankString } from '@vill-v/vanilla'
 
 isNotBlankString(' \r\n') // =>false

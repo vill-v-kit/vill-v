@@ -4,7 +4,7 @@
 
 ## Demo
 
-```ts
+```ts twoslash
 import { pathParse } from '@vill-v/path-prop'
 
 pathParse('test.test1[0].test2')

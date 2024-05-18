@@ -4,7 +4,7 @@
 
 ## Demo
 
-```ts
+```ts twoslash
 import { asArray } from '@vill-v/vanilla'
 asArray('')
 // ['']

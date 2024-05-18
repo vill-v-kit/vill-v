@@ -4,8 +4,8 @@
 
 ## Demo
 
-```ts
-import {year, date} from '@vill-v/date'
+```ts twoslash
+import {date, year} from '@vill-v/date'
 
 year(date())
 ```

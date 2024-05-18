@@ -6,7 +6,7 @@
 
 ## Demo
 
-```ts
+```ts twoslash
 import { blobToJson, blobToJsonLegacy, blobToJsonModern } from '@vill-v/broswer'
 
 const xhr = new XMLHttpRequest()

@@ -6,7 +6,7 @@
 
 如需要基于路径字符串进行解析，请使用：[hasByPath](/modules/path-prop/hasByPath)
 
-```ts
+```ts twoslash
 import { hasByPath } from '@vill-v/path-prop'
 ```
 
@@ -14,7 +14,7 @@ import { hasByPath } from '@vill-v/path-prop'
 
 ## Demo
 
-```ts
+```ts twoslash
 import { has } from '@vill-v/vanilla'
 
 has({ text: '' }, 'text') //=>true

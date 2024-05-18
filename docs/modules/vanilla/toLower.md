@@ -10,11 +10,9 @@
 
 ## Demo
 
-```ts
+```ts twoslash
 import { toLower } from '@vill-v/vanilla'
 
-toLower(undefined) //=>''
-toLower(null) //=>''
 toLower('ABC') //=> 'abc'
 ```
 

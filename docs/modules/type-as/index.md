@@ -28,7 +28,11 @@ $ pnpm add @vill-v/type-as
 
 ## 可判断的类型
 
-```ts
+```ts twoslash
+// @noErrors
+import {isBoolean,isError,isFunction,isMap,isNil,isNull,isNumber,isObject,isSet,isString,isSymbol,isUndefined} from '@vill-v/type-as'
+
+// ---cut---
 isBoolean(true)
 
 isError(new Error())
@@ -39,7 +43,7 @@ isMap(new Map())
 
 isNil(null)
 
-isNil(undefined)
+isNil(void 0)
 
 isNull(null)
 
@@ -53,5 +57,5 @@ isString('foor')
 
 isSymbol(new Symbol())
 
-isUndefined(undefined)
+isUndefined()
 ```

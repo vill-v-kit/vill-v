@@ -11,8 +11,8 @@
 
 ## Demo
 
-```ts
-import { stringToArray, mapToArray, setToArray, toArray } from '@vill-v/vanilla'
+```ts twoslash
+import { mapToArray, setToArray, stringToArray, toArray } from '@vill-v/vanilla'
 
 stringToArray('xxxxxx') // => ['x','x','x','x','x','x']
 mapToArray(

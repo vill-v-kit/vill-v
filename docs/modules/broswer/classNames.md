@@ -4,7 +4,8 @@
 
 ## Demo
 
-```tsx
+```tsx twoslash
+// @noErrors
 import {classNames} from '@vill-v/broswer'
 
 const App = () => {

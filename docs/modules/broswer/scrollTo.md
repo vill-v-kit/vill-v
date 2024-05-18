@@ -4,7 +4,7 @@
 
 ## Demo
 
-```ts
+```ts twoslash
 import {scrollTo} from '@vill-v/broswer'
 
 // window 滚动至100px
@@ -12,7 +12,7 @@ scrollTo(100)
 
 scrollTo(100, {
   // 默认滚动距离，模式是window
-  getContainer: () => document.getElementById('app'),
+  getContainer: () => document.getElementById('app')!,
   // 滚动返回函数
   callback: () => {
     console.log('我滚完了')

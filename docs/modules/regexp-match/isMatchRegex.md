@@ -3,7 +3,7 @@
 
 ## Demo
 
-```ts
+```ts twoslash
 import {isMatchRegex} from '@vill-v/regexp-match'
 
 isMatchRegex(/^g/, 'test')

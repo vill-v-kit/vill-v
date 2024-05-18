@@ -18,7 +18,7 @@
 
 ## Demo
 
-```ts
+```ts twoslash
 import {isBirthday} from '@vill-v/date'
 
 isBirthday('1960-01-03')

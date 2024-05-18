@@ -4,14 +4,14 @@
 
 ## Demo
 
-```ts
+```ts twoslash
 import {getScroll} from '@vill-v/broswer'
 
 // 获取scrollTop
 getScroll(document.getElementById('app'), true)
 
 // 获取scrollLeft
-getScroll(document.getElementById('app'))
+getScroll(document.getElementById('app'), false)
 ```
 
 ## DTS

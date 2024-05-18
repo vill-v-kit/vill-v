@@ -3,7 +3,7 @@
 `window.open()` 的封装
 ## Demo
 
-```ts
+```ts twoslash
 import {openWindow} from '@vill-v/broswer'
 
 openWindow('https://developer.mozilla.org/zh-CN/', {

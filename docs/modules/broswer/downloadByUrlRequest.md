@@ -4,7 +4,7 @@
 
 ## Demo
 
-```ts
+```ts twoslash
 import { downloadByUrlRequest } from '@vill-v/broswer'
 
 downloadByUrlRequest({

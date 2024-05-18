@@ -6,7 +6,7 @@
 
 ## Demo
 
-```ts
+```ts twoslash
 import {toDayJs} from '@vill-v/date'
 
 toDayJs('1901-11-02')

@@ -11,18 +11,18 @@
 
 ## Demo
 
-```ts
+```ts twoslash
 import {
+  isArrayEmpty,
   isEmpty,
-  isSetEmpty,
   isMapEmpty,
   isObjectEmpty,
+  isSetEmpty,
   isStringEmpty,
-  isArrayEmpty,
 } from '@vill-v/vanilla'
 
 isEmpty(null) // =>true
-isEmpty(undefined) // =>true
+isEmpty(void 0) // =>true
 
 isSetEmpty(new Set()) // =>true
 isEmpty(new Set()) // =>true

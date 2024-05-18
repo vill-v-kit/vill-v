@@ -4,8 +4,10 @@
 
 ## Demo
 
-```ts
-getBoundingClientRect(document.getElementById('app'))
+```ts twoslash
+import { getBoundingClientRect } from '@vill-v/broswer'
+
+getBoundingClientRect(document.getElementById('app')!)
 ```
 
 ## DTS

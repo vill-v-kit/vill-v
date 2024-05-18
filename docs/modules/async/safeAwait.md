@@ -5,7 +5,10 @@
 适合在一些请求发生错误时，还是要执行后续方法的业务
 
 ## Demo
-```ts
+
+```ts twoslash
+import { safeAwait } from '@vill-v/async'
+
 await safeAwait(Promise.reject())
 await safeAwait(()=>Promise.reject())
 ```

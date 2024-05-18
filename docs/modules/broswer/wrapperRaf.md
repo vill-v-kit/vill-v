@@ -6,8 +6,9 @@
 
 ## Demo
 
-```ts
-import {wrapperRaf, getScroll,raf} from '@vill-v/broswer'
+```ts twoslash
+// @noErrors
+import {getScroll, raf,wrapperRaf} from '@vill-v/broswer'
 
 const wrapperRaf1 = wrapperRaf(() => {
   console.log(getScroll(window))
@@ -19,7 +20,7 @@ const raf1 = raf(()=>{
 /**
  * 取消所有回调
  */
-Object.keys(wrapperRaf1.ids).forEach(id => {
+Object.keys(wrapperRaf1.ids).forEach((id) => {
   wrapperRaf1.cancel(id)
 })
 

@@ -4,14 +4,12 @@
   "private": true,
   "homepage": "https://vill-v.gitee.io/",
   "repository": "https://github.com/vill-v-kit/vill-v.git",
-  "packageManager": "pnpm@9.0.6",
+  "packageManager": "pnpm@9.1.1",
   "type": "module",
   "scripts": {
     "build": "turbo run build",
     "release": "vbumpp -r && pnpm build",
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:serve": "vitepress serve docs",
+    "docs:build": "pnpm --filter ./docs/ docs:build",
     "update:deps": "taze major -w -i -a -r -f",
     "test": "vitest --ui",
     "clean:deps": "vfdel node_modules packages/*/node_modules playground/*/node_modules",
@@ -19,24 +17,22 @@
     "force:install": "pnpm force:clean:deps && pnpm install"
   },
   "devDependencies": {
-    "@types/node": "^20.12.8",
+    "@types/node": "^20.12.12",
     "@vill-v/bumpp": "^1.0.4",
     "@vill-v/eslint-config": "^1.2.1",
     "@vill-v/prettier-config": "^1.0.0",
     "@vill-v/tsconfig": "^1.0.1",
-    "@vitest/ui": "^1.5.3",
-    "@vrx-cp/utils": "0.0.1-beta.97",
-    "eslint": "^9.1.1",
+    "@vitest/ui": "^1.6.0",
+    "@vrx-cp/utils": "0.0.1-beta.99",
+    "eslint": "^9.3.0",
     "globby": "^14.0.1",
     "prettier": "^3.2.5",
     "taze": "^0.13.8",
     "tsup": "^8.0.2",
     "turbo": "^1.13.3",
     "typescript": "^5.4.5",
-    "unocss": "^0.59.4",
-    "vitepress": "1.1.4",
-    "vitest": "^1.5.3",
+    "vitest": "^1.6.0",
     "void-fs": "0.0.1-beta.15",
-    "vue": "^3.4.26"
+    "vue": "^3.4.27"
   }
 }

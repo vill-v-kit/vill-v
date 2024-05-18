@@ -4,7 +4,7 @@
 
 ## Demo
 
-```ts
+```ts twoslash
 import {setByPath} from '@vill-v/path-prop'
 
 setByPath([{test: {foor: 'bar'}}], '[0].test.foor', 'value') // => [{test: {foor: 'value'}}]

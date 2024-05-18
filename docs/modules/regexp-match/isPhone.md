@@ -4,8 +4,8 @@
 
 ## Demo
 
-```ts
-import {isMobile, isMobileHk, isMobileTw, isMobileMo, isPhone} from '@vill-v/regexp-match'
+```ts twoslash
+import {isMobile, isMobileHk, isMobileMo, isMobileTw, isPhone} from '@vill-v/regexp-match'
 
 /**
  * 验证是否为手机号码（中国）

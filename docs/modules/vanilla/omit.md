@@ -4,7 +4,7 @@
 
 ## Demo
 
-```ts
+```ts twoslash
 import { omit } from '@vill-v/vanilla'
 
 const source = {

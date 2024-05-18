@@ -4,7 +4,7 @@
 
 ## Demo
 
-```ts
+```ts twoslash
 import {parseDate} from '@vill-v/date'
 
 parseDate('1999-1-1', 'YYYY-MM-DD')
