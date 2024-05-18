@@ -37,7 +37,7 @@ normalStorage.rawEq('bar')
 
 对值进行解析
 
-```ts
+```ts twoslash
 import { StorageCache, createStorageCache } from '@vill-v/broswer'
 
 /**
