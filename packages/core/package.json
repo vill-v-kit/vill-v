@@ -65,7 +65,7 @@
     }
   },
   "scripts": {
-    "build": "tsup-node",
+    "build": "pnpm dlx automd && tsup-node",
     "gen:file": "node ./build.mjs"
   },
   "dependencies": {

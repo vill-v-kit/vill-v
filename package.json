@@ -7,7 +7,7 @@
   "packageManager": "pnpm@9.1.1",
   "type": "module",
   "scripts": {
-    "build": "turbo run build",
+    "build": "pnpm dlx automd && turbo run build",
     "release": "vbumpp -r && pnpm build",
     "docs:build": "pnpm --filter ./docs/ docs:build",
     "update:deps": "taze major -w -i -a -r -f",
