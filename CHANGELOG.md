@@ -1,6 +1,28 @@
 # Changelog
 
 
+## v1.3.2
+
+[compare changes](https://github.com/vill-v-kit/vill-v/compare/v1.3.1...v1.3.2)
+
+### 🩹 修复
+
+- **type-as:** 修复 `isObject` 结果不符合预期的问题 ([e98aa65](https://github.com/vill-v-kit/vill-v/commit/e98aa65))
+
+### 📖 文档
+
+- Markdown 增加 twoslash 支持 ([c5f4eeb](https://github.com/vill-v-kit/vill-v/commit/c5f4eeb))
+- Update docs ([602f281](https://github.com/vill-v-kit/vill-v/commit/602f281))
+
+### 🏡 框架
+
+- Use [`automd`](https://automd.unjs.io/) to update `README.md` ([d12440e](https://github.com/vill-v-kit/vill-v/commit/d12440e))
+- **date:** Update dep `dayjs@1.11.13` ([d682a23](https://github.com/vill-v-kit/vill-v/commit/d682a23))
+
+### ❤️ 贡献者
+
+- Whitekite ([@Colourlessglow](http://github.com/Colourlessglow))
+
 ## v1.3.1
 
 [compare changes](https://github.com/vill-v-kit/vill-v/compare/v1.3.0...v1.3.1)
