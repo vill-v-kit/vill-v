@@ -19,49 +19,49 @@
   "types": "index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
-      "require": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/index.js"
     },
     "./async": {
+      "types": "./dist/async.d.ts",
       "import": "./dist/async.mjs",
-      "require": "./dist/async.js",
-      "types": "./dist/async.d.ts"
+      "require": "./dist/async.js"
     },
     "./broswer": {
+      "types": "./dist/broswer.d.ts",
       "import": "./dist/broswer.mjs",
-      "require": "./dist/broswer.js",
-      "types": "./dist/broswer.d.ts"
+      "require": "./dist/broswer.js"
     },
     "./date": {
+      "types": "./dist/date.d.ts",
       "import": "./dist/date.mjs",
-      "require": "./dist/date.js",
-      "types": "./dist/date.d.ts"
+      "require": "./dist/date.js"
     },
     "./path-prop": {
+      "types": "./dist/path-prop.d.ts",
       "import": "./dist/path-prop.mjs",
-      "require": "./dist/path-prop.js",
-      "types": "./dist/path-prop.d.ts"
+      "require": "./dist/path-prop.js"
     },
     "./regexp-match": {
+      "types": "./dist/regexp-match.d.ts",
       "import": "./dist/regexp-match.mjs",
-      "require": "./dist/regexp-match.js",
-      "types": "./dist/regexp-match.d.ts"
+      "require": "./dist/regexp-match.js"
     },
     "./ts": {
+      "types": "./dist/ts.d.ts",
       "import": "./dist/ts.mjs",
-      "require": "./dist/ts.js",
-      "types": "./dist/ts.d.ts"
+      "require": "./dist/ts.js"
     },
     "./type-as": {
+      "types": "./dist/type-as.d.ts",
       "import": "./dist/type-as.mjs",
-      "require": "./dist/type-as.js",
-      "types": "./dist/type-as.d.ts"
+      "require": "./dist/type-as.js"
     },
     "./vanilla": {
+      "types": "./dist/vanilla.d.ts",
       "import": "./dist/vanilla.mjs",
-      "require": "./dist/vanilla.js",
-      "types": "./dist/vanilla.d.ts"
+      "require": "./dist/vanilla.js"
     }
   },
   "scripts": {

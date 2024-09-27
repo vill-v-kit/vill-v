@@ -22,9 +22,9 @@ for (const module of dirs) {
   dtsFiles[module] = `export * from './dist/${module}'`
   entryFile.push(`export * from '@vill-v/${module}'`)
   pkg.exports['./' + module] = {
+    types: `./dist/${module}.d.ts`,
     import: `./dist/${module}.mjs`,
     require: `./dist/${module}.js`,
-    types: `./dist/${module}.d.ts`,
   }
 }
 console.log('DELETE', 'clean src')
