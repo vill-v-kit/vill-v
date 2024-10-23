@@ -1,4 +1,4 @@
-import { isNil, isObject } from '@vill-v/type-as'
+import { isNil } from '@vill-v/type-as'
 import { Path } from './interface'
 import { pathParse } from './pathParse'
 
@@ -8,7 +8,7 @@ export const pathIterator = <T = any>(
   path: Path,
   callback: (has: boolean, obj: any, path?: string | number) => T
 ) => {
-  if (!isObject(value)) {
+  if (typeof value !== 'object') {
     return callback(false, value)
   }
   if (isNil(path)) {
@@ -20,7 +20,7 @@ export const pathIterator = <T = any>(
   }
   let res = callback(true, value)
   pathArr.every((pathItem) => {
-    if (!isObject(value) || !(pathItem in value)) {
+    if (typeof value !== 'object' || !(pathItem in value)) {
       res = callback(false, value)
       return false
     }
