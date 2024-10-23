@@ -4,7 +4,7 @@ neta了崩坏3 往世乐土的英杰维尔薇
 <!-- automd:badges color="orange" license licenseBranch  bundlephobia packagephobia -->
 
 [![npm version](https://img.shields.io/npm/v/@vill-v/regexp-match?color=orange)](https://npmjs.com/package/@vill-v/regexp-match)
-[![npm downloads](https://img.shields.io/npm/dm/@vill-v/regexp-match?color=orange)](https://npmjs.com/package/@vill-v/regexp-match)
+[![npm downloads](https://img.shields.io/npm/dm/@vill-v/regexp-match?color=orange)](https://npm.chart.dev/@vill-v/regexp-match)
 [![bundle size](https://img.shields.io/bundlephobia/minzip/@vill-v/regexp-match?color=orange)](https://bundlephobia.com/package/@vill-v/regexp-match)
 [![license](https://img.shields.io/github/license/vill-v-kit/vill-v?color=orange)](https://github.com/vill-v-kit/vill-v/blob/true/LICENSE)
 
@@ -30,6 +30,9 @@ pnpm install @vill-v/regexp-match
 
 # bun
 bun install @vill-v/regexp-match
+
+# deno
+deno install @vill-v/regexp-match
 ```
 
 <!-- /automd -->

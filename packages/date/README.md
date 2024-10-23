@@ -4,7 +4,7 @@ neta了崩坏3 往世乐土的英杰维尔薇
 <!-- automd:badges color="orange" license licenseBranch  bundlephobia packagephobia -->
 
 [![npm version](https://img.shields.io/npm/v/@vill-v/date?color=orange)](https://npmjs.com/package/@vill-v/date)
-[![npm downloads](https://img.shields.io/npm/dm/@vill-v/date?color=orange)](https://npmjs.com/package/@vill-v/date)
+[![npm downloads](https://img.shields.io/npm/dm/@vill-v/date?color=orange)](https://npm.chart.dev/@vill-v/date)
 [![bundle size](https://img.shields.io/bundlephobia/minzip/@vill-v/date?color=orange)](https://bundlephobia.com/package/@vill-v/date)
 [![license](https://img.shields.io/github/license/vill-v-kit/vill-v?color=orange)](https://github.com/vill-v-kit/vill-v/blob/true/LICENSE)
 
@@ -30,6 +30,9 @@ pnpm install @vill-v/date
 
 # bun
 bun install @vill-v/date
+
+# deno
+deno install @vill-v/date
 ```
 
 <!-- /automd -->
