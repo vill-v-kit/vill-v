@@ -13,7 +13,7 @@
 - YYYY.MM.DD
 - YYYY年MM月DD日
 
-占位符含义详见 [dayjs](https://dayjs.gitee.io/docs/zh-CN/parse/string-format)
+占位符含义详见 [dayjs](https://day.js.org/docs/zh-CN/parse/string-format)
 :::
 
 ## Demo
