@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v1.3.3
+
+[compare changes](https://github.com/vill-v-kit/vill-v/compare/v1.3.2...v1.3.3)
+
+### 🩹 修复
+
+- **path-prop:** 修复由于 `v1.3.2` (e98aa651) 此次提交导致的功能破坏 ([6d687e6](https://github.com/vill-v-kit/vill-v/commit/6d687e6))
+
+### 📖 文档
+
+- 修改 `dayjs` 文档地址 ([ab92a3b](https://github.com/vill-v-kit/vill-v/commit/ab92a3b))
+
+### ❤️ 贡献者
+
+- Whitekite ([@Colourlessglow](http://github.com/Colourlessglow))
+
 ## v1.3.2
 
 [compare changes](https://github.com/vill-v-kit/vill-v/compare/v1.3.1...v1.3.2)
