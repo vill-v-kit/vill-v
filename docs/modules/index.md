@@ -2,9 +2,7 @@
 
 [`@vill-v/async`](/modules/async/) - 异步行为
 
-[`@vill-v/broswer`](/modules/broswer/) -浏览器相关
-
-[`@vill-v/date`](/modules/date/) - 时间处理相关
+[`@vill-v/browser`](/modules/browser/) - 浏览器相关
 
 [`@vill-v/path-prop`](/modules/path-prop/) - 路径字符串对对象进行操作
 

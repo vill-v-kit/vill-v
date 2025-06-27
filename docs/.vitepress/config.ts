@@ -3,7 +3,7 @@ import path from 'node:path'
 import { defineConfig } from 'vitepress'
 import { transformerTwoslash } from '@shikijs/vitepress-twoslash'
 import UnoCss from 'unocss/vite'
-import { presetUno } from 'unocss'
+import { presetWind3 } from 'unocss'
 import pkg from '../../package.json'
 
 const getModules = () => {
@@ -48,10 +48,11 @@ export default defineConfig({
   lang: 'zh-CN',
   base: '/vill-v/',
   lastUpdated: true,
-  vite: { server: { port: 3002 }, plugins: [UnoCss({ presets: [presetUno()] })] },
+  vite: { server: { port: 3002 }, plugins: [UnoCss({ presets: [presetWind3()] })] },
   description: '开发中对于技术的总结，归纳',
   markdown: {
     codeTransformers: [transformerTwoslash()],
+    languages: ['js', 'vue'],
   },
   themeConfig: {
     lastUpdatedText: '最后更新时间',

@@ -1,3 +1,36 @@
 packages:
-  - packages/*
+  - package
   - docs
+
+catalogs:
+  dev:
+    '@types/node': ^24.0.5
+    '@vill-v/bumpp-github': ^4.0.0
+    '@vill-v/eslint-config': ^3.3.1
+    '@vill-v/prettier-config': ^1.0.0
+    '@vill-v/tsconfig': ^1.0.1
+    eslint: ^9.29.0
+    prettier: ^3.6.2
+    taze: ^19.1.0
+    turbo: ^2.5.4
+    typescript: ^5.8.3
+    void-fs: 0.0.1-beta.18
+    vue: ^3.5.17
+    '@shikijs/vitepress-twoslash': ^3.7.0
+    unocss: ^66.3.2
+    vitepress: ^2.0.0-alpha.7
+    tsdown: 0.12.9
+    unplugin-unused: ^0.5.1
+    publint: ^0.3.12
+  prod:
+    '@vill-v/async': ^2.0.1
+    '@vill-v/browser': ^2.0.0
+    '@vill-v/path-prop': ^2.0.1
+    '@vill-v/regexp-match': ^2.0.0
+    '@vill-v/ts': ^2.0.0
+    '@vill-v/type-as': ^2.0.1
+    '@vill-v/vanilla': ^2.0.0
+
+onlyBuiltDependencies:
+  - esbuild
+  - unrs-resolver

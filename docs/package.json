@@ -14,18 +14,18 @@
     "docs:serve": "vitepress serve ."
   },
   "dependencies": {
-    "@vill-v/async": "workspace:*",
-    "@vill-v/broswer": "workspace:*",
-    "@vill-v/date": "workspace:*",
-    "@vill-v/path-prop": "workspace:*",
-    "@vill-v/regexp-match": "workspace:*",
-    "@vill-v/ts": "workspace:*",
-    "@vill-v/type-as": "workspace:*",
-    "@vill-v/vanilla": "workspace:*"
+    "@vill-v/async": "catalog:prod",
+    "@vill-v/browser": "catalog:prod",
+    "@vill-v/path-prop": "catalog:prod",
+    "@vill-v/regexp-match": "catalog:prod",
+    "@vill-v/ts": "catalog:prod",
+    "@vill-v/type-as": "catalog:prod",
+    "@vill-v/vanilla": "catalog:prod"
   },
   "devDependencies": {
-    "@shikijs/vitepress-twoslash": "^1.22.0",
-    "unocss": "^0.63.6",
-    "vitepress": "^1.4.1"
+    "@shikijs/vitepress-twoslash": "catalog:dev",
+    "unocss": "catalog:dev",
+    "vitepress": "catalog:dev",
+    "vue": "catalog:dev"
   }
 }

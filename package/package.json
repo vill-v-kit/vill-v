@@ -1,0 +1,47 @@
+{
+  "name": "vill-v",
+  "version": "1.3.3",
+  "description": "开发中对于技术的总结，归纳",
+  "files": [
+    "dist",
+    "*.d.ts"
+  ],
+  "type": "module",
+  "license": "MIT",
+  "author": {
+    "name": "whitekite",
+    "email": "1075790909@qq.com"
+  },
+  "sideEffects": false,
+  "homepage": "https://vill-v-kit.github.io/vill-v/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vill-v-kit/vill-v.git"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./async": "./dist/async.js",
+    "./browser": "./dist/browser.js",
+    "./path-prop": "./dist/path-prop.js",
+    "./regexp-match": "./dist/regexp-match.js",
+    "./ts": "./dist/ts.js",
+    "./type-as": "./dist/type-as.js",
+    "./vanilla": "./dist/vanilla.js",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "pnpm dlx automd && tsdown"
+  },
+  "dependencies": {
+    "@vill-v/async": "catalog:prod",
+    "@vill-v/browser": "catalog:prod",
+    "@vill-v/path-prop": "catalog:prod",
+    "@vill-v/regexp-match": "catalog:prod",
+    "@vill-v/ts": "catalog:prod",
+    "@vill-v/type-as": "catalog:prod",
+    "@vill-v/vanilla": "catalog:prod"
+  }
+}
