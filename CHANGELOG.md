@@ -1,6 +1,35 @@
 # Changelog
 
 
+## v2.0.0
+
+[compare changes](https://github.com/vill-v-kit/vill-v/compare/v1.3.3...v2.0.0)
+
+### 🚀 特性
+
+- ⚠️  删除 `@vill-v/date` 包，请直接使用 `dayjs` ([0887bb3](https://github.com/vill-v-kit/vill-v/commit/0887bb3))
+- ⚠️  Use ESM dist only and use `@vill-v/*@2` ([5ffca9a](https://github.com/vill-v-kit/vill-v/commit/5ffca9a))
+
+### 🏡 框架
+
+- 将 代码迁移至 [独立仓库](https://github.com/vill-v-kit/async)维护 ([167ceda](https://github.com/vill-v-kit/vill-v/commit/167ceda))
+- 将 代码迁移至 [独立仓库](https://github.com/vill-v-kit/browser)维护 ([3a67429](https://github.com/vill-v-kit/vill-v/commit/3a67429))
+- 将 代码迁移至 [独立仓库](https://github.com/vill-v-kit/path-prop)维护 ([ce4fa4c](https://github.com/vill-v-kit/vill-v/commit/ce4fa4c))
+- 将 代码迁移至 [独立仓库](https://github.com/vill-v-kit/regexp-match)维护 ([68cda81](https://github.com/vill-v-kit/vill-v/commit/68cda81))
+- 将 代码迁移至 [独立仓库](https://github.com/vill-v-kit/typescript)维护 ([065b9fc](https://github.com/vill-v-kit/vill-v/commit/065b9fc))
+- 将 代码迁移至 [独立仓库](https://github.com/vill-v-kit/type-as)维护 ([65a3d8d](https://github.com/vill-v-kit/vill-v/commit/65a3d8d))
+- 将 代码迁移至 [独立仓库](https://github.com/vill-v-kit/vanilla)维护 ([eae9d1f](https://github.com/vill-v-kit/vill-v/commit/eae9d1f))
+- Remove turbo dep ([b01a51a](https://github.com/vill-v-kit/vill-v/commit/b01a51a))
+
+#### 🚨 破坏性改动
+
+- ⚠️  删除 `@vill-v/date` 包，请直接使用 `dayjs` ([0887bb3](https://github.com/vill-v-kit/vill-v/commit/0887bb3))
+- ⚠️  Use ESM dist only and use `@vill-v/*@2` ([5ffca9a](https://github.com/vill-v-kit/vill-v/commit/5ffca9a))
+
+### ❤️ 贡献者
+
+- Whitekite ([@Colourlessglow](https://github.com/Colourlessglow))
+
 ## v1.3.3
 
 [compare changes](https://github.com/vill-v-kit/vill-v/compare/v1.3.2...v1.3.3)
