@@ -1,6 +1,0 @@
-export * from './get'
-export * from './has'
-export * from './del'
-export * from './set'
-export * from './interface'
-export * from './pathParse'
