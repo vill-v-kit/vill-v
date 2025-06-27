@@ -7,12 +7,12 @@
   "packageManager": "pnpm@10.12.4",
   "type": "module",
   "scripts": {
-    "build": "pnpm dlx automd && turbo run build",
+    "build": "pnpm dlx automd && pnpm --filter ./package/ build",
     "release": "vbumpp -r && pnpm build",
     "docs:build": "pnpm --filter ./docs/ docs:build",
-    "update:deps": "taze major -w -i -a -r -f",
-    "clean:deps": "vfdel node_modules package/node_modules docs/node_modules",
-    "force:clean:deps": "vfdel pnpm-lock.yaml && pnpm clean:deps",
+    "update:deps": "pnpm dlx taze major -w -i -a -r -f",
+    "clean:deps": "pnpm dlx void-fs del node_modules package/node_modules docs/node_modules",
+    "force:clean:deps": "pnpm dlx void-fs del pnpm-lock.yaml && pnpm clean:deps",
     "force:install": "pnpm force:clean:deps && pnpm install"
   },
   "devDependencies": {
@@ -24,11 +24,8 @@
     "eslint": "catalog:dev",
     "prettier": "catalog:dev",
     "publint": "catalog:dev",
-    "taze": "catalog:dev",
     "tsdown": "catalog:dev",
-    "turbo": "catalog:dev",
     "typescript": "catalog:dev",
-    "unplugin-unused": "catalog:dev",
-    "void-fs": "catalog:dev"
+    "unplugin-unused": "catalog:dev"
   }
 }
