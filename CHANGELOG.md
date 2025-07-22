@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v2.0.2
+
+[compare changes](https://github.com/vill-v-kit/vill-v/compare/v2.0.1...v2.0.2)
+
+### 🩹 修复
+
+- **ts:** 修复 `@oxc-project/runtime` 被错误处理 ([479cc32](https://github.com/vill-v-kit/vill-v/commit/479cc32))
+
+### ❤️ 贡献者
+
+- Whitekite ([@Colourlessglow](https://github.com/Colourlessglow))
+
 ## v2.0.1
 
 [compare changes](https://github.com/vill-v-kit/vill-v/compare/v2.0.0...v2.0.1)
